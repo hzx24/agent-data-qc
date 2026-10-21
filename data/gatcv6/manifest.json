@@ -1,0 +1,63 @@
+{
+  "dataset": "GOAT-AI/gatcv6",
+  "revision": "216fb6e2c9449dd8eeab0a3b9233e89ea08d1f7a",
+  "downloaded_at_utc": "2026-10-19T15:09:32Z",
+  "elapsed_seconds": 8.743,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 2504,
+      "sha256": "9e75dd981de037ec3769f24f790e126bc5a160b6871f510214e68dc70649aeeb"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 9040,
+      "sha256": "df439b3ffca90287229626006fa57a0906233c088343007c182ef7e82a3f5bc8"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "README.md",
+      "bytes": 46076,
+      "sha256": "9d842b2459a04511858a4c30d1e694a68fe8c95acb8a47bdae1cb39292c0789c"
+    },
+    {
+      "path": "sample/CHECKSUMS.json",
+      "bytes": 614,
+      "sha256": "4e368a129d20e82fa2fc5ea6264a0e94d908cde88c83f0af1c1c2c26d6646196"
+    },
+    {
+      "path": "sample/labels/labels.jsonl.zst",
+      "bytes": 101247,
+      "sha256": "72c48e79eec912ef09071123efab047247037061cd6dcf8664ad3405b070809e"
+    },
+    {
+      "path": "sample/messages/messages.jsonl.zst",
+      "bytes": 25159728,
+      "sha256": "82b0125509065fcdbb8d22384e0725770ce63e4012fe925751a273095a55cb7c"
+    },
+    {
+      "path": "sample/trajectories/trajectories.jsonl.zst",
+      "bytes": 25740312,
+      "sha256": "e8ea1da604050ccff41610ec7404267981c7be31a1c510e0df3c33518e7c4290"
+    },
+    {
+      "path": "sample/views/error_recovery.jsonl.zst",
+      "bytes": 619396,
+      "sha256": "4ecc9d80e72f1283591b765e879724ef609d8adcbfb38377615b615705cf2356"
+    },
+    {
+      "path": "sample/views/sft_steps.jsonl.zst",
+      "bytes": 15278901,
+      "sha256": "aea6a0e377e24382ceb8f4d1c7b226a7868258223bab61d2ddd90dce36d48a67"
+    },
+    {
+      "path": "sample/views/tool_grammar.jsonl.zst",
+      "bytes": 354,
+      "sha256": "64b5b03bc2b65e3c8fd3c23f1c7c981ed53a5c92820ea28924a6ca43ee40d925"
+    }
+  ]
+}

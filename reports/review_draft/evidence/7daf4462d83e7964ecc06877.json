@@ -1,0 +1,980 @@
+{
+  "trajectory_id": "7daf4462d83e7964ecc06877",
+  "decision": {
+    "check_status": "completed",
+    "checks": {
+      "cross_table": "complete",
+      "exact_duplicate": "complete",
+      "messages": "complete",
+      "recovery": "complete",
+      "trajectory": "complete"
+    },
+    "decision": "admit",
+    "issue_ids": [
+      "issue_0bd056a8d482dac38058",
+      "issue_0c866a2a01b52c049ceb",
+      "issue_a45711316405c08f7421",
+      "issue_5b9fad60333a16bf5b6e"
+    ],
+    "message_characters": 2144,
+    "reason_codes": [
+      "CHECKS_PASSED_WITH_RECORDED_RISKS"
+    ],
+    "review_status": "queued",
+    "risk_codes": [
+      "OPEN_BOUNDARY",
+      "PUBLISHER_FLAG",
+      "RECOVERY_HEURISTIC",
+      "STATUS_UNKNOWN"
+    ],
+    "source_status": "present",
+    "sources": [
+      {
+        "file": "sample/trajectories/trajectories.jsonl.zst",
+        "line": 128,
+        "pointer": ""
+      },
+      {
+        "file": "sample/messages/messages.jsonl.zst",
+        "line": 128,
+        "pointer": ""
+      },
+      {
+        "file": "sample/labels/labels.jsonl.zst",
+        "line": 128,
+        "pointer": ""
+      }
+    ],
+    "tool_calls": 8,
+    "trajectory_id": "7daf4462d83e7964ecc06877"
+  },
+  "queue": {
+    "current_decision": "admit",
+    "issue_ids": [
+      "issue_0bd056a8d482dac38058",
+      "issue_0c866a2a01b52c049ceb",
+      "issue_a45711316405c08f7421",
+      "issue_5b9fad60333a16bf5b6e"
+    ],
+    "priority": {
+      "decision_change_impact": 0,
+      "seeded_tiebreak": "064bfcc3f9aa4037a7d2972b325ba1d291a6bc4fc7cec612321655db0b043638",
+      "tool_call_value_capped_100": 8
+    },
+    "rank": 116,
+    "review_question": "独立检查规则漏检及误报，不预设当前建议正确",
+    "selection_reason": "seeded_audit",
+    "sources": [
+      {
+        "file": "sample/trajectories/trajectories.jsonl.zst",
+        "line": 128,
+        "pointer": ""
+      },
+      {
+        "file": "sample/messages/messages.jsonl.zst",
+        "line": 128,
+        "pointer": ""
+      },
+      {
+        "file": "sample/labels/labels.jsonl.zst",
+        "line": 128,
+        "pointer": ""
+      }
+    ],
+    "trajectory_id": "7daf4462d83e7964ecc06877"
+  },
+  "issues": [
+    {
+      "category": "risk",
+      "evidence": {
+        "count": 1,
+        "first_step": 12
+      },
+      "issue_id": "issue_0bd056a8d482dac38058",
+      "message": "状态未记录，不计入失败",
+      "related_sources": [],
+      "rule_id": "STATUS_UNKNOWN",
+      "severity": "medium",
+      "source": {
+        "file": "sample/trajectories/trajectories.jsonl.zst",
+        "line": 128,
+        "pointer": "/steps/12/ok"
+      },
+      "suggested_action": "allow",
+      "trajectory_id": "7daf4462d83e7964ecc06877"
+    },
+    {
+      "category": "risk",
+      "evidence": {
+        "failed_count": 1
+      },
+      "issue_id": "issue_0c866a2a01b52c049ceb",
+      "message": "保留失败及后续步骤；不把窗口成功当作任务成功",
+      "related_sources": [],
+      "rule_id": "RECOVERY_HEURISTIC",
+      "severity": "info",
+      "source": {
+        "file": "sample/trajectories/trajectories.jsonl.zst",
+        "line": 128,
+        "pointer": "/steps/7"
+      },
+      "suggested_action": "allow",
+      "trajectory_id": "7daf4462d83e7964ecc06877"
+    },
+    {
+      "category": "risk",
+      "evidence": {
+        "has_text_answer_end": false,
+        "has_user_start": true
+      },
+      "issue_id": "issue_a45711316405c08f7421",
+      "message": "边界不完整不自动否定中间调用价值",
+      "related_sources": [],
+      "rule_id": "OPEN_BOUNDARY",
+      "severity": "medium",
+      "source": {
+        "file": "sample/messages/messages.jsonl.zst",
+        "line": 128,
+        "pointer": "/messages"
+      },
+      "suggested_action": "allow",
+      "trajectory_id": "7daf4462d83e7964ecc06877"
+    },
+    {
+      "category": "risk",
+      "evidence": {
+        "flags": [
+          "ends_without_answer"
+        ]
+      },
+      "issue_id": "issue_5b9fad60333a16bf5b6e",
+      "message": "已有标记未作为自动排除真值",
+      "related_sources": [],
+      "rule_id": "PUBLISHER_FLAG",
+      "severity": "info",
+      "source": {
+        "file": "sample/messages/messages.jsonl.zst",
+        "line": 128,
+        "pointer": "/ft_issues"
+      },
+      "suggested_action": "allow",
+      "trajectory_id": "7daf4462d83e7964ecc06877"
+    }
+  ],
+  "trajectories": {
+    "file": "sample/trajectories/trajectories.jsonl.zst",
+    "line": 128,
+    "data": {
+      "trajectory_id": "7daf4462d83e7964ecc06877",
+      "models": [
+        "Tier B"
+      ],
+      "actor_id": "user258",
+      "repo_id": "repo2444",
+      "started_at": "2026-09-15T18:34:00",
+      "duration_s": 50.384,
+      "n_steps": 13,
+      "n_tool_calls": 8,
+      "n_errors": 1,
+      "task_type": "implementation",
+      "session_kind": "interactive",
+      "is_eval": false,
+      "eval_kind": null,
+      "template_group": null,
+      "template_group_size": 1,
+      "parent_trajectory_id": null,
+      "prompt_language": "en",
+      "last_test_result": null,
+      "git_commit_made": true,
+      "tokens": {
+        "input": 18,
+        "output": 1345,
+        "total": 1363,
+        "cache_read": 641722,
+        "cache_write": 25192
+      },
+      "redaction": {
+        "n": 18
+      },
+      "steps": [
+        {
+          "i": 0,
+          "type": "user",
+          "text": "Ad data directory to gitignore. We do not need to keep results in repo",
+          "ts": "2026-09-15T18:34:01.797Z",
+          "is_wrapper": false
+        },
+        {
+          "i": 1,
+          "type": "tool_call",
+          "tool": "bash",
+          "tool_raw": "Bash",
+          "tool_class": "builtin",
+          "args": "{\"command\": \"cat .gitignore 2>/dev/null; echo \\\"---\\\"; git status --short data/ | head -20\"}",
+          "result": "# node\r\nnode_modules/\r\n\r\n## Secrets ##\r\n.env\r\n\r\n## <MODEL_A> ##\r\n.vendor_a/settings.local.json\r\n<MODEL_A>.local.md\r\n\r\n## <NAME_1> ##\r\n.vscode/*\r\n!.vscode/settings.json\r\n!.vscode/tasks.json\r\n!.vscode/launch.json\r\n!.vscode/extensions.json\r\n*.code-workspace\r\n---\n M data/artificial-analysis/language-models.json\n M data/vendor_b/models-pricing.json\n M data/vendor_c-go/models-pricing.json\n M data/recommendations.json",
+          "ok": true,
+          "duration_ms": 1910.0,
+          "ts": "2026-09-15T18:34:04.013Z"
+        },
+        {
+          "i": 2,
+          "type": "tool_call",
+          "tool": "edit",
+          "tool_raw": "Edit",
+          "tool_class": "builtin",
+          "args": "{\"replace_all\": false, \"file_path\": \"C:\\\\Code\\\\repo2444\\\\.gitignore\", \"old_string\": \"## <NAME_1> ##\", \"new_string\": \"## Data ##\\ndata/\\n\\n## <NAME_1> ##\"}",
+          "result": "The file C:\\Code\\repo2444\\.gitignore has been updated successfully. (file state is current in your context — no need to Read it back)",
+          "ok": true,
+          "duration_ms": 48.0,
+          "ts": "2026-09-15T18:34:09.161Z"
+        },
+        {
+          "i": 3,
+          "type": "assistant",
+          "text": "Since `data/` is currently tracked, adding it to `.gitignore` alone won't stop it from being tracked — I'll also untrack it (files stay on disk, just removed from git).",
+          "model": "Tier B",
+          "out_tokens": 132,
+          "ts": "2026-09-15T18:34:10.759Z"
+        },
+        {
+          "i": 4,
+          "type": "tool_call",
+          "tool": "bash",
+          "tool_raw": "Bash",
+          "tool_class": "builtin",
+          "args": "{\"command\": \"git rm -r --cached data/ >/dev/null && git status --short | head -20\"}",
+          "result": " M .gitignore\nD  data/artificial-analysis/language-models.json\nD  data/vendor_b/models-pricing.json\nD  data/model-mapping.json\nD  data/vendor_c-go/models-pricing.json\nD  data/recommendations.json",
+          "ok": true,
+          "duration_ms": 1606.0,
+          "ts": "2026-09-15T18:34:11.186Z"
+        },
+        {
+          "i": 5,
+          "type": "assistant",
+          "text": "Done. `data/` is now gitignored and untracked (files remain on disk locally, just no longer tracked by git). Let me know if you'd like this committed.",
+          "model": "Tier B",
+          "out_tokens": 52,
+          "ts": "2026-09-15T18:34:13.950Z"
+        },
+        {
+          "i": 6,
+          "type": "user",
+          "text": "commit this",
+          "ts": "2026-09-15T18:34:33.675Z",
+          "is_wrapper": false
+        },
+        {
+          "i": 7,
+          "type": "tool_call",
+          "tool": "bash",
+          "tool_raw": "Bash",
+          "tool_class": "builtin",
+          "args": "{\"command\": \"git add .gitignore data/ && git status --short\"}",
+          "result": "Exit code 1\nThe following paths are ignored by one of your .gitignore files:\ndata\nhint: Use -f if you really want to add them.\nhint: Disable this message with \"git config set advice.addIgnoredFile false\"",
+          "ok": false,
+          "duration_ms": 1364.0,
+          "ts": "2026-09-15T18:34:35.206Z"
+        },
+        {
+          "i": 8,
+          "type": "tool_call",
+          "tool": "bash",
+          "tool_raw": "Bash",
+          "tool_class": "builtin",
+          "args": "{\"command\": \"git add .gitignore && git status --short\"}",
+          "result": "M  .gitignore\nD  data/artificial-analysis/language-models.json\nD  data/vendor_b/models-pricing.json\nD  data/model-mapping.json\nD  data/vendor_c-go/models-pricing.json\nD  data/recommendations.json",
+          "ok": true,
+          "duration_ms": 1365.0,
+          "ts": "2026-09-15T18:34:38.015Z"
+        },
+        {
+          "i": 9,
+          "type": "assistant",
+          "text": "All staged correctly (deletions were already staged by `git rm --cached`).",
+          "model": "Tier B",
+          "out_tokens": 137,
+          "ts": "2026-09-15T18:34:40.550Z"
+        },
+        {
+          "i": 10,
+          "type": "tool_call",
+          "tool": "bash",
+          "tool_raw": "Bash",
+          "tool_class": "builtin",
+          "args": "{\"command\": \"git commit -m \\\"$(cat <<'EOF'\\nIgnore data directory, stop tracking pipeline output\\n\\nGenerated pricing/benchmark data is reproducible output, not source.\\nEOF\\n)\\\"\"}",
+          "result": "[main 2e44cdb] Ignore data directory, stop tracking pipeline output\n 6 files changed, 3 insertions(+), 20251 deletions(-)\n delete mode 100644 data/artificial-analysis/language-models.json\n delete mode 100644 data/vendor_b/models-pricing.json\n delete mode 100644 data/model-mapping.json\n delete mode 100644 data/vendor_c-go/models-pricing.json\n delete mode 100644 data/recommendations.json",
+          "ok": true,
+          "duration_ms": 3016.0,
+          "ts": "2026-09-15T18:34:41.414Z"
+        },
+        {
+          "i": 11,
+          "type": "tool_call",
+          "tool": "bash",
+          "tool_raw": "Bash",
+          "tool_class": "builtin",
+          "args": "{\"command\": \"git log -1 --format=\\\"%B\\\"\"}",
+          "result": "Ignore data directory, stop tracking pipeline output\n\nGenerated pricing/benchmark data is reproducible output, not source.\n\n<ORG_1>: <REDACTED>",
+          "ok": true,
+          "duration_ms": 110.0,
+          "ts": "2026-09-15T18:34:46.063Z"
+        },
+        {
+          "i": 12,
+          "type": "tool_call",
+          "tool": "bash",
+          "tool_raw": "Bash",
+          "tool_class": "builtin",
+          "args": "{\"command\": \"git commit --amend -m \\\"$(cat <<'EOF'\\nIgnore data directory, stop tracking pipeline output\\n\\nGenerated pricing/benchmark data is reproducible output, not source.\\n\\nCo-Authored-By: <MODEL_A> <<EMAIL_1>>\\nEOF\\n)\\\"\"}",
+          "result": "",
+          "ok": null,
+          "duration_ms": 0.0,
+          "ts": "2026-09-15T18:34:51.077Z"
+        }
+      ],
+      "repo": "user258/repo2444",
+      "schema_version": "gatc-v0.5"
+    }
+  },
+  "messages": {
+    "file": "sample/messages/messages.jsonl.zst",
+    "line": 128,
+    "data": {
+      "trajectory_id": "7daf4462d83e7964ecc06877",
+      "models": [
+        "Tier B"
+      ],
+      "n_steps": 13,
+      "task_type": "implementation",
+      "session_kind": "interactive",
+      "is_eval": false,
+      "eval_kind": null,
+      "template_group": null,
+      "template_group_size": 1,
+      "parent_trajectory_id": null,
+      "prompt_language": "en",
+      "last_test_result": null,
+      "git_commit_made": true,
+      "messages": [
+        {
+          "role": "user",
+          "content": "Ad data directory to gitignore. We do not need to keep results in repo",
+          "is_wrapper": false
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_0",
+              "type": "function",
+              "function": {
+                "name": "bash",
+                "arguments": "{\"command\": \"cat .gitignore 2>/dev/null; echo \\\"---\\\"; git status --short data/ | head -20\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_0",
+          "content": "# node\r\nnode_modules/\r\n\r\n## Secrets ##\r\n.env\r\n\r\n## <MODEL_A> ##\r\n.vendor_a/settings.local.json\r\n<MODEL_A>.local.md\r\n\r\n## <NAME_1> ##\r\n.vscode/*\r\n!.vscode/settings.json\r\n!.vscode/tasks.json\r\n!.vscode/launch.json\r\n!.vscode/extensions.json\r\n*.code-workspace\r\n---\n M data/artificial-analysis/language-models.json\n M data/vendor_b/models-pricing.json\n M data/vendor_c-go/models-pricing.json\n M data/recommendations.json"
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_1",
+              "type": "function",
+              "function": {
+                "name": "edit",
+                "arguments": "{\"path\": \"C:\\\\Code\\\\repo2444\\\\.gitignore\", \"old_string\": \"## <NAME_1> ##\", \"new_string\": \"## Data ##\\ndata/\\n\\n## <NAME_1> ##\", \"replace_all\": false}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_1",
+          "content": "The file C:\\Code\\repo2444\\.gitignore has been updated successfully. (file state is current in your context — no need to Read it back)"
+        },
+        {
+          "role": "assistant",
+          "content": "Since `data/` is currently tracked, adding it to `.gitignore` alone won't stop it from being tracked — I'll also untrack it (files stay on disk, just removed from git).",
+          "tool_calls": [
+            {
+              "id": "call_2",
+              "type": "function",
+              "function": {
+                "name": "bash",
+                "arguments": "{\"command\": \"git rm -r --cached data/ >/dev/null && git status --short | head -20\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_2",
+          "content": " M .gitignore\nD  data/artificial-analysis/language-models.json\nD  data/vendor_b/models-pricing.json\nD  data/model-mapping.json\nD  data/vendor_c-go/models-pricing.json\nD  data/recommendations.json"
+        },
+        {
+          "role": "assistant",
+          "content": "Done. `data/` is now gitignored and untracked (files remain on disk locally, just no longer tracked by git). Let me know if you'd like this committed."
+        },
+        {
+          "role": "user",
+          "content": "commit this",
+          "is_wrapper": false
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_3",
+              "type": "function",
+              "function": {
+                "name": "bash",
+                "arguments": "{\"command\": \"git add .gitignore data/ && git status --short\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_3",
+          "content": "Exit code 1\nThe following paths are ignored by one of your .gitignore files:\ndata\nhint: Use -f if you really want to add them.\nhint: Disable this message with \"git config set advice.addIgnoredFile false\""
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_4",
+              "type": "function",
+              "function": {
+                "name": "bash",
+                "arguments": "{\"command\": \"git add .gitignore && git status --short\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_4",
+          "content": "M  .gitignore\nD  data/artificial-analysis/language-models.json\nD  data/vendor_b/models-pricing.json\nD  data/model-mapping.json\nD  data/vendor_c-go/models-pricing.json\nD  data/recommendations.json"
+        },
+        {
+          "role": "assistant",
+          "content": "All staged correctly (deletions were already staged by `git rm --cached`).",
+          "tool_calls": [
+            {
+              "id": "call_5",
+              "type": "function",
+              "function": {
+                "name": "bash",
+                "arguments": "{\"command\": \"git commit -m \\\"$(cat <<'EOF'\\nIgnore data directory, stop tracking pipeline output\\n\\nGenerated pricing/benchmark data is reproducible output, not source.\\nEOF\\n)\\\"\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_5",
+          "content": "[main 2e44cdb] Ignore data directory, stop tracking pipeline output\n 6 files changed, 3 insertions(+), 20251 deletions(-)\n delete mode 100644 data/artificial-analysis/language-models.json\n delete mode 100644 data/vendor_b/models-pricing.json\n delete mode 100644 data/model-mapping.json\n delete mode 100644 data/vendor_c-go/models-pricing.json\n delete mode 100644 data/recommendations.json"
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_6",
+              "type": "function",
+              "function": {
+                "name": "bash",
+                "arguments": "{\"command\": \"git log -1 --format=\\\"%B\\\"\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_6",
+          "content": "Ignore data directory, stop tracking pipeline output\n\nGenerated pricing/benchmark data is reproducible output, not source.\n\n<ORG_1>: <REDACTED>"
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_7",
+              "type": "function",
+              "function": {
+                "name": "bash",
+                "arguments": "{\"command\": \"git commit --amend -m \\\"$(cat <<'EOF'\\nIgnore data directory, stop tracking pipeline output\\n\\nGenerated pricing/benchmark data is reproducible output, not source.\\n\\nCo-Authored-By: <MODEL_A> <<EMAIL_1>>\\nEOF\\n)\\\"\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_7",
+          "content": ""
+        }
+      ],
+      "tools": "[{\"type\": \"function\", \"function\": {\"name\": \"bash\", \"description\": \"Run a shell command.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"command\": {\"type\": \"string\", \"description\": \"The command to run.\"}, \"description\": {\"type\": \"string\", \"description\": \"What the command does.\"}, \"workdir\": {\"type\": \"string\", \"description\": \"Working directory.\"}, \"timeout_ms\": {\"type\": \"integer\", \"description\": \"Timeout in milliseconds.\"}, \"background\": {\"type\": \"boolean\", \"description\": \"Run in the background.\"}}, \"required\": [\"command\"]}}}, {\"type\": \"function\", \"function\": {\"name\": \"edit\", \"description\": \"Replace text in a file.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"path\": {\"type\": \"string\", \"description\": \"File path.\"}, \"old_string\": {\"type\": \"string\", \"description\": \"Text to replace.\"}, \"new_string\": {\"type\": \"string\", \"description\": \"Replacement text.\"}, \"replace_all\": {\"type\": \"boolean\", \"description\": \"Replace every occurrence.\"}}, \"required\": [\"path\", \"old_string\", \"new_string\"]}}}]",
+      "ft_issues": [
+        "ends_without_answer"
+      ],
+      "repo_id": "repo2444",
+      "actor_id": "user258",
+      "repo": "user258/repo2444"
+    }
+  },
+  "labels": {
+    "file": "sample/labels/labels.jsonl.zst",
+    "line": 128,
+    "data": {
+      "trajectory_id": "7daf4462d83e7964ecc06877",
+      "n_steps": 13,
+      "task_type": "implementation",
+      "session_kind": "interactive",
+      "is_eval": false,
+      "eval_kind": null,
+      "template_group": null,
+      "template_group_size": 1,
+      "parent_trajectory_id": null,
+      "prompt_language": "en",
+      "last_test_result": null,
+      "git_commit_made": true,
+      "modified_files": [
+        "C:\\Code\\repo2444\\.gitignore"
+      ],
+      "key_tools": [
+        "bash",
+        "edit"
+      ],
+      "metrics": {
+        "span_count": 13,
+        "llm_span_count": 3,
+        "tool_call_count": 8,
+        "error_count": 1,
+        "error_rate": 0.125,
+        "user_turn_count": 2,
+        "distinct_files_touched": 1,
+        "distinct_models": [
+          "Tier B"
+        ]
+      },
+      "repo_id": "repo2444",
+      "actor_id": "user258",
+      "repo": "user258/repo2444"
+    }
+  },
+  "sft_steps": [
+    {
+      "file": "sample/views/sft_steps.jsonl.zst",
+      "line": 19131,
+      "data": {
+        "trajectory_id": "7daf4462d83e7964ecc06877",
+        "i": 1,
+        "context": [
+          {
+            "type": "user",
+            "text": "Ad data directory to gitignore. We do not need to keep results in repo"
+          }
+        ],
+        "tool": "bash",
+        "tool_raw": "Bash",
+        "args": "{\"command\": \"cat .gitignore 2>/dev/null; echo \\\"---\\\"; git status --short data/ | head -20\"}",
+        "ok": true,
+        "result": "# node\r\nnode_modules/\r\n\r\n## Secrets ##\r\n.env\r\n\r\n## <MODEL_A> ##\r\n.vendor_a/settings.local.json\r\n<MODEL_A>.local.md\r\n\r\n## <NAME_1> ##\r\n.vscode/*\r\n!.vscode/settings.json\r\n!.vscode/tasks.json\r\n!.vscode/launch.json\r\n!.vscode/extensions.json\r\n*.code-workspace\r\n---\n M data/artificial-analysis/language-models.json\n M data/vendor_b/models-pricing.json\n M data/vendor_c-go/models-pricing.json\n M data/recommendations.json",
+        "repo_id": "repo2444",
+        "actor_id": "user258",
+        "repo": "user258/repo2444"
+      }
+    },
+    {
+      "file": "sample/views/sft_steps.jsonl.zst",
+      "line": 19132,
+      "data": {
+        "trajectory_id": "7daf4462d83e7964ecc06877",
+        "i": 2,
+        "context": [
+          {
+            "type": "user",
+            "text": "Ad data directory to gitignore. We do not need to keep results in repo"
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          }
+        ],
+        "tool": "edit",
+        "tool_raw": "Edit",
+        "args": "{\"replace_all\": false, \"file_path\": \"C:\\\\Code\\\\repo2444\\\\.gitignore\", \"old_string\": \"## <NAME_1> ##\", \"new_string\": \"## Data ##\\ndata/\\n\\n## <NAME_1> ##\"}",
+        "ok": true,
+        "result": "The file C:\\Code\\repo2444\\.gitignore has been updated successfully. (file state is current in your context — no need to Read it back)",
+        "repo_id": "repo2444",
+        "actor_id": "user258",
+        "repo": "user258/repo2444"
+      }
+    },
+    {
+      "file": "sample/views/sft_steps.jsonl.zst",
+      "line": 19133,
+      "data": {
+        "trajectory_id": "7daf4462d83e7964ecc06877",
+        "i": 4,
+        "context": [
+          {
+            "type": "user",
+            "text": "Ad data directory to gitignore. We do not need to keep results in repo"
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          },
+          {
+            "type": "tool_call",
+            "text": "edit"
+          },
+          {
+            "type": "assistant",
+            "text": "Since `data/` is currently tracked, adding it to `.gitignore` alone won't stop it from being tracked — I'll also untrack it (files stay on disk, just removed from git)."
+          }
+        ],
+        "tool": "bash",
+        "tool_raw": "Bash",
+        "args": "{\"command\": \"git rm -r --cached data/ >/dev/null && git status --short | head -20\"}",
+        "ok": true,
+        "result": " M .gitignore\nD  data/artificial-analysis/language-models.json\nD  data/vendor_b/models-pricing.json\nD  data/model-mapping.json\nD  data/vendor_c-go/models-pricing.json\nD  data/recommendations.json",
+        "repo_id": "repo2444",
+        "actor_id": "user258",
+        "repo": "user258/repo2444"
+      }
+    },
+    {
+      "file": "sample/views/sft_steps.jsonl.zst",
+      "line": 19134,
+      "data": {
+        "trajectory_id": "7daf4462d83e7964ecc06877",
+        "i": 7,
+        "context": [
+          {
+            "type": "user",
+            "text": "Ad data directory to gitignore. We do not need to keep results in repo"
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          },
+          {
+            "type": "tool_call",
+            "text": "edit"
+          },
+          {
+            "type": "assistant",
+            "text": "Since `data/` is currently tracked, adding it to `.gitignore` alone won't stop it from being tracked — I'll also untrack it (files stay on disk, just removed from git)."
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          },
+          {
+            "type": "assistant",
+            "text": "Done. `data/` is now gitignored and untracked (files remain on disk locally, just no longer tracked by git). Let me know if you'd like this committed."
+          },
+          {
+            "type": "user",
+            "text": "commit this"
+          }
+        ],
+        "tool": "bash",
+        "tool_raw": "Bash",
+        "args": "{\"command\": \"git add .gitignore data/ && git status --short\"}",
+        "ok": false,
+        "result": "Exit code 1\nThe following paths are ignored by one of your .gitignore files:\ndata\nhint: Use -f if you really want to add them.\nhint: Disable this message with \"git config set advice.addIgnoredFile false\"",
+        "repo_id": "repo2444",
+        "actor_id": "user258",
+        "repo": "user258/repo2444"
+      }
+    },
+    {
+      "file": "sample/views/sft_steps.jsonl.zst",
+      "line": 19135,
+      "data": {
+        "trajectory_id": "7daf4462d83e7964ecc06877",
+        "i": 8,
+        "context": [
+          {
+            "type": "user",
+            "text": "Ad data directory to gitignore. We do not need to keep results in repo"
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          },
+          {
+            "type": "tool_call",
+            "text": "edit"
+          },
+          {
+            "type": "assistant",
+            "text": "Since `data/` is currently tracked, adding it to `.gitignore` alone won't stop it from being tracked — I'll also untrack it (files stay on disk, just removed from git)."
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          },
+          {
+            "type": "assistant",
+            "text": "Done. `data/` is now gitignored and untracked (files remain on disk locally, just no longer tracked by git). Let me know if you'd like this committed."
+          },
+          {
+            "type": "user",
+            "text": "commit this"
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          }
+        ],
+        "tool": "bash",
+        "tool_raw": "Bash",
+        "args": "{\"command\": \"git add .gitignore && git status --short\"}",
+        "ok": true,
+        "result": "M  .gitignore\nD  data/artificial-analysis/language-models.json\nD  data/vendor_b/models-pricing.json\nD  data/model-mapping.json\nD  data/vendor_c-go/models-pricing.json\nD  data/recommendations.json",
+        "repo_id": "repo2444",
+        "actor_id": "user258",
+        "repo": "user258/repo2444"
+      }
+    },
+    {
+      "file": "sample/views/sft_steps.jsonl.zst",
+      "line": 19136,
+      "data": {
+        "trajectory_id": "7daf4462d83e7964ecc06877",
+        "i": 10,
+        "context": [
+          {
+            "type": "user",
+            "text": "Ad data directory to gitignore. We do not need to keep results in repo"
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          },
+          {
+            "type": "tool_call",
+            "text": "edit"
+          },
+          {
+            "type": "assistant",
+            "text": "Since `data/` is currently tracked, adding it to `.gitignore` alone won't stop it from being tracked — I'll also untrack it (files stay on disk, just removed from git)."
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          },
+          {
+            "type": "assistant",
+            "text": "Done. `data/` is now gitignored and untracked (files remain on disk locally, just no longer tracked by git). Let me know if you'd like this committed."
+          },
+          {
+            "type": "user",
+            "text": "commit this"
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          },
+          {
+            "type": "assistant",
+            "text": "All staged correctly (deletions were already staged by `git rm --cached`)."
+          }
+        ],
+        "tool": "bash",
+        "tool_raw": "Bash",
+        "args": "{\"command\": \"git commit -m \\\"$(cat <<'EOF'\\nIgnore data directory, stop tracking pipeline output\\n\\nGenerated pricing/benchmark data is reproducible output, not source.\\nEOF\\n)\\\"\"}",
+        "ok": true,
+        "result": "[main 2e44cdb] Ignore data directory, stop tracking pipeline output\n 6 files changed, 3 insertions(+), 20251 deletions(-)\n delete mode 100644 data/artificial-analysis/language-models.json\n delete mode 100644 data/vendor_b/models-pricing.json\n delete mode 100644 data/model-mapping.json\n delete mode 100644 data/vendor_c-go/models-pricing.json\n delete mode 100644 data/recommendations.json",
+        "repo_id": "repo2444",
+        "actor_id": "user258",
+        "repo": "user258/repo2444"
+      }
+    },
+    {
+      "file": "sample/views/sft_steps.jsonl.zst",
+      "line": 19137,
+      "data": {
+        "trajectory_id": "7daf4462d83e7964ecc06877",
+        "i": 11,
+        "context": [
+          {
+            "type": "user",
+            "text": "Ad data directory to gitignore. We do not need to keep results in repo"
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          },
+          {
+            "type": "tool_call",
+            "text": "edit"
+          },
+          {
+            "type": "assistant",
+            "text": "Since `data/` is currently tracked, adding it to `.gitignore` alone won't stop it from being tracked — I'll also untrack it (files stay on disk, just removed from git)."
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          },
+          {
+            "type": "assistant",
+            "text": "Done. `data/` is now gitignored and untracked (files remain on disk locally, just no longer tracked by git). Let me know if you'd like this committed."
+          },
+          {
+            "type": "user",
+            "text": "commit this"
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          },
+          {
+            "type": "assistant",
+            "text": "All staged correctly (deletions were already staged by `git rm --cached`)."
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          }
+        ],
+        "tool": "bash",
+        "tool_raw": "Bash",
+        "args": "{\"command\": \"git log -1 --format=\\\"%B\\\"\"}",
+        "ok": true,
+        "result": "Ignore data directory, stop tracking pipeline output\n\nGenerated pricing/benchmark data is reproducible output, not source.\n\n<ORG_1>: <REDACTED>",
+        "repo_id": "repo2444",
+        "actor_id": "user258",
+        "repo": "user258/repo2444"
+      }
+    },
+    {
+      "file": "sample/views/sft_steps.jsonl.zst",
+      "line": 19138,
+      "data": {
+        "trajectory_id": "7daf4462d83e7964ecc06877",
+        "i": 12,
+        "context": [
+          {
+            "type": "user",
+            "text": "Ad data directory to gitignore. We do not need to keep results in repo"
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          },
+          {
+            "type": "tool_call",
+            "text": "edit"
+          },
+          {
+            "type": "assistant",
+            "text": "Since `data/` is currently tracked, adding it to `.gitignore` alone won't stop it from being tracked — I'll also untrack it (files stay on disk, just removed from git)."
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          },
+          {
+            "type": "assistant",
+            "text": "Done. `data/` is now gitignored and untracked (files remain on disk locally, just no longer tracked by git). Let me know if you'd like this committed."
+          },
+          {
+            "type": "user",
+            "text": "commit this"
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          },
+          {
+            "type": "assistant",
+            "text": "All staged correctly (deletions were already staged by `git rm --cached`)."
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          }
+        ],
+        "tool": "bash",
+        "tool_raw": "Bash",
+        "args": "{\"command\": \"git commit --amend -m \\\"$(cat <<'EOF'\\nIgnore data directory, stop tracking pipeline output\\n\\nGenerated pricing/benchmark data is reproducible output, not source.\\n\\nCo-Authored-By: <MODEL_A> <<EMAIL_1>>\\nEOF\\n)\\\"\"}",
+        "ok": null,
+        "result": "",
+        "repo_id": "repo2444",
+        "actor_id": "user258",
+        "repo": "user258/repo2444"
+      }
+    }
+  ],
+  "error_recovery": [
+    {
+      "file": "sample/views/error_recovery.jsonl.zst",
+      "line": 469,
+      "data": {
+        "trajectory_id": "7daf4462d83e7964ecc06877",
+        "failed_tool": "bash",
+        "args": "{\"command\": \"git add .gitignore data/ && git status --short\"}",
+        "error": "Exit code 1\nThe following paths are ignored by one of your .gitignore files:\ndata\nhint: Use -f if you really want to add them.\nhint: Disable this message with \"git config set advice.addIgnoredFile false\"",
+        "recovery": [
+          {
+            "type": "tool_call",
+            "tool": "bash",
+            "text": ""
+          },
+          {
+            "type": "assistant",
+            "tool": null,
+            "text": "All staged correctly (deletions were already staged by `git rm --cached`)."
+          },
+          {
+            "type": "tool_call",
+            "tool": "bash",
+            "text": ""
+          },
+          {
+            "type": "tool_call",
+            "tool": "bash",
+            "text": ""
+          }
+        ],
+        "recovered": true,
+        "recovery_kind": "same_tool_new_args",
+        "repo_id": "repo2444",
+        "actor_id": "user258",
+        "repo": "user258/repo2444"
+      }
+    }
+  ]
+}

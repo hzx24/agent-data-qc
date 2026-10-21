@@ -1,0 +1,8 @@
+{
+  "policy": "balanced",
+  "review_fraction": 0.1,
+  "audit_fraction_of_budget": 0.2,
+  "seed": 20261020,
+  "expected_revision": "216fb6e2c9449dd8eeab0a3b9233e89ea08d1f7a",
+  "expected_trajectories": 1189
+}

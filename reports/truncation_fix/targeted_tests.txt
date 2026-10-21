@@ -1,0 +1,6 @@
+test_truncation_literal_admitted_and_notice_deferred_in_both_policies (test_qc.IntegrationTest) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.035s
+
+OK

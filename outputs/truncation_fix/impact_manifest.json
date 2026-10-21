@@ -1,0 +1,21 @@
+{
+  "files_sha256": {
+    "outputs/truncation_fix/before/balanced/run_manifest.json": "ae6e47b922424ee69fca8340379d0a45b97cb661e602a7bede56000d01eb34ce",
+    "outputs/balanced/run_manifest.json": "59d2d238a57f4092d7f73fb9f09825e25813d045a406d72402d1849159de6d0d",
+    "outputs/truncation_fix/before/conservative/run_manifest.json": "f3e6a22696dc23da017e96cbe5d6879599f7b3bf3cf35affe6cd676f72e8aa62",
+    "outputs/conservative/run_manifest.json": "fd0a82d5a0f5af2d761d0932f57f24dd46f87afd387a81482f20ca9db467aae3",
+    "/Users/huangzixuan/Desktop/研究生/大模型实习/基元律动/coding test/scripts/compare_truncation_fix.py": "b3ef2bc3fb4a698fbf3f54419682138e1964f46a4066966bbc78f0ad0d8c32d4",
+    "scripts/compare_policies.py": "88e092900893d3525cc57b23b7cbd4e8f008703b8ef88cd33810a97e1e34c6db",
+    "scripts/prepare_review.py": "b2d22ab7b13e2aa94ba9e10b2f9c7f9958a5d9fa4d1a6d96995bec6536d39fb0",
+    "tests/fixtures/truncation_cases.json": "624c762242b396b23372e647d653d4124156301e9925f5918ca20c2b3f514503",
+    "outputs/truncation_fix/impact.json": "d554dd011976d01aaac86d80f05be09ad930e82541f588ea15e6b0d11b1e706f",
+    "outputs/truncation_fix/issue_changes.jsonl": "2d477da7822a10cd566bc6a479311962d7fa03ca80015c124e9d25d27ee2a32f",
+    "outputs/truncation_fix/before/comparison/comparison.json": "cb85f6dedca88a69f21335405bfb08d7069ce6834bab087f57a3e9f54c5a7bba",
+    "outputs/comparison/comparison.json": "cb85f6dedca88a69f21335405bfb08d7069ce6834bab087f57a3e9f54c5a7bba",
+    "reports/truncation_fix/baseline_code/agent_qc/__init__.py": "b5d9ed2f427d2c5e3d33c0406f3b879eab7901452f40570251f03a9338212454",
+    "reports/truncation_fix/baseline_code/agent_qc/__main__.py": "6fb0555b96da7aeb16068c3ca7978966c7d61068e0c2977cff8dac4499153a11",
+    "reports/truncation_fix/baseline_code/agent_qc/pipeline.py": "34e29da597a817082ed84b0f07e816d16b2cac894a4dc2e0dbaf8a81c1a86dca",
+    "reports/truncation_fix/baseline_code/agent_qc/rules.py": "6460c6014c580734936f05d1f52a26ee1557273b93b559aa1faf7af14a1991d0"
+  },
+  "note": "修复前后允许代码不同；原始数据、依赖和配置必须相同。原运行产物和代码均经哈希核对。"
+}

@@ -1,0 +1,810 @@
+{
+  "status": "human_review_complete",
+  "authoring": "提交者已逐条核对并确认，最终样本判断由提交者本人负责。",
+  "items": [
+    {
+      "index": 1,
+      "trajectory_id": "e77456b90dbeb23873305aea",
+      "recommendation": "admit",
+      "finding_type": "合法探索与恢复",
+      "rationale": "保留工具使用过程。步骤552的xargs长度错误后，553改用find -exec取得文件清单，是针对性调整；末尾编辑仍有完整替换参数。用户拒绝过某次操作和开放结尾均不等于数据损坏。",
+      "uncertainty": "584步仅作针对性核对；末尾582/583状态未知且结果为空，不能据此认定修改已经生效或整个项目完成。",
+      "change_conditions": "若原始日志证明末尾修改未获授权或上下文缺失影响调用解释，转暂缓；如只训练已完成任务，需额外完成证据或按目标另行筛选。",
+      "evidence": [
+        {
+          "table": "trajectories",
+          "pointer": "/steps/552/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/553/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/583"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "trajectory_id": "8a315ebdf674f909d7880577",
+      "recommendation": "defer",
+      "finding_type": "关键动作内容不足",
+      "rationale": "暂缓与管线一致。多个edit只记录space_age.cpp/h的路径，不能重建修改内容；操作返回已应用及末尾自行展示测试结果，不能补回缺失的动作参数。",
+      "uncertainty": "无法断言真实修改失败，也不确定是采集丢参还是原工具隐式处理。",
+      "change_conditions": "补原生调用、完整补丁和工具契约；若完整参数可恢复并与messages对齐，可重新入选。",
+      "evidence": [
+        {
+          "table": "messages",
+          "pointer": "/messages/5/tool_calls/0"
+        },
+        {
+          "table": "messages",
+          "pointer": "/messages/7/tool_calls/0"
+        },
+        {
+          "table": "messages",
+          "pointer": "/messages/11/tool_calls/0"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "trajectory_id": "a4f4652bf1f2db578146d1c5",
+      "recommendation": "defer",
+      "finding_type": "语义证据不足；状态层级疑问",
+      "rationale": "建议由入选改为暂缓整轨迹。跨步骤比较：密度表明确要求cm³，而最终回答仍称体积为units³，直接乘密度的量纲依据未给出；步骤5的ok=true同时返回退出127，步骤7改python3恢复，不可把ok当进程成功。另有circuit problem的无关思考。不是因为发生失败而暂缓。",
+      "uncertainty": "不能证明实际质量算错：输入可能默认cm，ok也可能仅表示工具传输成功。本结论针对整轨迹正向监督中未经确认的单位/成功含义；尚未重放mesh工具。",
+      "change_conditions": "补STL坐标单位、mesh工具单位约定与数值验收；若证实单位一致且屏蔽不可靠思考/成功标签，可保留过程片段。",
+      "evidence": [
+        {
+          "table": "trajectories",
+          "pointer": "/steps/5/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/7/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/9/result",
+          "contains": "Ensure volume"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/11/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/14/text"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/15/text"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "trajectory_id": "61bcfad0dd5ffc9dbdd81225",
+      "recommendation": "admit",
+      "finding_type": "有证据的代码检索",
+      "rationale": "保留。步骤3定位两个RunOnce声明及调用，5/6继续区分s3presign的调用与memopayload的辅助函数使用，最终按包区分同名Runner；不是只凭名字猜调用关系。",
+      "uncertainty": "grep的覆盖受语言、目录和过滤条件限制；评测来源不等于已证明与目标评测泄漏。",
+      "change_conditions": "目标评测集确有重合则按来源隔离；若补充动态调用或其他语言调用反例，需修正最终无调用的断言。",
+      "evidence": [
+        {
+          "table": "trajectories",
+          "pointer": "/steps/3/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/5/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/6/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/10/text"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "trajectory_id": "4dc74ff5da4b7112df5bf56e",
+      "recommendation": "admit",
+      "finding_type": "合法派生视图截短",
+      "rationale": "保留主messages轨迹。管线报告的VIEW_TRUNCATED是原始结果的前缀截短，而非原文已损坏；步骤82有实际push返回，83的已推送说明有就近支持。",
+      "uncertainty": "没有独立确认远端PR/CI最终状态；84步没有逐段验收SDK迁移语义。",
+      "change_conditions": "如训练改为仅使用sft_steps并需完整README上下文，应从主表补足再生成；远端CI失败且训练仅收成功任务时改选。",
+      "evidence": [
+        {
+          "table": "trajectories",
+          "pointer": "/steps/10/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/82/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/83/text"
+        },
+        {
+          "table": "sft_steps",
+          "line": 21228,
+          "pointer": "/result"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "trajectory_id": "a6186a70d50f69b4fc9b114b",
+      "recommendation": "admit",
+      "finding_type": "简短但充分的检索",
+      "rationale": "保留。读取postgres.go的结果中有DB结构和NewDB返回store.Driver，末尾回答DB及对应路径；调用少不是无价值。",
+      "uncertainty": "未验收仓库全部版本；评测标记和较大模板组仅是来源/重复风险，未证明全文重复或目标评测重叠。",
+      "change_conditions": "目标评测去重出现确定重合则隔离；不同版本结构名称变化需按版本重核。",
+      "evidence": [
+        {
+          "table": "trajectories",
+          "pointer": "/steps/3/result",
+          "contains": "type DB struct"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/4/text"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "trajectory_id": "1dfa68e4d45e1809564d014f",
+      "recommendation": "admit",
+      "finding_type": "未知状态下仍有可用探索",
+      "rationale": "保留探索过程。步骤10的路径错误后12定位、14读取替代路径，命令和返回可见；全为ok=null不应当作全失败。结尾有cost limit和autosubmit，未完成不抹去中间探索。",
+      "uncertainty": "没有最终修复验收；151/152是终止控制而不是成功动作，不能把它们变为任务完成奖励。",
+      "change_conditions": "若必须使用成功任务或已知评测与目标重合则隔离；若消费端无法区分终止控制步骤，应先过滤控制目标、另产派生片段。",
+      "evidence": [
+        {
+          "table": "trajectories",
+          "pointer": "/steps/10"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/12"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/14"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/151"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/152"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "trajectory_id": "947bff5d1e83d3a444a6d0b3",
+      "recommendation": "admit",
+      "finding_type": "可消费不等于计划正确",
+      "rationale": "保留读问题、读域、写两个计划的工具工作流。输入输出路径与调用可追踪；没有验证器结果不自动构成损坏。最终声称valid应视为待验收断言。",
+      "uncertainty": "未运行PDDL解析或执行验证，不保证计划可执行或达成目标；不将写文件成功当成计划正确。",
+      "change_conditions": "若用于成功计划监督，需PDDL验证器逐计划通过；若发现动作前置条件或语法反例，则隔离相关最终答案或暂缓整轨迹。",
+      "evidence": [
+        {
+          "table": "trajectories",
+          "pointer": "/steps/3/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/5/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/9/args"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/11/args"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/13/text"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "trajectory_id": "91de80047c831bb903c2a4e2",
+      "recommendation": "defer",
+      "finding_type": "需求与产物的跨步骤冲突",
+      "rationale": "建议由入选改为暂缓。步骤0要求X-TLM-Mode: exfil，76实际写入仅为http.header; content:\"exfil\"，未约束字段名，81却声称五项全部满足。77/78的一正一负pcap测试不足以支撑普遍无误报。",
+      "uncertainty": "可构造X-Other: exfil但缺失指定头的候选反例；尚未重放Suricata，不声称该反例已产生警报。原记录的试错过程仍有价值。",
+      "change_conditions": "补充只改变头名的对照pcap、验证实际告警和规则约束；修复后重新验收，或将最终错误断言屏蔽后独立保留恢复片段。",
+      "evidence": [
+        {
+          "table": "trajectories",
+          "pointer": "/steps/0/text",
+          "contains": "X-TLM-Mode"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/76/result",
+          "contains": "http.header"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/77/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/78/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/81/text"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "trajectory_id": "788f75ec42d6701f1810c3cc",
+      "recommendation": "admit",
+      "finding_type": "目标是形式化而非证明",
+      "rationale": "保留。用户要求把本地开放猜想形式化而非证明；步骤15写入定义/猜想声明，16解释结构。不能仅因存在sorry或没有证明而按失败排除。",
+      "uncertainty": "未运行Lean编译，也未验证形式化与自然语言数学命题等价；模板组共享开头不是重复真值。",
+      "change_conditions": "若后续要求可编译或无sorry，需Lean检查与数学审查；若发现命题条件不等价应暂缓数学答案监督。",
+      "evidence": [
+        {
+          "table": "trajectories",
+          "pointer": "/steps/0/text"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/15/args"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/16/text"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "trajectory_id": "a11e0688dc7f141f22ea507b",
+      "recommendation": "defer",
+      "finding_type": "跨表差异与缺失证据",
+      "rationale": "暂缓。原步骤2067与sft_steps结果在3994偏移附近出现arize-vendor_c/arize-<ORG_40>差异，不能按合法前缀证明相同；messages1879等有WITHHELD，3068搜索参数为空。即使差异来自独立脱敏，其他缺失仍未解除。",
+      "uncertainty": "不把脱敏差异判为已确认损坏；2333步仅核对关键触发位置及上下文，未逐字复核整轨迹。",
+      "change_conditions": "补统一脱敏映射/生成顺序、被移除调用及原始搜索契约；验证全链一致后才可重选或可靠切片。",
+      "evidence": [
+        {
+          "table": "trajectories",
+          "pointer": "/steps/2067/result",
+          "contains": "arize-vendor_c"
+        },
+        {
+          "table": "messages",
+          "pointer": "/messages/1879"
+        },
+        {
+          "table": "messages",
+          "pointer": "/messages/3068/tool_calls/0"
+        },
+        {
+          "table": "sft_steps",
+          "line": 11193,
+          "pointer": "/result"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "trajectory_id": "7bce5aa6ee3bc6fa68957d61",
+      "recommendation": "defer",
+      "finding_type": "确认标记误报；兼容性待修",
+      "rationale": "仍暂缓，但已纠正初版RECORDED_TRUNCATION理由：步骤27的[TRUNCATED]位于测试断言toBe中，是合法代码常量，修复后仅记录非阻断TRUNCATION_LITERAL。messages24的edit具有old_string及空new_string，是合法删除；当前阻断原因仅为file_path与发布schema的path不一致。",
+      "uncertainty": "该处误报已通过回归和两策略全量扫描修正，不代表所有语言或截断场景均已覆盖；即使末尾typecheck/lint通过，也不能证明发布schema可直接消费。",
+      "change_conditions": "为file_path提供可验证的工具契约或无损规范化并回归，再评估入选；若扩展标记识别语境，需继续补合法常量与真实截断的正反例，不能全局禁用。",
+      "evidence": [
+        {
+          "table": "trajectories",
+          "pointer": "/steps/27/result",
+          "contains": "toBe('[TRUNCATED]')"
+        },
+        {
+          "table": "messages",
+          "pointer": "/messages/24/tool_calls/0"
+        },
+        {
+          "table": "messages",
+          "pointer": "/tools",
+          "decoded_pointer": "/1"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/169/result"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "trajectory_id": "4e7f55928c33fd2fff1db7af",
+      "recommendation": "defer",
+      "finding_type": "表示不兼容但补丁未必缺失",
+      "rationale": "暂缓现有表示。messages27的replacements含filePath/oldString/newString，35的filePaths是批量读取；数据里有实质内容，不应叫作路径缺参。阻断点是发布工具schema无法表达这些参数变体。",
+      "uncertainty": "原工具可能完全合法；622步仅核对触发位置与边界，未验收全部代码变更。",
+      "change_conditions": "提供原始批量工具定义或经测试的无损拆分映射，保持调用返回和顺序一致后重选。",
+      "evidence": [
+        {
+          "table": "messages",
+          "pointer": "/messages/27/tool_calls/0"
+        },
+        {
+          "table": "messages",
+          "pointer": "/messages/35/tool_calls/0"
+        },
+        {
+          "table": "messages",
+          "pointer": "/tools"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "trajectory_id": "fffa584c9e10be4e287f1a94",
+      "recommendation": "defer",
+      "finding_type": "动作被摘要替代",
+      "rationale": "暂缓。bash为空对象，write/edit只保留_dirty_files文件名，不能推断具体命令或改动。与包含完整嵌套补丁的参数变体应分开处理。",
+      "uncertainty": "不能推断真实操作没有发生；很可能是采集/转换丢失内容，现有记录不能作为完整动作监督。",
+      "change_conditions": "补原调用日志、文件diff或内容；若只恢复文件名依旧不能重建动作，则继续暂缓。",
+      "evidence": [
+        {
+          "table": "messages",
+          "pointer": "/messages/1/tool_calls/0"
+        },
+        {
+          "table": "messages",
+          "pointer": "/messages/3/tool_calls/0"
+        },
+        {
+          "table": "messages",
+          "pointer": "/messages/87/tool_calls/0"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "trajectory_id": "9b0406d7ec2f9dc41a7d1824",
+      "recommendation": "defer",
+      "finding_type": "嵌套JSON仍缺修改内容",
+      "rationale": "暂缓。messages11/13的parameters虽然可再解析，但只含relativeWorkspacePath，不含补丁或新内容。双层JSON不是充分恢复手段。",
+      "uncertainty": "可能另有未发布的工作区状态或私有工具语义；不能凭assistant意图文本补造实际修改。",
+      "change_conditions": "补原生edit参数/变更diff及映射，再核对schema；只做JSON解包不改变结论。",
+      "evidence": [
+        {
+          "table": "messages",
+          "pointer": "/messages/11/tool_calls/0"
+        },
+        {
+          "table": "messages",
+          "pointer": "/messages/13/tool_calls/0"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "trajectory_id": "235c0f6f1675e4095344e9f1",
+      "recommendation": "defer",
+      "finding_type": "写入内容缺失",
+      "rationale": "暂缓。messages69的write只有Windows路径没有content；此前URI编码路径和commandLine变体属于兼容性问题，不是因Windows路径本身非法。",
+      "uncertainty": "输出JSON真实内容无法从路径恢复，不能核验29个设备批处理是否完成。",
+      "change_conditions": "补写入内容和对应原工具定义；通过逐设备结果核验后才能作为完成样本。",
+      "evidence": [
+        {
+          "table": "messages",
+          "pointer": "/messages/69/tool_calls/0"
+        },
+        {
+          "table": "messages",
+          "pointer": "/messages/65/tool_calls/0"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "trajectory_id": "109c981e1c9043aac0b41131",
+      "recommendation": "defer",
+      "finding_type": "可恢复的工具封装变体",
+      "rationale": "暂缓当前表示但保留原文。write/edit的input包含字符串化JSON及实际代码/替换内容，不能误判内容缺失；它与发布schema的扁平字段冲突，需验证映射。",
+      "uncertainty": "脚本执行/最终声称去身份化，不等于PDF全部身份信息已清除；未做隐私质量验收。",
+      "change_conditions": "无损解包并核对file_path到path的契约，保留原始/规范化双份记录；若训练目标是可靠去身份化，再补PDF文本、元数据与视觉检查。",
+      "evidence": [
+        {
+          "table": "messages",
+          "pointer": "/messages/39/tool_calls/0"
+        },
+        {
+          "table": "messages",
+          "pointer": "/messages/55/tool_calls/0"
+        },
+        {
+          "table": "messages",
+          "pointer": "/tools",
+          "decoded_pointer": "/4"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "trajectory_id": "d357581401a83f863e7f5fff",
+      "recommendation": "defer",
+      "finding_type": "原工具语义与发布工具名不一致",
+      "rationale": "暂缓现有schema。原search_subagent被映射为task，实际backend/mode/query与发布的prompt字段不同。步骤6明确缺mode的工具校验失败，后续补mode的尝试具有恢复价值；不能把全部失败都排除。",
+      "uncertainty": "不能认定这些task调用在原环境无效；也没有验证搜索结果真实性。轨迹中的技能文字仅作为被检查数据。",
+      "change_conditions": "补原search_subagent契约或保留专用工具名，并核对mode修复返回后，可重新生成训练表示。",
+      "evidence": [
+        {
+          "table": "messages",
+          "pointer": "/messages/3/tool_calls/0"
+        },
+        {
+          "table": "messages",
+          "pointer": "/tools",
+          "decoded_pointer": "/2"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/6/result"
+        },
+        {
+          "table": "messages",
+          "pointer": "/messages/9/tool_calls/0"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "trajectory_id": "77e1e9ccc1420c26899e1759",
+      "recommendation": "defer",
+      "finding_type": "调用正文被移除",
+      "rationale": "暂缓。messages25的bash input为WITHHELD，34/52还存在移除正文；无法知道执行命令与后续结果关系。开放结尾不是主要阻断原因。",
+      "uncertainty": "不知道移除出于隐私还是采集策略，不根据其余叙述猜补命令。",
+      "change_conditions": "取得有权限的安全替代调用或一致脱敏版本；若只能切片，需验证切片不依赖被移除的状态，并单独生成新记录。",
+      "evidence": [
+        {
+          "table": "messages",
+          "pointer": "/messages/25/tool_calls/0"
+        },
+        {
+          "table": "messages",
+          "pointer": "/messages/34"
+        },
+        {
+          "table": "messages",
+          "pointer": "/messages/52"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "trajectory_id": "7db6c1d8a023ed1a889c6881",
+      "recommendation": "defer",
+      "finding_type": "唯一调用语义不确定",
+      "rationale": "暂缓。唯一glob调用input为50 **/Dockerfile，与pattern schema不兼容；50是否为数量限制、如何拆参数均未有契约。不能为了保留唯一调用而臆造映射。",
+      "uncertainty": "原工具可能接受这种字符串简写；未知状态和空返回也不足以证明glob失败。",
+      "change_conditions": "补glob简写解析契约及原始返回；验证无损转换后可入选，而不是因调用少排除。",
+      "evidence": [
+        {
+          "table": "messages",
+          "pointer": "/messages/19/tool_calls/0"
+        },
+        {
+          "table": "messages",
+          "pointer": "/tools",
+          "decoded_pointer": "/0"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/21"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "trajectory_id": "7daf4462d83e7964ecc06877",
+      "recommendation": "admit",
+      "finding_type": "失败后有针对性恢复",
+      "rationale": "保留。步骤7添加被忽略文件失败，8改添加.gitignore，10提交成功。12最后amend无返回，不抵消前面可见的恢复链。",
+      "uncertainty": "不能确认最后amend完成，不应给整任务成功标签；保守策略只因开放结尾暂缓。",
+      "change_conditions": "若需要最终提交状态，补git log/status；若回补显示amend意图与用户要求冲突，隔离该尾部。",
+      "evidence": [
+        {
+          "table": "trajectories",
+          "pointer": "/steps/7"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/8"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/10/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/12"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "trajectory_id": "e8e7875ed949d0b4242d3da4",
+      "recommendation": "admit",
+      "finding_type": "状态成功文本仍可含失败",
+      "rationale": "保留恢复过程。步骤2读取过大后4限行读取；23缺numpy，24管道返回ok=true但文本为PEP668限制，25换安装方式，26求解器有optimal反馈。不把24视为已安装。",
+      "uncertainty": "求解器optimal并不证明建模满足原问题；评测来源是否与业务评测重合未知。",
+      "change_conditions": "补模型约束与独立答案验收；目标评测确定重合则隔离。若以ok监督命令成功，必须先拆分状态层级。",
+      "evidence": [
+        {
+          "table": "trajectories",
+          "pointer": "/steps/2/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/4/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/24/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/25/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/26/result"
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "trajectory_id": "753530dd642d338581edde8e",
+      "recommendation": "admit",
+      "finding_type": "权限失败后的工具调整",
+      "rationale": "保留。步骤4搜索EACCES后5改shell grep取得结果；末尾读取测试内容而无最终回答，仍有可消费的中间过程。",
+      "uncertainty": "最后读取测试不是测试执行通过；评测来源和无最终答案都不证明记录损坏。",
+      "change_conditions": "与目标基准确定重合则隔离；若收敛到只收完整成功修复，应补测试执行及最终diff。",
+      "evidence": [
+        {
+          "table": "trajectories",
+          "pointer": "/steps/4/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/5"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/41"
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "trajectory_id": "34b796f5a03369d11b40e110",
+      "recommendation": "defer",
+      "finding_type": "工具动作来源可疑",
+      "rationale": "建议由入选改为暂缓。步骤0/2/4/6/8的vendor_a_output空参数返回启动横幅、费用、加文件交互，更像被动控制台输出；转为模型应主动调用的工具目标可能误导训练。与普通ok未知不同。",
+      "uncertainty": "仅凭日志形态不能证明不存在真实可调用vendor_a_output工具；需要原日志/转换契约，不能直接判损坏。",
+      "change_conditions": "提供真实可调用契约及动作来源证明可改判；若确为被动输出，应重编码为观测并验证角色配对，或按目标无工具排除派生记录。",
+      "evidence": [
+        {
+          "table": "trajectories",
+          "pointer": "/steps/0"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/4"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/6"
+        },
+        {
+          "table": "messages",
+          "pointer": "/tools"
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "trajectory_id": "938fb20e9c2c354b2ac2f6f6",
+      "recommendation": "admit",
+      "finding_type": "单调用与视图截短的合法边界",
+      "rationale": "保留。用户请求解释adjudication_engine.py，步骤2完整读取11116字符、3回答。sft_steps保留4000字符合法前缀；当前使用主messages，单次检索已能形成有用链。",
+      "uncertainty": "尚未逐项验收代码解释；如果改为只消费截短view，部分解释可能缺少可见依据。",
+      "change_conditions": "训练入口改成sft_steps时，需补足原始上下文并重核回答；发现解释与代码冲突时隔离相关答案。",
+      "evidence": [
+        {
+          "table": "trajectories",
+          "pointer": "/steps/1/text"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/2/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/3/text"
+        },
+        {
+          "table": "sft_steps",
+          "line": 43229,
+          "pointer": "/result"
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "trajectory_id": "eecd796755bb58f80dfefafa",
+      "recommendation": "defer",
+      "finding_type": "关键观测系统性缺失",
+      "rationale": "建议由入选改为暂缓。52次工具调用的result全部为空，包含读取OVERVIEW、DEVELOP_PHASE、代码等；后续却依赖这些信息作设计与宣称完成。不是因为52个ok=null，而是输入观测链无法核证。末尾edit有完整参数，不能扩大为所有动作缺参。",
+      "uncertainty": "空结果可能是导出时删除，或来自环境另有不可见上下文，尚不能证明实际开发失败。",
+      "change_conditions": "补原始读取结果、调用返回或可定位的仓库快照后重新构建观测链；若只保留独立编辑片段，需验证其前置上下文充分。",
+      "evidence": [
+        {
+          "table": "trajectories",
+          "pointer": "/steps/2"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/3"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/4"
+        },
+        {
+          "table": "messages",
+          "pointer": "/messages/2"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/82"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/83/text"
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "trajectory_id": "c4704adb2a18332df39148b2",
+      "recommendation": "admit",
+      "finding_type": "派生恢复标签歧义不否定主轨迹",
+      "rationale": "保留messages探索链，但禁用有歧义的恢复成功含义。步骤36/38两次相同找不到test_fix.py错误，恢复view无法唯一关联；40随后创建脚本。23个失败不等于23个无价值片段。",
+      "uncertainty": "150的自写测试反馈不证明修复通过外部验收；恢复窗口、评测重合及最后终止状态均未确证。",
+      "change_conditions": "补原生调用ID可消除恢复表歧义；若改为训练恢复成功标签，须逐个核对正确关联和业务结果。目标评测重合则隔离。",
+      "evidence": [
+        {
+          "table": "trajectories",
+          "pointer": "/steps/36/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/38/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/40/args"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/150/result"
+        },
+        {
+          "table": "error_recovery",
+          "line": 959,
+          "pointer": ""
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "trajectory_id": "d101de2b80d1abf850b43f07",
+      "recommendation": "admit",
+      "finding_type": "无命中对照仍需证据核验",
+      "rationale": "保留。先读取目标组件、hook及参考页面，发现参考页实际用ErrorState而非404；步骤8主动说明差异。7新增error判断、10查看diff、11提交返回与12提交号一致。",
+      "uncertainty": "无规则命中不等于语义完全正确；未见针对路由错误的自动化运行测试，未验收运行时行为。",
+      "change_conditions": "若业务要求测试通过才入选，需补路由回归测试；发现404违反产品定义则暂缓最终修复监督。",
+      "evidence": [
+        {
+          "table": "trajectories",
+          "pointer": "/steps/5/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/7/args"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/8/text"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/11/result"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/12/text"
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "trajectory_id": "f6ee1f33426b334fc6e6d1a1",
+      "recommendation": "admit",
+      "finding_type": "失败探索与终止控制",
+      "rationale": "保留CTF探索过程的可见命令与反馈。虽然29次状态未知，但这些是实际命令而非被动横幅；末尾因cost limit退出，不能当作找到flag。",
+      "uncertainty": "没有有效flag及成功验收；评测来源可能影响去污染。终止控制不应变成一般解题工具的成功目标。",
+      "change_conditions": "如果训练只收已解决CTF，需可验证flag或权威验收；目标评测重合时隔离；消费端不能区分exit_cost则先屏蔽该控制步骤。",
+      "evidence": [
+        {
+          "table": "trajectories",
+          "pointer": "/steps/0/text"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/2"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/57/text"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/58"
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "trajectory_id": "4fd7f1ffc160d75c53ad659f",
+      "recommendation": "admit",
+      "finding_type": "交互确认与开放结尾",
+      "rationale": "保留。开头acquaint很短但并非无用户输入；末尾164明确提出提交说明、165用户go确认、166才执行push，并有preflight/变更摘要反馈。这条有实际交互授权，不能因最后是tool而认定坏轨迹。",
+      "uncertainty": "167步针对性复核，未逐字验收Rust生命周期实现；preflight文本不独立保证全部代码语义正确。",
+      "change_conditions": "若实际push返回含未处理错误应限制完成宣称；若只收完整问答应补最终确认，但工具过程训练无须因此整条丢弃。",
+      "evidence": [
+        {
+          "table": "trajectories",
+          "pointer": "/steps/0/text"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/164/text"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/165/text"
+        },
+        {
+          "table": "trajectories",
+          "pointer": "/steps/166/result"
+        }
+      ]
+    }
+  ]
+}

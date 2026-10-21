@@ -1,0 +1,11 @@
+test_actual_markers_still_block_even_when_reading_source (test_qc.TruncationRegressionTest) ... ok
+test_evidence_offsets_point_back_to_original_text (test_qc.TruncationRegressionTest) ... ok
+test_literal_does_not_hide_second_marker_on_same_line (test_qc.TruncationRegressionTest) ... ok
+test_quoted_constants_are_not_observation_loss (test_qc.TruncationRegressionTest) ... ok
+test_real_source_literal_and_recorded_omission (test_qc.TruncationRegressionTest) ... ok
+test_unrecognised_context_is_uncertain_not_silently_allowed (test_qc.TruncationRegressionTest) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK

@@ -1,0 +1,197 @@
+{
+  "data_revision": "216fb6e2c9449dd8eeab0a3b9233e89ea08d1f7a",
+  "policies": {
+    "balanced": {
+      "raw_and_config_and_dependencies_identical": true,
+      "non_truncation_findings_identical": true,
+      "before_code_sha256": "76d3aeff7d4b1e84d06187e7950b605ff80fec3143bbfef14af81f227a2f386e",
+      "after_code_sha256": "ed6cb9e67d5c4d09c82f0ad241307f5d1bf9c597fe9a1fd16488d2b51e8f8057",
+      "trajectory_count": 1189,
+      "decision_counts_before": {
+        "admit": 862,
+        "defer": 245,
+        "exclude": 82
+      },
+      "decision_counts_after": {
+        "admit": 862,
+        "defer": 245,
+        "exclude": 82
+      },
+      "decision_changes": [],
+      "reason_or_risk_changes": [
+        {
+          "trajectory_id": "7bce5aa6ee3bc6fa68957d61",
+          "decision_before": "defer",
+          "decision_after": "defer",
+          "reason_codes_before": [
+            "RECORDED_TRUNCATION",
+            "SCHEMA_MISMATCH"
+          ],
+          "reason_codes_after": [
+            "SCHEMA_MISMATCH"
+          ],
+          "risk_codes_before": [
+            "PUBLISHER_FLAG",
+            "RECOVERY_HEURISTIC",
+            "VIEW_TRUNCATED"
+          ],
+          "risk_codes_after": [
+            "PUBLISHER_FLAG",
+            "RECOVERY_HEURISTIC",
+            "TRUNCATION_LITERAL",
+            "VIEW_TRUNCATED"
+          ]
+        }
+      ],
+      "marker_issues_before": {
+        "RECORDED_TRUNCATION": 69
+      },
+      "marker_issues_after": {
+        "RECORDED_TRUNCATION": 68,
+        "TRUNCATION_LITERAL": 1
+      },
+      "marker_issue_changes": {
+        "evidence_updated": 68,
+        "removed": 1,
+        "added": 1
+      },
+      "queue_ids_added": [],
+      "queue_ids_removed": [],
+      "queue_order_priority_and_selection_unchanged": true,
+      "queue_issue_references_changed": [
+        "7bce5aa6ee3bc6fa68957d61"
+      ],
+      "review_budget_before": {
+        "denominator": 1189,
+        "fraction": 0.1,
+        "maximum": 118,
+        "queued": 118,
+        "uncertainty_candidates": 245,
+        "deferred_not_queued": 149,
+        "audit_slots_requested": 24,
+        "seed": 20261020
+      },
+      "review_budget_after": {
+        "denominator": 1189,
+        "fraction": 0.1,
+        "maximum": 118,
+        "queued": 118,
+        "uncertainty_candidates": 245,
+        "deferred_not_queued": 149,
+        "audit_slots_requested": 24,
+        "seed": 20261020
+      },
+      "elapsed_seconds_before": 6.787,
+      "elapsed_seconds_after": 7.147,
+      "check_status_after": {
+        "completed": 1189
+      }
+    },
+    "conservative": {
+      "raw_and_config_and_dependencies_identical": true,
+      "non_truncation_findings_identical": true,
+      "before_code_sha256": "76d3aeff7d4b1e84d06187e7950b605ff80fec3143bbfef14af81f227a2f386e",
+      "after_code_sha256": "ed6cb9e67d5c4d09c82f0ad241307f5d1bf9c597fe9a1fd16488d2b51e8f8057",
+      "trajectory_count": 1189,
+      "decision_counts_before": {
+        "defer": 674,
+        "admit": 433,
+        "exclude": 82
+      },
+      "decision_counts_after": {
+        "defer": 674,
+        "admit": 433,
+        "exclude": 82
+      },
+      "decision_changes": [],
+      "reason_or_risk_changes": [
+        {
+          "trajectory_id": "7bce5aa6ee3bc6fa68957d61",
+          "decision_before": "defer",
+          "decision_after": "defer",
+          "reason_codes_before": [
+            "RECORDED_TRUNCATION",
+            "SCHEMA_MISMATCH"
+          ],
+          "reason_codes_after": [
+            "SCHEMA_MISMATCH"
+          ],
+          "risk_codes_before": [
+            "PUBLISHER_FLAG",
+            "RECOVERY_HEURISTIC",
+            "VIEW_TRUNCATED"
+          ],
+          "risk_codes_after": [
+            "PUBLISHER_FLAG",
+            "RECOVERY_HEURISTIC",
+            "TRUNCATION_LITERAL",
+            "VIEW_TRUNCATED"
+          ]
+        }
+      ],
+      "marker_issues_before": {
+        "RECORDED_TRUNCATION": 69
+      },
+      "marker_issues_after": {
+        "RECORDED_TRUNCATION": 68,
+        "TRUNCATION_LITERAL": 1
+      },
+      "marker_issue_changes": {
+        "evidence_updated": 68,
+        "removed": 1,
+        "added": 1
+      },
+      "queue_ids_added": [],
+      "queue_ids_removed": [],
+      "queue_order_priority_and_selection_unchanged": true,
+      "queue_issue_references_changed": [
+        "7bce5aa6ee3bc6fa68957d61"
+      ],
+      "review_budget_before": {
+        "denominator": 1189,
+        "fraction": 0.1,
+        "maximum": 118,
+        "queued": 118,
+        "uncertainty_candidates": 674,
+        "deferred_not_queued": 562,
+        "audit_slots_requested": 24,
+        "seed": 20261020
+      },
+      "review_budget_after": {
+        "denominator": 1189,
+        "fraction": 0.1,
+        "maximum": 118,
+        "queued": 118,
+        "uncertainty_candidates": 674,
+        "deferred_not_queued": 562,
+        "audit_slots_requested": 24,
+        "seed": 20261020
+      },
+      "elapsed_seconds_before": 6.994,
+      "elapsed_seconds_after": 7.082,
+      "check_status_after": {
+        "completed": 1189
+      }
+    }
+  },
+  "policy_comparison_unchanged": true,
+  "policy_comparison_changed_keys": [],
+  "real_regression_fixtures_verified": [
+    {
+      "trajectory_id": "5f2171ff39cf7006b1e49b7e",
+      "source": {
+        "file": "sample/trajectories/trajectories.jsonl.zst",
+        "line": 6,
+        "pointer": "/steps/297/result"
+      }
+    },
+    {
+      "trajectory_id": "7bce5aa6ee3bc6fa68957d61",
+      "source": {
+        "file": "sample/trajectories/trajectories.jsonl.zst",
+        "line": 53,
+        "pointer": "/steps/27/result"
+      }
+    }
+  ]
+}

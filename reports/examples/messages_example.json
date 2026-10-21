@@ -1,0 +1,1966 @@
+{
+  "trajectory_id": "3e9d0654186f2c9f1a736ef4",
+  "models": [
+    "Tier A"
+  ],
+  "n_steps": 119,
+  "task_type": "implementation",
+  "session_kind": "interactive",
+  "is_eval": false,
+  "eval_kind": null,
+  "template_group": null,
+  "template_group_size": 1,
+  "parent_trajectory_id": null,
+  "prompt_language": "en",
+  "last_test_result": null,
+  "git_commit_made": false,
+  "messages": [
+    {
+      "role": "user",
+      "content": "<command-name>/clear</command-name>\n            <command-message>clear</command-message>\n            <command-args></command-args>",
+      "is_wrapper": true
+    },
+    {
+      "role": "user",
+      "content": "13/ ﻿Figure F.2: SR-MoA architecture (Self-Routed Mixture of Adapters). Each of K=5 experts has\n<- The orange arrow going from the sigmoid to the expert appears tilted. Please make it look straight.\n\nStart by taking a screenshot of that image using computer usce mcp",
+      "is_wrapper": false
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_0",
+          "type": "function",
+          "function": {
+            "name": "search_tools",
+            "arguments": "{\"query\": \"computer-use\", \"max_results\": 30}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_0",
+      "content": "{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__computer_batch\"}\n{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__cursor_position\"}\n{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__double_click\"}\n{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__hold_key\"}\n{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__key\"}\n{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__left_click\"}\n{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__left_click_drag\"}\n{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__left_mouse_down\"}\n{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__left_mouse_up\"}\n{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__list_granted_applications\"}\n{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__middle_click\"}\n{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__mouse_move\"}\n{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__open_application\"}\n{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__read_clipboard\"}\n{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__request_access\"}\n{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__right_click\"}\n{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__screenshot\"}\n{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__scroll\"}\n{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__switch_display\"}\n{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__triple_click\"}\n{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__type\"}\n{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__wait\"}\n{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__write_clipboard\"}\n{\"type\": \"tool_reference\", \"tool_name\": \"mcp__computer-use__zoom\"}"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_1",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_request_access",
+            "arguments": "{\"apps\": [\"Preview\", \"<NAME_1>\", \"Google Chrome\", \"Safari\", \"Skim\"], \"reason\": \"Take a screenshot of Figure F.2 in the paper to inspect the orange arrow that appears tilted.\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_1",
+      "content": "{\"granted\":[{\"bundleId\":\"com.apple.Preview\",\"displayName\":\"<NAME_2>\",\"grantedAt\":1777733307471},{\"bundleId\":\"com.foxit-software.Foxit.PDF.Reader\",\"displayName\":\"<NAME_1>\",\"grantedAt\":1777733307471},{\"bundleId\":\"com.google.Chrome\",\"displayName\":\"<NAME_3>\",\"grantedAt\":1777733307471},{\"bundleId\":\"com.apple.Safari\",\"displayName\":\"<NAME_4>\",\"grantedAt\":1777733307471}],\"denied\":[{\"bundleId\":\"Skim\",\"reason\":\"not_installed\"}],\"tierGuidance\":\"\\\"Google Chrome\\\", \\\"Safari\\\" are browsers — granted at tier \\\"read\\\" (visible in screenshots only; no clicks or typing). You can read what's on screen but cannot navigate, click, or type into them. For browser interaction, use the vendor_a-in-Chrome MCP (tools named `mcp__vendor_a_in_Chrome__*`; load via ToolSearch if deferred). Do not attempt to work around this restriction — never use AppleScript, System Events, shell commands, or any other method to send clicks or keystrokes to this app.\",\"screenshotFiltering\":\"native\",\"windowLocations\":[{\"bundleId\":\"com.foxit-software.Foxit.PDF.Reader\",\"displayName\":\"<NAME_1>\",\"displays\":[{\"id\":1,\"label\":\"Built-in Retina Display\",\"isPrimary\":true}]},{\"bundleId\":\"com.google.Chrome\",\"displayName\":\"<NAME_3>\",\"displays\":[{\"id\":1,\"label\":\"Built-in Retina Display\",\"isPrimary\":true}]}]}"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_2",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{\"save_to_disk\": true}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_2",
+      "content": "This screenshot was taken on monitor \"Built-in Retina Display\". Other attached monitors: \"MSI MP273QP\". Use switch_display to capture a different monitor.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": "I see <NAME_1> is open with main.pdf showing page 1. I need to navigate to Figure F.2 (SR-MoA architecture). Let me search for it.",
+      "tool_calls": [
+        {
+          "id": "call_3",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_left_click",
+            "arguments": "{\"coordinate\": [713, 51]}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_3",
+      "content": "Clicked."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_4",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_type",
+            "arguments": "{\"text\": \"SR-MoA architecture\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_4",
+      "content": "Typed 19 grapheme(s)."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_5",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_key",
+            "arguments": "{\"text\": \"Return\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_5",
+      "content": "Key pressed."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_6",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_6",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": "The search opened a different document. Let me go back to main.pdf tab.",
+      "tool_calls": [
+        {
+          "id": "call_7",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_7",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": "Let me click on the main.pdf tab to switch back.",
+      "tool_calls": [
+        {
+          "id": "call_8",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_left_click",
+            "arguments": "{\"coordinate\": [316, 162]}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_8",
+      "content": "Clicked."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_9",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_9",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": "Let me open main.pdf directly from the file menu.",
+      "tool_calls": [
+        {
+          "id": "call_10",
+          "type": "function",
+          "function": {
+            "name": "bash",
+            "arguments": "{\"command\": \"ls -la /Users/<USER_1>/repo1994/main.pdf 2>&1 | head -3\", \"description\": \"Verify main.pdf exists\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_10",
+      "content": "-rw-r--r--@ 1 <USER_1>  staff  811786 May  2 21:43 /Users/<USER_1>/repo1994/main.pdf"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_11",
+          "type": "function",
+          "function": {
+            "name": "bash",
+            "arguments": "{\"command\": \"open -a \\\"<NAME_1>\\\" /Users/<USER_1>/repo1994/main.pdf\", \"description\": \"Open main.pdf in <NAME_5>\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_11",
+      "content": "(Bash completed with no output)"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_12",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_12",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": "I can see main.pdf is now open at page 39 showing Table F.2. I need to scroll up to find Figure F.2.",
+      "tool_calls": [
+        {
+          "id": "call_13",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_scroll",
+            "arguments": "{\"coordinate\": [697, 500], \"scroll_direction\": \"up\", \"scroll_amount\": 10}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_13",
+      "content": "Scrolled."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_14",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_14",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_15",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_scroll",
+            "arguments": "{\"coordinate\": [697, 500], \"scroll_direction\": \"up\", \"scroll_amount\": 10}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_15",
+      "content": "Scrolled."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_16",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_16",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": "I'll search for Figure F.2 directly using the existing search dialog.",
+      "tool_calls": [
+        {
+          "id": "call_17",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_triple_click",
+            "arguments": "{\"coordinate\": [1252, 220]}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_17",
+      "content": "Clicked."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_18",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_type",
+            "arguments": "{\"text\": \"SR-MoA architecture\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_18",
+      "content": "Typed 19 grapheme(s)."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_19",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_key",
+            "arguments": "{\"text\": \"Return\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_19",
+      "content": "Key pressed."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_20",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_20",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": "Let me find the Figure F.2 location using a different approach.",
+      "tool_calls": [
+        {
+          "id": "call_21",
+          "type": "function",
+          "function": {
+            "name": "bash",
+            "arguments": "{\"command\": \"grep -n \\\"fig:sr_moa\\\\|SR-MoA architecture\\\\|Figure F.2\\\\|Self-Routed Mixture\\\" main.tex | head -20\", \"description\": \"Find Figure F.2 SR-MoA architecture in main.tex\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_21",
+      "content": "498:\\textbf{The principle is architecture-agnostic (SR-MoA).} To confirm the bottleneck is in the routing \\emph{input} rather than the router \\emph{architecture}, SR-MoA~\\citep{lv2025aoe,cheng2025ermoe,liu2026routingfree} replaces the external Conv1d router with a per-expert sigmoid gate $\\sigma_k(\\mathbf{X}_\\mathrm{raw})$, with no external router at all. SR-MoA \\emph{outperforms} RR-MoA by $13$--$42\\%$ across all 6 datasets (ETTh1: $0.464$; ETTm1: $0.388$; Weather: $0.222$; 252 runs total), generalizes across six backbones, and independently replicates the Frozen Paradox (frozen best on 4/6 datasets; Table~\\ref{tab:self_routed}). That a different architecture exceeds RR-MoA while sharing only the raw-input principle confirms it is the \\emph{principle}, not the specific router design, that drives the gains. The same SR-MoA architecture gating on hidden states degrades by $+87\\%$ to $+768\\%$ on \\textbf{all 6 datasets} ($p{=}0.016$, one-sided Wilcoxon signed-rank). \\textbf{Normalization-specificity:} on Timer-XL (no RevIN), the same raw-vs-hidden comparison yields only $+4$--$9\\%$ ($15$--$100{\\times}$ smaller than on MOMENT), confirming the degradation is normalization-induced. A third architecture-level control, \\textbf{AdaMix-Raw} (Appendix~\\ref{app:adamix_details}), replaces AdaMix's hidden-state router with a raw-input router and recovers entropy to $1.41$--$1.57$ and MSE by $41$--$88\\%$ on all 12 cells. All three router instantiations (RR-MoA, SR-MoA, AdaMix-Raw) are consistent with the same diagnosis: the bottleneck is normalization, not router design. Table~\\ref{tab:causal_controls} summarizes all eight controls.\n1450:\\caption{\\textbf{SR-MoA architecture (Self-Routed Mixture of Adapters).} Each of $K{=}5$ experts has its own sigmoid gate $\\sigma_k$ reading $\\mathbf{X}_\\mathrm{raw}$ directly, with no external router. The frozen TSFM produces $\\mathbf{H}$, and each expert's contribution is scaled by its self-gate. SR-MoA shares only the \\emph{raw-input} principle with RR-MoA (Figure~\\ref{fig:framework}): the routing architecture is otherwise entirely different. SR-MoA outperforms RR-MoA by $13$--$42\\%$ across all 6 datasets, providing architecture-agnostic validation that the principle, not the specific router, drives the gains.}"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_22",
+          "type": "function",
+          "function": {
+            "name": "bash",
+            "arguments": "{\"command\": \"awk '/begin\\\\{figure\\\\}|fig:sr_moa|caption.*SR-MoA architecture/{print NR\\\": \\\"$0}' main.tex | head -20\", \"description\": \"Find figure block for SR-MoA in main.tex\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_22",
+      "content": "79: \\begin{figure}[t]\n239: \\begin{figure}[t!]\n475: \\begin{figure}[h]\n484: \\begin{figure}[h]\n578: \\begin{figure}[t]\n1141: \\begin{figure}[h]\n1309: \\begin{figure}[h]\n1450: \\caption{\\textbf{SR-MoA architecture (Self-Routed Mixture of Adapters).} Each of $K{=}5$ experts has its own sigmoid gate $\\sigma_k$ reading $\\mathbf{X}_\\mathrm{raw}$ directly, with no external router. The frozen TSFM produces $\\mathbf{H}$, and each expert's contribution is scaled by its self-gate. SR-MoA shares only the \\emph{raw-input} principle with RR-MoA (Figure~\\ref{fig:framework}): the routing architecture is otherwise entirely different. SR-MoA outperforms RR-MoA by $13$--$42\\%$ across all 6 datasets, providing architecture-agnostic validation that the principle, not the specific router, drives the gains.}\n1521: \\begin{figure}[h]\n2143: \\begin{figure}[h]"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_23",
+          "type": "function",
+          "function": {
+            "name": "read",
+            "arguments": "{\"path\": \"/Users/<USER_1>/repo1994/main.tex\", \"offset\": 1380, \"limit\": 90}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_23",
+      "content": "1380\t% Stream labels (pulled inward from the top/bottom edges so they don't\n1381\t% touch the figure bounding box at \\resizebox{0.95\\columnwidth})\n1382\t\\node[font=\\footnotesize\\bfseries, text=srback] at (8.0, 3.30)\n1383\t    {\\textsc{Stream A: Hidden States}};\n1384\t\\node[font=\\footnotesize\\bfseries, text=srgate] at (8.0, -3.05)\n1385\t    {\\textsc{Self-routing: per-expert} $\\sigma_k(\\mathbf{X}_\\mathrm{raw})$};\n1386\t\n1387\t% ====== Arrows on background layer (so they render BEHIND boxes/text) ======\n1388\t% Layout principle: H stream and X_raw stream both flow LEFT-TO-RIGHT into\n1389\t% their targets, so no head-to-head arrow clashes. H horizontals run at\n1390\t% y+0.45 (clearly above each σ.top apex at y+0.35; σ size 0.70cm gives\n1391\t% half-diagonal 0.35) so the blue stream has a 0.10cm gap above each σ_k.\n1392\t\\begin{pgfonlayer}{background}\n1393\t% Input -> TSFM (blue, hidden-state stream)\n1394\t\\draw[bluearr] (input.east) -- ++(0.4, 0) |- (tsfm.west);\n1395\t% TSFM -> H\n1396\t\\draw[bluearr] (tsfm.east) -- (hidden.west);\n1397\t\n1398\t% H broadcast: trunk at x=6.20 (left of X_raw bus and σ_k), 5 horizontal\n1399\t% tap-offs at y+0.45 into expert.west.upper. With σ.top at y+0.35 the\n1400\t% blue stream clears each σ_k by 0.10cm (~3pt) visually.\n1401\t\\draw[bluearr, -] (hidden.east) -- (6.20, 1.6);\n1402\t\\draw[bluearr, -] (6.20, 3.15) -- (6.20, -2.05);  % vertical trunk spanning y+0.45 levels\n1403\t\\foreach \\i/\\y in {1/2.7, 2/1.4, 3/0.1, 4/-1.2, 5/-2.5} {\n1404\t    \\pgfmathsetmacro{\\yt}{\\y + 0.45}\n1405\t    \\draw[bluearr] (6.20, \\yt) -- ([yshift=0.45cm]e\\i.west);\n1406\t}\n1407\t\n1408\t% X_raw broadcast bus tucked next to σ.west (x=6.95, σ.west at 7.05): the\n1409\t% per-σ taps shrink to 0.10cm ticks instead of long horizontal arrows, so\n1410\t% each σ_k visually reads as \"fed by the bus\" rather than \"lassoed by an\n1411\t% arrow\". Same flow direction as σ.east -> expert.west, so no head clashes.\n1412\t\\draw[gatedasharr, -] (input.south) -- ++(0, -0.55) -| (0.40, -3.55);\n1413\t\\draw[gatedasharr, -] (0.40, -3.55) -- (6.95, -3.55);   % under-figure bus\n1414\t\\draw[gatedasharr, -] (6.95, -3.55) -- (6.95, 2.7);     % vertical riser flush against σ.west\n1415\t\\foreach \\i/\\y in {1/2.7, 2/1.4, 3/0.1, 4/-1.2, 5/-2.5} {\n1416\t    \\draw[gatedasharr] (6.95, \\y) -- (g\\i.west);\n1417\t}\n1418\t% sigma_k -> expert (solid orange arrow into LOWER half of expert)\n1419\t\\foreach \\i in {1,2,3,4,5} {\n1420\t    \\draw[gatearr] (g\\i.east) -- ([yshift=-0.30cm]e\\i.west);\n1421\t}\n1422\t% Experts -> Sigma. Three convergence routes (north / west / south):\n1423\t%  - experts 1+2 (above Sigma) merge into a tiny vertical mini-bus at\n1424\t%    x=12.80 that taps Sigma's north\n1425\t%  - expert 3 (in-line with Sigma) feeds Sigma's west directly\n1426\t%  - experts 4+5 (below Sigma) merge into a tiny vertical mini-bus at\n1427\t%    x=12.80 that taps Sigma's south\n1428\t% This places Sigma as the explicit confluence point — no ambiguous\n1429\t% pass-by trunk, no junction dot needed.\n1430\t\\draw[bluearr, -, opacity=0.85] (e1.east) -- (12.80, 2.7);\n1431\t\\draw[bluearr, -, opacity=0.85] (e2.east) -- (12.80, 1.4);\n1432\t\\draw[bluearr, -, opacity=0.85] (12.80, 2.7) -- (12.80, 1.4);\n1433\t\\draw[bluearr, opacity=0.85] (12.80, 1.4) -- (sum.north);\n1434\t\\draw[bluearr, opacity=0.85] (e3.east) -- (sum.west);\n1435\t\\draw[bluearr, -, opacity=0.85] (e4.east) -- (12.80, -1.2);\n1436\t\\draw[bluearr, -, opacity=0.85] (e5.east) -- (12.80, -2.5);\n1437\t\\draw[bluearr, -, opacity=0.85] (12.80, -1.2) -- (12.80, -2.5);\n1438\t\\draw[bluearr, opacity=0.85] (12.80, -1.2) -- (sum.south);\n1439\t% Sigma -> output (teal)\n1440\t\\draw[outarr] (sum.east) -- (output.west);\n1441\t\\end{pgfonlayer}\n1442\t\n1443\t% Bottom annotation (parbox to prevent overflow at column width)\n1444\t\\node[anchor=center] at (7.3, -4.0) {%\n1445\t    \\parbox{12cm}{\\centering\\footnotesize\n1446\t    No external router. Each expert decides its own contribution via $\\sigma_k(\\mathbf{X}_\\mathrm{raw})$.\\\\[1pt]\n1447\t    Output: $\\hat{\\mathbf{y}} = \\sum_k \\sigma_k(\\mathbf{X}_\\mathrm{raw}) \\cdot \\mathrm{Adapter}_k(\\mathbf{H})$.}};\n1448\t\\end{tikzpicture}%\n1449\t}\n1450\t\\caption{\\textbf{SR-MoA architecture (Self-Routed Mixture of Adapters).} Each of $K{=}5$ experts has its own sigmoid gate $\\sigma_k$ reading $\\mathbf{X}_\\mathrm{raw}$ directly, with no external router. The frozen TSFM produces $\\mathbf{H}$, and each expert's contribution is scaled by its self-gate. SR-MoA shares only the \\emph{raw-input} principle with RR-MoA (Figure~\\ref{fig:framework}): the routing architecture is otherwise entirely different. SR-MoA outperforms RR-MoA by $13$--$42\\%$ across all 6 datasets, providing architecture-agnostic validation that the principle, not the specific router, drives the gains.}\n1451\t\\label{fig:srmoa_arch}\n1452\t\\end{figure}\n1453\t\n1454\t\\begin{table}[h]\n1455\t\\centering\n1456\t\\caption{\\textbf{Self-Routed MoA (SR-MoA): routing input control} (dense, 5 seeds unless noted). Each expert has its own sigmoid gate, with no external router. \\textbf{Top}: gating on raw input vs hidden states (frozen, MOMENT-small). \\textbf{Second}: Timer-XL negative control with no RevIN, so raw$\\approx$hidden. \\textbf{Third}: freeze-level ablation confirms Frozen Paradox (frozen best 4/6). \\textbf{Bottom}: cross-backbone generalization (H=96, frozen). 252 runs total.}\n1457\t\\label{tab:self_routed}\n1458\t\\footnotesize\n1459\t\\begin{tabular}{@{}lllcc@{}}\n1460\t\\toprule\n1461\tDataset & Config & Backbone & MSE ($\\downarrow$) & Entropy \\\\\n1462\t\\midrule\n1463\t\\multicolumn{5}{l}{\\textit{Routing input control (frozen, MOMENT-small, 5 seeds):}} \\\\\n1464\tETTh1       & Raw     & MOMENT-sm & $\\mathbf{0.464 \\pm 0.009}$ & $1.53$ \\\\\n1465\tETTh1       & Hidden  & MOMENT-sm & $1.075 \\pm 0.102$ {\\scriptsize($+131\\%$)} & $1.60$ \\\\\n1466\tETTh2       & Raw     & MOMENT-sm & $\\mathbf{0.577 \\pm 0.105}$ & $1.38$ \\\\\n1467\tETTh2       & Hidden  & MOMENT-sm & $2.840 \\pm 0.164$ {\\scriptsize($+393\\%$)} & $1.58$ \\\\\n1468\tETTm1       & Raw     & MOMENT-sm & $\\mathbf{0.388 \\pm 0.023}$ & $1.53$ \\\\\n1469\tETTm1       & Hidden  & MOMENT-sm & $0.934 \\pm 0.024$ {\\scriptsize($+141\\%$)} & $1.60$ \\\\"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_24",
+          "type": "function",
+          "function": {
+            "name": "read",
+            "arguments": "{\"path\": \"/Users/<USER_1>/repo1994/main.tex\", \"offset\": 1309, \"limit\": 75}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_24",
+      "content": "1309\t\\begin{figure}[h]\n1310\t\\centering\n1311\t\\resizebox{0.95\\columnwidth}{!}{%\n1312\t\\begin{tikzpicture}[\n1313\t    >=<MODEL_B>,\n1314\t    % Box styles --- white-fill, thin colored strokes (academic convention)\n1315\t    box/.style={rectangle, draw=black!70, rounded corners=2pt, fill=white,\n1316\t        minimum height=0.75cm, font=\\small, align=center, line width=0.7pt},\n1317\t    inputbox/.style={box, minimum width=1.5cm, minimum height=1.0cm},\n1318\t    frozenbox/.style={rectangle, draw=black, fill=white, rounded corners=2pt,\n1319\t        minimum width=2.6cm, minimum height=1.6cm, font=\\small\\bfseries,\n1320\t        align=center, line width=0.9pt},\n1321\t    hiddenbox/.style={rectangle, draw=black, fill=white, rounded corners=2pt,\n1322\t        minimum width=0.85cm, minimum height=0.7cm, font=\\normalsize\\bfseries,\n1323\t        align=center, line width=0.7pt},\n1324\t    expertbox/.style={rectangle, draw=black, fill=white, rounded corners=2pt,\n1325\t        minimum width=3.4cm, minimum height=0.95cm, font=\\scriptsize\\bfseries,\n1326\t        align=center, line width=0.8pt, text=black, inner sep=4pt},\n1327\t    sigmagate/.style={diamond, draw=srgate, fill=srgate!18, line width=1.0pt,\n1328\t        minimum size=0.70cm, font=\\scriptsize\\bfseries, inner sep=0pt, text=srgate!75!black},\n1329\t    sumnode/.style={circle, draw=black, fill=white,\n1330\t        minimum size=0.7cm, font=\\normalsize\\bfseries, line width=0.8pt},\n1331\t    outputbox/.style={rectangle, draw=srout, fill=white, rounded corners=2pt,\n1332\t        minimum width=1.1cm, minimum height=0.85cm, line width=0.9pt,\n1333\t        font=\\normalsize\\bfseries, align=center},\n1334\t    % Arrow styles\n1335\t    bluearr/.style={->, line width=0.7pt, color=srback,\n1336\t        shorten >=1pt, shorten <=1pt},\n1337\t    gatedasharr/.style={->, line width=0.6pt, color=srgate, densely dashed,\n1338\t        shorten >=1pt, shorten <=1pt},\n1339\t    gatearr/.style={->, line width=0.7pt, color=srgate,\n1340\t        shorten >=1pt, shorten <=1pt},\n1341\t    outarr/.style={->, line width=0.9pt, color=srout,\n1342\t        shorten >=1pt, shorten <=1pt},\n1343\t]\n1344\t\n1345\t% ====== Nodes (drawn on main layer, on top) ======\n1346\t% Input\n1347\t\\node[inputbox] (input) at (0, 0) {%\n1348\t    $\\mathbf{X}_\\mathrm{raw}$\\\\[-1pt]{\\scriptsize raw input}};\n1349\t\n1350\t% Frozen TSFM\n1351\t\\node[frozenbox] (tsfm) at (3.2, 1.6) {%\n1352\t    Frozen TSFM\\\\Backbone\\\\[2pt]\n1353\t    {\\scriptsize\\mdseries\\color{black!55} no gradients}};\n1354\t\\node[font=\\scriptsize\\bfseries, text=white,\n1355\t    fill={rgb,255:red,200;green,55;blue,55},\n1356\t    rounded corners=1.5pt, inner sep=2pt]\n1357\t    at ([xshift=-0.6cm, yshift=0.18cm]tsfm.north east) {\\textsc{frozen}};\n1358\t\n1359\t% H box\n1360\t\\node[hiddenbox] (hidden) at (5.6, 1.6) {$\\mathbf{H}$};\n1361\t\\node[font=\\tiny, text=black!65, anchor=north] at ([yshift=-0.05cm]hidden.south)\n1362\t    {hidden states};\n1363\t\n1364\t% 5 sigma gates and 5 experts in two parallel vertical columns\n1365\t\\foreach \\i/\\y/\\name in {1/2.7/Mean Pool, 2/1.4/Last Token,\n1366\t                          3/0.1/Max Pool, 4/-1.2/Attention, 5/-2.5/Conv1d} {\n1367\t    \\node[sigmagate] (g\\i) at (7.4, \\y) {$\\sigma_\\i$};\n1368\t    \\node[expertbox] (e\\i) at (10.6, \\y) {Expert \\i: \\name};\n1369\t}\n1370\t\n1371\t% Sum + output. Sigma sits to the east of all 5 experts. Experts above and\n1372\t% below Sigma converge into a short vertical mini-bus that taps Sigma's\n1373\t% north/south; expert 3 (in-line with Sigma) feeds Sigma.west directly.\n1374\t\\node[sumnode] (sum) at (13.50, 0.1) {$\\Sigma$};\n1375\t\\node[font=\\tiny, text=black!65, anchor=north]\n1376\t    at ([yshift=-0.05cm]sum.south) {weighted sum};\n1377\t\\node[outputbox] (output) at (15.00, 0.1) {%\n1378\t    $\\hat{\\mathbf{y}}$\\\\[-1pt]{\\scriptsize\\mdseries forecast}};\n1379\t\n1380\t% Stream labels (pulled inward from the top/bottom edges so they don't\n1381\t% touch the figure bounding box at \\resizebox{0.95\\columnwidth})\n1382\t\\node[font=\\footnotesize\\bfseries, text=srback] at (8.0, 3.30)\n1383\t    {\\textsc{Stream A: Hidden States}};"
+    },
+    {
+      "role": "assistant",
+      "content": "Let me close other tabs and navigate directly to the right page using the page number field.",
+      "tool_calls": [
+        {
+          "id": "call_25",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_25",
+      "content": "\"Notion\", \"com.apple.storeuid\" were open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open one of them, that's why you don't see it — call request_access to add them to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_26",
+          "type": "function",
+          "function": {
+            "name": "bash",
+            "arguments": "{\"command\": \"open -a \\\"<NAME_1>\\\" /Users/<USER_1>/repo1994/main.pdf\", \"description\": \"Open main.pdf in <NAME_5> again\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_26",
+      "content": "(Bash completed with no output)"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_27",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_wait",
+            "arguments": "{\"duration\": 1}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_27",
+      "content": "Waited 1s."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_28",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_28",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_29",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_triple_click",
+            "arguments": "{\"coordinate\": [95, 875]}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_29",
+      "content": "Clicked."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_30",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_type",
+            "arguments": "{\"text\": \"37\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_30",
+      "content": "\"Google Chrome\" is granted at tier \"read\" — visible in screenshots only, no clicks or typing. Use the vendor_a-in-Chrome MCP for browser interaction (tools named `mcp__vendor_a_in_Chrome__*`; load via ToolSearch if deferred). Do not attempt to work around this restriction — never use AppleScript, System Events, shell commands, or any other method to send clicks or keystrokes to this app."
+    },
+    {
+      "role": "assistant",
+      "content": "Let me click in <NAME_5> window first to focus it.",
+      "tool_calls": [
+        {
+          "id": "call_31",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_left_click",
+            "arguments": "{\"coordinate\": [697, 400]}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_31",
+      "content": "\"Google Chrome\" is granted at tier \"read\" — visible in screenshots only, no clicks or typing. Use the vendor_a-in-Chrome MCP for browser interaction (tools named `mcp__vendor_a_in_Chrome__*`; load via ToolSearch if deferred). Do not attempt to work around this restriction — never use AppleScript, System Events, shell commands, or any other method to send clicks or keystrokes to this app."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_32",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_open_application",
+            "arguments": "{\"app\": \"<NAME_1>\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_32",
+      "content": "Opened \"<NAME_1>\". If it isn't visible in the next screenshot, it may have opened on a different monitor — use switch_display to check."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_33",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_33",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_34",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_triple_click",
+            "arguments": "{\"coordinate\": [97, 875]}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_34",
+      "content": "Clicked."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_35",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_35",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": "Let me check the order of figures in the appendix.",
+      "tool_calls": [
+        {
+          "id": "call_36",
+          "type": "function",
+          "function": {
+            "name": "bash",
+            "arguments": "{\"command\": \"awk '/\\\\\\\\begin{figure}/{flag=1; lineno=NR} flag && /\\\\\\\\caption/{print lineno\\\": \\\"$0; flag=0}' main.tex | grep -A0 -E \\\"F\\\\.|Self-Rout|sr_moa|routing.*scatter|amplitude\\\" | head -20\", \"description\": \"Identify figures with their captions\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_36",
+      "content": "1309: \\caption{\\textbf{SR-MoA architecture (Self-Routed Mixture of Adapters).} Each of $K{=}5$ experts has its own sigmoid gate $\\sigma_k$ reading $\\mathbf{X}_\\mathrm{raw}$ directly, with no external router. The frozen TSFM produces $\\mathbf{H}$, and each expert's contribution is scaled by its self-gate. SR-MoA shares only the \\emph{raw-input} principle with RR-MoA (Figure~\\ref{fig:framework}): the routing architecture is otherwise entirely different. SR-MoA outperforms RR-MoA by $13$--$42\\%$ across all 6 datasets, providing architecture-agnostic validation that the principle, not the specific router, drives the gains.}\n1521: \\caption{\\textbf{Per-sample expert assignment vs.\\ input statistics} (ETTh1, seed 42, $N{=}5{,}000$ test windows). Left: amplitude vs.\\ volatility; right: mean level vs.\\ amplitude. Colors indicate dominant expert (top-1 routing weight). Expert selection clusters by amplitude and volatility (the very statistics RevIN strips), empirically validating the conditional independence assumption $(M,\\Sigma) \\perp\\!\\!\\!\\perp S$ from Observation~\\ref{thm:mi_decomp}(iii). Note: conv1d (purple) is in the legend but rarely the top-1 expert on ETTh1, so it is not visually present.}"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_37",
+          "type": "function",
+          "function": {
+            "name": "bash",
+            "arguments": "{\"command\": \"awk '/\\\\\\\\begin{figure}/{lineno=NR; getcap=1} getcap && /\\\\\\\\caption/{print lineno\\\"-\\\"NR\\\": \\\"substr($0,1,150); getcap=0}' main.tex | head -20\", \"description\": \"List all figures with captions\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_37",
+      "content": "79-221: \\caption{\\textbf{Problem overview.} \\textbf{(a)}~TSFM adapters use the same head for every window. \\textbf{(b)}~The natural mixture-of-experts extensi\n239-361: \\caption{\\textbf{RR-MoA architecture.} \\textit{Path~A} (blue): frozen TSFM produces $\\mathbf{H}$ for all experts. \\textit{Path~B} (orange): Conv1d gat\n475-479: \\caption{\\textbf{Per-step routing / gradient trajectory} (AdaMix, ETTh1). (a)~Unfrozen+RevIN (red) collapses within ${\\sim}50$ steps; strictly frozen \n484-488: \\caption{\\textbf{Causal contrast: MOMENT vs Timer-XL} (ETTh1, last-4 unfreezing). Solid lines: unfrozen runs. MOMENT entropy collapses $0.51{\\to}0.000\n578-652: \\caption{\\textbf{Left: Frozen Paradox}, frozen RR-MoA beats full FT by $12$--$79\\%$. \\textbf{Right: Observation~\\ref{thm:mi_decomp} validated} ($\\rho{\n1141-1174: \\caption{\\textbf{Normalization dose-response} (frozen, 5 seeds $\\times$ 6 datasets; std smaller than markers). MSE vs $\\alpha$ ($0{=}$raw, $1{=}$RevIN\n1309-1450: \\caption{\\textbf{SR-MoA architecture (Self-Routed Mixture of Adapters).} Each of $K{=}5$ experts has its own sigmoid gate $\\sigma_k$ reading $\\mathbf{\n1521-1524: \\caption{\\textbf{Per-sample expert assignment vs.\\ input statistics} (ETTh1, seed 42, $N{=}5{,}000$ test windows). Left: amplitude vs.\\ volatility; ri\n2143-2275: \\caption{\\textbf{Residual-IA\\textsuperscript{+} architecture (dual-stream extension).} \\textit{Stream 1} (blue): the frozen TSFM produces hidden state"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_38",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_scroll",
+            "arguments": "{\"coordinate\": [697, 500], \"scroll_direction\": \"up\", \"scroll_amount\": 15}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_38",
+      "content": "Scrolled."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_39",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_39",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_40",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_scroll",
+            "arguments": "{\"coordinate\": [697, 500], \"scroll_direction\": \"up\", \"scroll_amount\": 50}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_40",
+      "content": "Scrolled."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_41",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_41",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_42",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_key",
+            "arguments": "{\"text\": \"cmd+g\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_42",
+      "content": "Key pressed."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_43",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_43",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_44",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_triple_click",
+            "arguments": "{\"coordinate\": [649, 429]}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_44",
+      "content": "Clicked."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_45",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_type",
+            "arguments": "{\"text\": \"37\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_45",
+      "content": "Typed 2 grapheme(s)."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_46",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_key",
+            "arguments": "{\"text\": \"Return\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_46",
+      "content": "Key pressed."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_47",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_47",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_48",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_key",
+            "arguments": "{\"text\": \"cmd+g\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_48",
+      "content": "Key pressed."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_49",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_49",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_50",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_triple_click",
+            "arguments": "{\"coordinate\": [649, 429]}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_50",
+      "content": "Clicked."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_51",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_type",
+            "arguments": "{\"text\": \"33\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_51",
+      "content": "Typed 2 grapheme(s)."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_52",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_key",
+            "arguments": "{\"text\": \"Return\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_52",
+      "content": "Key pressed."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_53",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_53",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_54",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_key",
+            "arguments": "{\"text\": \"cmd+g\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_54",
+      "content": "Key pressed."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_55",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_triple_click",
+            "arguments": "{\"coordinate\": [649, 429]}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_55",
+      "content": "Clicked."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_56",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_type",
+            "arguments": "{\"text\": \"29\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_56",
+      "content": "Typed 2 grapheme(s)."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_57",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_key",
+            "arguments": "{\"text\": \"Return\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_57",
+      "content": "Key pressed."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_58",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_58",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_59",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_open_application",
+            "arguments": "{\"app\": \"<NAME_1>\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_59",
+      "content": "Opened \"<NAME_1>\". If it isn't visible in the next screenshot, it may have opened on a different monitor — use switch_display to check."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_60",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_60",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_61",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_scroll",
+            "arguments": "{\"coordinate\": [697, 500], \"scroll_direction\": \"up\", \"scroll_amount\": 15}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_61",
+      "content": "Scrolled."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_62",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_62",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_63",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_scroll",
+            "arguments": "{\"coordinate\": [697, 500], \"scroll_direction\": \"up\", \"scroll_amount\": 25}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_63",
+      "content": "Scrolled."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_64",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_64",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_65",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_scroll",
+            "arguments": "{\"coordinate\": [697, 500], \"scroll_direction\": \"up\", \"scroll_amount\": 30}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_65",
+      "content": "Scrolled."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_66",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_66",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_67",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_scroll",
+            "arguments": "{\"coordinate\": [697, 500], \"scroll_direction\": \"up\", \"scroll_amount\": 35}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_67",
+      "content": "Scrolled."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_68",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_68",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_69",
+          "type": "function",
+          "function": {
+            "name": "bash",
+            "arguments": "{\"command\": \"grep -n \\\"^\\\\\\\\\\\\\\\\section\\\\|^\\\\\\\\\\\\\\\\subsection\\\\|appendix\\\" main.tex | head -40\", \"description\": \"Find appendix sections\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_69",
+      "content": "61:\\section{Introduction}\n226:\\section{Related Work}\n236:\\section{Method}\n366:\\subsection{Raw-Routed Mixture of Adapters (RR-MoA)}\n385:\\section{Experiments}\n387:\\subsection{Setup}\n397:\\subsection{Main Results}\n660:\\section{Conclusion and Limitations}\n964:\\appendix\n976:\\section{Experimental Setup Details}\n1012:\\section{Deployment-Regime Motivation}\n1023:\\subsection{Inference Benchmark}\n1052:\\section{Multi-Horizon Evaluation}\n1074:\\section{Proposition Proofs}\n1116:\\subsection{Theoretical Depth of Observation~\\ref{thm:mi_decomp}}\n1220:\\section{LoRA Sweep (Full Results)}\n1285:\\section{Routing Ablations}\n1542:\\subsection{Statistics Re-Injection Ablation}\n1568:\\section{Extended RR-MoA Freeze Grid}\n1629:\\subsection{Rescue-Baseline Sweep Details}\n1661:\\subsection{AdaMix Implementation Details}\n1691:\\section{Normalization Generalization}\n1716:\\subsection{Cross-Modality Control: Vision MoE}\n1747:\\section{Top-$k$ Sparse Routing Ablation}\n1771:\\subsection{Expert Pool Diversity Ablation}\n1795:\\subsection{Expert Count Scaling}\n1821:\\section{Imputation Results}\n1847:\\section{Learnable Normalization Coefficient}\n1873:\\section{Exact MI Loss and Bound Tightness}\n1904:\\section{Information Content Diagnostic}\n1948:\\section{Cross-Backbone RR-MoA}\n2039:\\section{Extended Full Fine-Tuning Ablation}\n2073:\\section{Closing the DLinear Gap}\n2134:\\subsection{Residual-IA: Closing the Remaining Gap}\n2528:\\subsection{SR-RIA\\textsuperscript{+}: Self-Routed Residual-IA\\textsuperscript{+}}\n2554:\\subsection{Pure Raw-MLP MoE Ablation: Quantifying the TSFM's Contribution}"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_70",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_key",
+            "arguments": "{\"text\": \"cmd+g\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_70",
+      "content": "\"Google Chrome\" is granted at tier \"read\" — visible in screenshots only, no clicks or typing. Use the vendor_a-in-Chrome MCP for browser interaction (tools named `mcp__vendor_a_in_Chrome__*`; load via ToolSearch if deferred). Do not attempt to work around this restriction — never use AppleScript, System Events, shell commands, or any other method to send clicks or keystrokes to this app."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_71",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_open_application",
+            "arguments": "{\"app\": \"<NAME_1>\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_71",
+      "content": "Opened \"<NAME_1>\". If it isn't visible in the next screenshot, it may have opened on a different monitor — use switch_display to check."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_72",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_key",
+            "arguments": "{\"text\": \"cmd+g\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_72",
+      "content": "Key pressed."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_73",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_73",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_74",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_triple_click",
+            "arguments": "{\"coordinate\": [649, 429]}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_74",
+      "content": "Clicked."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_75",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_type",
+            "arguments": "{\"text\": \"25\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_75",
+      "content": "Typed 2 grapheme(s)."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_76",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_key",
+            "arguments": "{\"text\": \"Return\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_76",
+      "content": "Key pressed."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_77",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_77",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": "Let me find the actual page where the SR-MoA architecture figure renders.",
+      "tool_calls": [
+        {
+          "id": "call_78",
+          "type": "function",
+          "function": {
+            "name": "bash",
+            "arguments": "{\"command\": \"python3 -c \\\"\\nimport fitz\\ndoc = fitz.open('main.pdf')\\nfor i, p in enumerate(doc):\\n    text = p.get_text()\\n    if 'SR-MoA architecture' in text or 'Self-Routed Mixture of Adapters' in text:\\n        print(f'Page {i+1}: contains SR-MoA architecture')\\n\\\"\", \"description\": \"Find page with SR-MoA architecture figure\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_78",
+      "content": "Page 8: contains SR-MoA architecture\nPage 27: contains SR-MoA architecture"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_79",
+          "type": "function",
+          "function": {
+            "name": "bash",
+            "arguments": "{\"command\": \"python3 -c \\\"\\nimport fitz\\ndoc = fitz.open('main.pdf')\\np = doc[26]\\ntext = p.get_text()\\nfor line in text.split('\\\\n'):\\n    if 'Figure' in line or 'SR-MoA' in line or 'Self-Routed' in line:\\n        print(repr(line))\\n\\\"\", \"description\": \"Extract figure label from page 27\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_79",
+      "content": "'Figure F.1: SR-MoA architecture (Self-Routed Mixture of Adapters). Each of K=5 experts has'\n'H, and each expert’s contribution is scaled by its self-gate. SR-MoA shares only the raw-input'\n'principle with RR-MoA (Figure 2): the routing architecture is otherwise entirely different. SR-MoA'\n'very statistics RevIN strips (Figure F.2). On ETTh1, Expert 0 (mean-pool) serves as the generalist'"
+    },
+    {
+      "role": "assistant",
+      "content": "The figure is actually Figure F.1 in the PDF (page 27). Let me navigate there.",
+      "tool_calls": [
+        {
+          "id": "call_80",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_key",
+            "arguments": "{\"text\": \"cmd+g\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_80",
+      "content": "Key pressed."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_81",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_triple_click",
+            "arguments": "{\"coordinate\": [649, 429]}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_81",
+      "content": "Clicked."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_82",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_type",
+            "arguments": "{\"text\": \"27\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_82",
+      "content": "Typed 2 grapheme(s)."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_83",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_key",
+            "arguments": "{\"text\": \"Return\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_83",
+      "content": "Key pressed."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_84",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_84",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": "Now I can see the SR-MoA architecture figure. Let me scroll down to see the whole figure with all 5 experts and their orange arrows.",
+      "tool_calls": [
+        {
+          "id": "call_85",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_scroll",
+            "arguments": "{\"coordinate\": [697, 500], \"scroll_direction\": \"down\", \"scroll_amount\": 5}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_85",
+      "content": "Scrolled."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_86",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{\"save_to_disk\": true}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_86",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_87",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_zoom",
+            "arguments": "{\"region\": [600, 600, 900, 870], \"save_to_disk\": true}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_87",
+      "content": "[image]"
+    },
+    {
+      "role": "assistant",
+      "content": "I have the screenshot of Figure F.1 (SR-MoA architecture). The orange arrows from each σ_k gate to its expert are clearly tilted downward — they leave σ.east at the gate's center but land at the lower half of the expert box, creating a visible diagonal slant on all 5 arrows.\n\nThe cause is in `main.tex:1418-1421`:\n```latex\n% sigma_k -> expert (solid orange arrow into LOWER half of expert)\n\\foreach \\i in {1,2,3,4,5} {\n    \\draw[gatearr] (g\\i.east) -- ([yshift=-0.30cm]e\\i.west);\n}\n```\n\nThe `yshift=-0.30cm` on the endpoint shifts the arrow tip into the lower half of `e\\i.west`, while the start (`g\\i.east`) is at the gate's center. Over the ~1.15 cm horizontal span this becomes a ~15° downward tilt.\n\n**Proposed fix:** drop the yshift so both endpoints share the same y, making the arrow horizontal. The blue hidden-state arrows still land at `+0.45cm` (upper half) so the two streams remain visually separated:\n\n```latex\n\\foreach \\i in {1,2,3,4,5} {\n    \\draw[gatearr] (g\\i.east) -- (e\\i.west);\n}\n```\n\nNote: the figure is labeled **Figure F.1** in the rendered PDF (not F.2 as you mentioned — F.2 is the per-sample expert-assignment scatter on a later page).\n\nWant me to apply the fix and recompile to verify?"
+    },
+    {
+      "role": "user",
+      "content": "nice, go ahead",
+      "is_wrapper": false
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_88",
+          "type": "function",
+          "function": {
+            "name": "edit",
+            "arguments": "{\"path\": \"/Users/<USER_1>/repo1994/main.tex\", \"old_string\": \"% sigma_k -> expert (solid orange arrow into LOWER half of expert)\\n\\\\foreach \\\\i in {1,2,3,4,5} {\\n    \\\\draw[gatearr] (g\\\\i.east) -- ([yshift=-0.30cm]e\\\\i.west);\\n}\", \"new_string\": \"% sigma_k -> expert (solid orange arrow, horizontal)\\n\\\\foreach \\\\i in {1,2,3,4,5} {\\n    \\\\draw[gatearr] (g\\\\i.east) -- (e\\\\i.west);\\n}\", \"replace_all\": false}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_88",
+      "content": "The file /Users/<USER_1>/repo1994/main.tex has been updated successfully."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_89",
+          "type": "function",
+          "function": {
+            "name": "bash",
+            "arguments": "{\"command\": \"pdflatex -interaction=nonstopmode -halt-on-error main.tex > /tmp/pdflatex.log 2>&1; tail -20 /tmp/pdflatex.log\", \"description\": \"Recompile main.tex\", \"timeout_ms\": 120000}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_89",
+      "content": "ibrary/texmf/fonts/type1/public/amsfonts/cm/cmr6.pfb></Users/<USER_1>/Library\n/texmf/fonts/type1/public/amsfonts/cm/cmr7.pfb></Users/<USER_1>/Library/texmf\n/fonts/type1/public/amsfonts/cm/cmr8.pfb></Users/<USER_1>/Library/texmf/fonts\n/type1/public/amsfonts/cm/cmr9.pfb></Users/<USER_1>/Library/texmf/fonts/type1\n/public/amsfonts/cm/cmsy10.pfb></Users/<USER_1>/Library/texmf/fonts/type1/pub\nlic/amsfonts/cm/cmsy5.pfb></Users/<USER_1>/Library/texmf/fonts/type1/public/a\nmsfonts/cm/cmsy6.pfb></Users/<USER_1>/Library/texmf/fonts/type1/public/amsfon\nts/cm/cmsy7.pfb></Users/<USER_1>/Library/texmf/fonts/type1/public/amsfonts/cm\n/cmsy8.pfb></Users/<USER_1>/Library/texmf/fonts/type1/public/amsfonts/cm/cmsy\n9.pfb></Users/<USER_1>/Library/texmf/fonts/type1/public/amsfonts/cm/cmti7.pfb\n></Users/<USER_1>/Library/texmf/fonts/type1/public/amsfonts/cm/cmti8.pfb></Us\ners/<USER_1>/Library/texmf/fonts/type1/public/amsfonts/cm/cmti9.pfb></Users/<USER_2>\nungpq2412/Library/texmf/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/lo\ncal/texlive/2026basic/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr\n/local/texlive/2026basic/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/loca\nl/texlive/2026basic/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/te\nxlive/2026basic/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive\n/2026basic/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>\nOutput written on main.pdf (48 pages, 811737 bytes).\nTranscript written on main.log."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_90",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_open_application",
+            "arguments": "{\"app\": \"<NAME_1>\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_90",
+      "content": "Opened \"<NAME_1>\". If it isn't visible in the next screenshot, it may have opened on a different monitor — use switch_display to check."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_91",
+          "type": "function",
+          "function": {
+            "name": "bash",
+            "arguments": "{\"command\": \"open -a \\\"<NAME_1>\\\" /Users/<USER_1>/repo1994/main.pdf\", \"description\": \"Reload main.pdf\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_91",
+      "content": "(Bash completed with no output)"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_92",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_key",
+            "arguments": "{\"text\": \"cmd+g\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_92",
+      "content": "Key pressed."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_93",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_triple_click",
+            "arguments": "{\"coordinate\": [649, 429]}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_93",
+      "content": "Clicked."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_94",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_type",
+            "arguments": "{\"text\": \"27\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_94",
+      "content": "Typed 2 grapheme(s)."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_95",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_key",
+            "arguments": "{\"text\": \"Return\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_95",
+      "content": "Key pressed."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_96",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_scroll",
+            "arguments": "{\"coordinate\": [697, 500], \"scroll_direction\": \"down\", \"scroll_amount\": 5}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_96",
+      "content": "Scrolled."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_97",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_zoom",
+            "arguments": "{\"region\": [600, 600, 900, 870], \"save_to_disk\": true}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_97",
+      "content": "[image]"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_98",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_scroll",
+            "arguments": "{\"coordinate\": [697, 500], \"scroll_direction\": \"up\", \"scroll_amount\": 3}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_98",
+      "content": "Scrolled."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_99",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_screenshot",
+            "arguments": "{\"save_to_disk\": true}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_99",
+      "content": "\"com.apple.storeuid\" was open and got hidden before this screenshot (not in the session allowlist). If a previous action was meant to open it, that's why you don't see it — call request_access to add it to the allowlist.\n[image]"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_100",
+          "type": "function",
+          "function": {
+            "name": "mcp_computer-use_zoom",
+            "arguments": "{\"region\": [640, 580, 900, 810], \"save_to_disk\": true}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_100",
+      "content": "[image]"
+    },
+    {
+      "role": "assistant",
+      "content": "The fix is applied. Comparing before vs. after:\n\n**Before:** orange arrows from σ_k → expert tilted downward ~15° (entered the lower half of the expert box).\n\n**After:** orange arrows now run horizontally from each σ_k.east straight into expert_k.west center, parallel to the blue hidden-state arrows above them.\n\n**Change made** (`main.tex:1418-1421`):\n```diff\n-% sigma_k -> expert (solid orange arrow into LOWER half of expert)\n+% sigma_k -> expert (solid orange arrow, horizontal)\n \\foreach \\i in {1,2,3,4,5} {\n-    \\draw[gatearr] (g\\i.east) -- ([yshift=-0.30cm]e\\i.west);\n+    \\draw[gatearr] (g\\i.east) -- (e\\i.west);\n }\n```\n\nPDF recompiled cleanly (48 pages, no errors). Figure F.1 on page 27 now shows straight horizontal orange arrows on all 5 σ_k → expert connections."
+    }
+  ],
+  "tools": "[{\"type\": \"function\", \"function\": {\"name\": \"bash\", \"description\": \"Run a shell command.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"command\": {\"type\": \"string\", \"description\": \"The command to run.\"}, \"description\": {\"type\": \"string\", \"description\": \"What the command does.\"}, \"workdir\": {\"type\": \"string\", \"description\": \"Working directory.\"}, \"timeout_ms\": {\"type\": \"integer\", \"description\": \"Timeout in milliseconds.\"}, \"background\": {\"type\": \"boolean\", \"description\": \"Run in the background.\"}}, \"required\": [\"command\"]}}}, {\"type\": \"function\", \"function\": {\"name\": \"edit\", \"description\": \"Replace text in a file.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"path\": {\"type\": \"string\", \"description\": \"File path.\"}, \"old_string\": {\"type\": \"string\", \"description\": \"Text to replace.\"}, \"new_string\": {\"type\": \"string\", \"description\": \"Replacement text.\"}, \"replace_all\": {\"type\": \"boolean\", \"description\": \"Replace every occurrence.\"}}, \"required\": [\"path\", \"old_string\", \"new_string\"]}}}, {\"type\": \"function\", \"function\": {\"name\": \"mcp_computer-use_key\", \"description\": \"A tool of the session's agent; parameters as recorded.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"text\": {\"type\": \"string\"}}, \"required\": [\"text\"]}}}, {\"type\": \"function\", \"function\": {\"name\": \"mcp_computer-use_left_click\", \"description\": \"A tool of the session's agent; parameters as recorded.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"coordinate\": {\"type\": \"array\"}}, \"required\": [\"coordinate\"]}}}, {\"type\": \"function\", \"function\": {\"name\": \"mcp_computer-use_open_application\", \"description\": \"A tool of the session's agent; parameters as recorded.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"app\": {\"type\": \"string\"}}, \"required\": [\"app\"]}}}, {\"type\": \"function\", \"function\": {\"name\": \"mcp_computer-use_request_access\", \"description\": \"A tool of the session's agent; parameters as recorded.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"apps\": {\"type\": \"array\"}, \"reason\": {\"type\": \"string\"}}, \"required\": [\"apps\", \"reason\"]}}}, {\"type\": \"function\", \"function\": {\"name\": \"mcp_computer-use_screenshot\", \"description\": \"A tool of the session's agent; parameters as recorded.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"save_to_disk\": {\"type\": \"boolean\"}}, \"required\": []}}}, {\"type\": \"function\", \"function\": {\"name\": \"mcp_computer-use_scroll\", \"description\": \"A tool of the session's agent; parameters as recorded.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"coordinate\": {\"type\": \"array\"}, \"scroll_direction\": {\"type\": \"string\"}, \"scroll_amount\": {\"type\": \"integer\"}}, \"required\": [\"coordinate\", \"scroll_amount\", \"scroll_direction\"]}}}, {\"type\": \"function\", \"function\": {\"name\": \"mcp_computer-use_triple_click\", \"description\": \"A tool of the session's agent; parameters as recorded.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"coordinate\": {\"type\": \"array\"}}, \"required\": [\"coordinate\"]}}}, {\"type\": \"function\", \"function\": {\"name\": \"mcp_computer-use_type\", \"description\": \"A tool of the session's agent; parameters as recorded.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"text\": {\"type\": \"string\"}}, \"required\": [\"text\"]}}}, {\"type\": \"function\", \"function\": {\"name\": \"mcp_computer-use_wait\", \"description\": \"A tool of the session's agent; parameters as recorded.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"duration\": {\"type\": \"integer\"}}, \"required\": [\"duration\"]}}}, {\"type\": \"function\", \"function\": {\"name\": \"mcp_computer-use_zoom\", \"description\": \"A tool of the session's agent; parameters as recorded.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"region\": {\"type\": \"array\"}, \"save_to_disk\": {\"type\": \"boolean\"}}, \"required\": [\"region\", \"save_to_disk\"]}}}, {\"type\": \"function\", \"function\": {\"name\": \"read\", \"description\": \"Read a file.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"path\": {\"type\": \"string\", \"description\": \"File path.\"}, \"offset\": {\"type\": \"integer\", \"description\": \"First line to read.\"}, \"limit\": {\"type\": \"integer\", \"description\": \"Number of lines to read.\"}, \"pages\": {\"type\": \"string\", \"description\": \"Pages of a PDF.\"}}, \"required\": [\"path\"]}}}, {\"type\": \"function\", \"function\": {\"name\": \"search_tools\", \"description\": \"Find tools by description.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"query\": {\"type\": \"string\", \"description\": \"What the tool should do.\"}, \"max_results\": {\"type\": \"integer\", \"description\": \"How many tools to return.\"}}, \"required\": [\"query\"]}}}]",
+  "ft_issues": [],
+  "repo_id": "repo1994",
+  "actor_id": "user563",
+  "repo": "user563/repo1994"
+}

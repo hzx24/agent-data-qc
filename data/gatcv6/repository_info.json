@@ -1,0 +1,751 @@
+{
+  "_id": "6ac7843a804177de767f8721",
+  "id": "GOAT-AI/gatcv6",
+  "author": "GOAT-AI",
+  "sha": "216fb6e2c9449dd8eeab0a3b9233e89ea08d1f7a",
+  "lastModified": "2026-10-15T10:05:13.000Z",
+  "private": false,
+  "gated": "auto",
+  "disabled": false,
+  "tags": [
+    "task_categories:text-generation",
+    "language:en",
+    "language:zh",
+    "language:ja",
+    "language:ru",
+    "language:ko",
+    "language:es",
+    "language:vi",
+    "language:pt",
+    "language:fr",
+    "language:uk",
+    "language:de",
+    "language:fa",
+    "license:apache-2.0",
+    "size_categories:10K<n<100K",
+    "format:json",
+    "modality:tabular",
+    "modality:text",
+    "library:datasets",
+    "library:pandas",
+    "library:polars",
+    "library:mlcroissant",
+    "region:us",
+    "code",
+    "agent",
+    "coding-agent",
+    "coding-sessions",
+    "agent-traces",
+    "tool-use",
+    "trajectories",
+    "sft",
+    "function-calling",
+    "reasoning"
+  ],
+  "description": "\n\t\n\t\t\n\t\n\t\n\t\tGATC: Agentic Coding Sessions\n\t\n\nRecorded sessions of AI coding agents at work, step by step.\n\nWebsite: goat.ai\nFull dataset and licensing: goat.ai/contact\nEmail: yerbol@goat.ai\n\n\nThis repository is a 1% sample. It holds 1,189 sessions, drawn uniformly at random from the 106,012 complete\nsessions of the full dataset of 117,796 sessions (complete: at least one user prompt and at least one assistant message;\nsee Sampling). The figures on this page describe the full dataset unless a… See the full description on the dataset page: https://huggingface.co/datasets/GOAT-AI/gatcv6.",
+  "downloads": 333,
+  "likes": 3,
+  "cardData": {
+    "license": "apache-2.0",
+    "pretty_name": "GATC: Agentic Coding Sessions",
+    "language": [
+      "en",
+      "zh",
+      "ja",
+      "ru",
+      "ko",
+      "es",
+      "vi",
+      "pt",
+      "fr",
+      "uk",
+      "de",
+      "fa"
+    ],
+    "size_categories": [
+      "1K<n<10K"
+    ],
+    "task_categories": [
+      "text-generation"
+    ],
+    "tags": [
+      "code",
+      "agent",
+      "coding-agent",
+      "coding-sessions",
+      "agent-traces",
+      "tool-use",
+      "trajectories",
+      "sft",
+      "function-calling",
+      "reasoning"
+    ],
+    "configs": [
+      {
+        "config_name": "messages",
+        "default": true,
+        "data_files": [
+          {
+            "split": "train",
+            "path": "sample/messages/messages.jsonl.zst"
+          }
+        ]
+      },
+      {
+        "config_name": "trajectories",
+        "data_files": [
+          {
+            "split": "train",
+            "path": "sample/trajectories/trajectories.jsonl.zst"
+          }
+        ]
+      },
+      {
+        "config_name": "sft_steps",
+        "data_files": [
+          {
+            "split": "train",
+            "path": "sample/views/sft_steps.jsonl.zst"
+          }
+        ]
+      },
+      {
+        "config_name": "error_recovery",
+        "data_files": [
+          {
+            "split": "train",
+            "path": "sample/views/error_recovery.jsonl.zst"
+          }
+        ]
+      },
+      {
+        "config_name": "labels",
+        "data_files": [
+          {
+            "split": "train",
+            "path": "sample/labels/labels.jsonl.zst"
+          }
+        ]
+      },
+      {
+        "config_name": "tool_grammar",
+        "data_files": [
+          {
+            "split": "train",
+            "path": "sample/views/tool_grammar.jsonl.zst"
+          }
+        ]
+      }
+    ],
+    "dataset_info": [
+      {
+        "config_name": "messages",
+        "features": [
+          {
+            "name": "trajectory_id",
+            "dtype": "string"
+          },
+          {
+            "name": "models",
+            "list": "string"
+          },
+          {
+            "name": "n_steps",
+            "dtype": "int64"
+          },
+          {
+            "name": "task_type",
+            "dtype": "string"
+          },
+          {
+            "name": "session_kind",
+            "dtype": "string"
+          },
+          {
+            "name": "is_eval",
+            "dtype": "bool"
+          },
+          {
+            "name": "eval_kind",
+            "dtype": "string"
+          },
+          {
+            "name": "template_group",
+            "dtype": "string"
+          },
+          {
+            "name": "template_group_size",
+            "dtype": "int64"
+          },
+          {
+            "name": "parent_trajectory_id",
+            "dtype": "string"
+          },
+          {
+            "name": "prompt_language",
+            "dtype": "string"
+          },
+          {
+            "name": "last_test_result",
+            "dtype": "string"
+          },
+          {
+            "name": "git_commit_made",
+            "dtype": "bool"
+          },
+          {
+            "name": "messages",
+            "list": [
+              {
+                "name": "role",
+                "dtype": "string"
+              },
+              {
+                "name": "content",
+                "dtype": "string"
+              },
+              {
+                "name": "is_wrapper",
+                "dtype": "bool"
+              },
+              {
+                "name": "tool_calls",
+                "list": [
+                  {
+                    "name": "id",
+                    "dtype": "string"
+                  },
+                  {
+                    "name": "type",
+                    "dtype": "string"
+                  },
+                  {
+                    "name": "function",
+                    "struct": [
+                      {
+                        "name": "name",
+                        "dtype": "string"
+                      },
+                      {
+                        "name": "arguments",
+                        "dtype": "string"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "tool_call_id",
+                "dtype": "string"
+              },
+              {
+                "name": "reasoning_content",
+                "dtype": "string"
+              }
+            ]
+          },
+          {
+            "name": "tools",
+            "dtype": "string"
+          },
+          {
+            "name": "ft_issues",
+            "list": "string"
+          },
+          {
+            "name": "repo_id",
+            "dtype": "string"
+          },
+          {
+            "name": "actor_id",
+            "dtype": "string"
+          },
+          {
+            "name": "repo",
+            "dtype": "string"
+          }
+        ]
+      },
+      {
+        "config_name": "trajectories",
+        "features": [
+          {
+            "name": "trajectory_id",
+            "dtype": "string"
+          },
+          {
+            "name": "models",
+            "list": "string"
+          },
+          {
+            "name": "actor_id",
+            "dtype": "string"
+          },
+          {
+            "name": "repo_id",
+            "dtype": "string"
+          },
+          {
+            "name": "started_at",
+            "dtype": "string"
+          },
+          {
+            "name": "duration_s",
+            "dtype": "float64"
+          },
+          {
+            "name": "n_steps",
+            "dtype": "int64"
+          },
+          {
+            "name": "n_tool_calls",
+            "dtype": "int64"
+          },
+          {
+            "name": "n_errors",
+            "dtype": "int64"
+          },
+          {
+            "name": "task_type",
+            "dtype": "string"
+          },
+          {
+            "name": "session_kind",
+            "dtype": "string"
+          },
+          {
+            "name": "is_eval",
+            "dtype": "bool"
+          },
+          {
+            "name": "eval_kind",
+            "dtype": "string"
+          },
+          {
+            "name": "template_group",
+            "dtype": "string"
+          },
+          {
+            "name": "template_group_size",
+            "dtype": "int64"
+          },
+          {
+            "name": "parent_trajectory_id",
+            "dtype": "string"
+          },
+          {
+            "name": "prompt_language",
+            "dtype": "string"
+          },
+          {
+            "name": "last_test_result",
+            "dtype": "string"
+          },
+          {
+            "name": "git_commit_made",
+            "dtype": "bool"
+          },
+          {
+            "name": "tokens",
+            "struct": [
+              {
+                "name": "input",
+                "dtype": "int64"
+              },
+              {
+                "name": "output",
+                "dtype": "int64"
+              },
+              {
+                "name": "total",
+                "dtype": "int64"
+              },
+              {
+                "name": "cache_read",
+                "dtype": "int64"
+              },
+              {
+                "name": "cache_write",
+                "dtype": "int64"
+              }
+            ]
+          },
+          {
+            "name": "redaction",
+            "struct": [
+              {
+                "name": "n",
+                "dtype": "int64"
+              }
+            ]
+          },
+          {
+            "name": "steps",
+            "list": [
+              {
+                "name": "i",
+                "dtype": "int64"
+              },
+              {
+                "name": "type",
+                "dtype": "string"
+              },
+              {
+                "name": "text",
+                "dtype": "string"
+              },
+              {
+                "name": "ts",
+                "dtype": "string"
+              },
+              {
+                "name": "is_wrapper",
+                "dtype": "bool"
+              },
+              {
+                "name": "tool",
+                "dtype": "string"
+              },
+              {
+                "name": "tool_raw",
+                "dtype": "string"
+              },
+              {
+                "name": "tool_class",
+                "dtype": "string"
+              },
+              {
+                "name": "args",
+                "dtype": "string"
+              },
+              {
+                "name": "result",
+                "dtype": "string"
+              },
+              {
+                "name": "ok",
+                "dtype": "bool"
+              },
+              {
+                "name": "duration_ms",
+                "dtype": "float64"
+              },
+              {
+                "name": "mcp_server",
+                "dtype": "string"
+              },
+              {
+                "name": "model",
+                "dtype": "string"
+              },
+              {
+                "name": "out_tokens",
+                "dtype": "int64"
+              },
+              {
+                "name": "thinking",
+                "dtype": "bool"
+              }
+            ]
+          },
+          {
+            "name": "repo",
+            "dtype": "string"
+          },
+          {
+            "name": "schema_version",
+            "dtype": "string"
+          }
+        ]
+      },
+      {
+        "config_name": "sft_steps",
+        "features": [
+          {
+            "name": "trajectory_id",
+            "dtype": "string"
+          },
+          {
+            "name": "i",
+            "dtype": "int64"
+          },
+          {
+            "name": "context",
+            "list": [
+              {
+                "name": "type",
+                "dtype": "string"
+              },
+              {
+                "name": "text",
+                "dtype": "string"
+              }
+            ]
+          },
+          {
+            "name": "tool",
+            "dtype": "string"
+          },
+          {
+            "name": "tool_raw",
+            "dtype": "string"
+          },
+          {
+            "name": "args",
+            "dtype": "string"
+          },
+          {
+            "name": "ok",
+            "dtype": "bool"
+          },
+          {
+            "name": "result",
+            "dtype": "string"
+          },
+          {
+            "name": "repo_id",
+            "dtype": "string"
+          },
+          {
+            "name": "actor_id",
+            "dtype": "string"
+          },
+          {
+            "name": "repo",
+            "dtype": "string"
+          }
+        ]
+      },
+      {
+        "config_name": "error_recovery",
+        "features": [
+          {
+            "name": "trajectory_id",
+            "dtype": "string"
+          },
+          {
+            "name": "failed_tool",
+            "dtype": "string"
+          },
+          {
+            "name": "args",
+            "dtype": "string"
+          },
+          {
+            "name": "error",
+            "dtype": "string"
+          },
+          {
+            "name": "recovery",
+            "list": [
+              {
+                "name": "type",
+                "dtype": "string"
+              },
+              {
+                "name": "tool",
+                "dtype": "string"
+              },
+              {
+                "name": "text",
+                "dtype": "string"
+              }
+            ]
+          },
+          {
+            "name": "recovered",
+            "dtype": "bool"
+          },
+          {
+            "name": "recovery_kind",
+            "dtype": "string"
+          },
+          {
+            "name": "repo_id",
+            "dtype": "string"
+          },
+          {
+            "name": "actor_id",
+            "dtype": "string"
+          },
+          {
+            "name": "repo",
+            "dtype": "string"
+          }
+        ]
+      },
+      {
+        "config_name": "labels",
+        "features": [
+          {
+            "name": "trajectory_id",
+            "dtype": "string"
+          },
+          {
+            "name": "n_steps",
+            "dtype": "int64"
+          },
+          {
+            "name": "task_type",
+            "dtype": "string"
+          },
+          {
+            "name": "session_kind",
+            "dtype": "string"
+          },
+          {
+            "name": "is_eval",
+            "dtype": "bool"
+          },
+          {
+            "name": "eval_kind",
+            "dtype": "string"
+          },
+          {
+            "name": "template_group",
+            "dtype": "string"
+          },
+          {
+            "name": "template_group_size",
+            "dtype": "int64"
+          },
+          {
+            "name": "parent_trajectory_id",
+            "dtype": "string"
+          },
+          {
+            "name": "prompt_language",
+            "dtype": "string"
+          },
+          {
+            "name": "last_test_result",
+            "dtype": "string"
+          },
+          {
+            "name": "git_commit_made",
+            "dtype": "bool"
+          },
+          {
+            "name": "modified_files",
+            "list": "string"
+          },
+          {
+            "name": "key_tools",
+            "list": "string"
+          },
+          {
+            "name": "metrics",
+            "struct": [
+              {
+                "name": "span_count",
+                "dtype": "int64"
+              },
+              {
+                "name": "llm_span_count",
+                "dtype": "int64"
+              },
+              {
+                "name": "tool_call_count",
+                "dtype": "int64"
+              },
+              {
+                "name": "error_count",
+                "dtype": "int64"
+              },
+              {
+                "name": "error_rate",
+                "dtype": "float64"
+              },
+              {
+                "name": "user_turn_count",
+                "dtype": "int64"
+              },
+              {
+                "name": "distinct_files_touched",
+                "dtype": "int64"
+              },
+              {
+                "name": "distinct_models",
+                "list": "string"
+              }
+            ]
+          },
+          {
+            "name": "repo_id",
+            "dtype": "string"
+          },
+          {
+            "name": "actor_id",
+            "dtype": "string"
+          },
+          {
+            "name": "repo",
+            "dtype": "string"
+          }
+        ]
+      },
+      {
+        "config_name": "tool_grammar",
+        "features": [
+          {
+            "name": "tool",
+            "dtype": "string"
+          },
+          {
+            "name": "calls",
+            "dtype": "int64"
+          },
+          {
+            "name": "sessions",
+            "dtype": "int64"
+          },
+          {
+            "name": "errors",
+            "dtype": "int64"
+          },
+          {
+            "name": "error_rate",
+            "dtype": "float64"
+          }
+        ]
+      }
+    ]
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": "AGENTS.md"
+    },
+    {
+      "rfilename": "LICENSE"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "sample/CHECKSUMS.json"
+    },
+    {
+      "rfilename": "sample/labels/labels.jsonl.zst"
+    },
+    {
+      "rfilename": "sample/messages/messages.jsonl.zst"
+    },
+    {
+      "rfilename": "sample/trajectories/trajectories.jsonl.zst"
+    },
+    {
+      "rfilename": "sample/views/error_recovery.jsonl.zst"
+    },
+    {
+      "rfilename": "sample/views/sft_steps.jsonl.zst"
+    },
+    {
+      "rfilename": "sample/views/tool_grammar.jsonl.zst"
+    }
+  ],
+  "createdAt": "2026-10-08T11:53:30.000Z",
+  "usedStorage": 515364566
+}

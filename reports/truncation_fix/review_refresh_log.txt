@@ -1,0 +1,216 @@
+{
+  "groups": [
+    {
+      "index": 1,
+      "group": "random",
+      "trajectory_id": "e77456b90dbeb23873305aea",
+      "selection_reason": "固定种子从剩余随机审计子池抽取",
+      "queue_rank": 99
+    },
+    {
+      "index": 2,
+      "group": "random",
+      "trajectory_id": "8a315ebdf674f909d7880577",
+      "selection_reason": "固定种子从剩余随机审计子池抽取",
+      "queue_rank": 111
+    },
+    {
+      "index": 3,
+      "group": "random",
+      "trajectory_id": "a4f4652bf1f2db578146d1c5",
+      "selection_reason": "固定种子从剩余随机审计子池抽取",
+      "queue_rank": 97
+    },
+    {
+      "index": 4,
+      "group": "random",
+      "trajectory_id": "61bcfad0dd5ffc9dbdd81225",
+      "selection_reason": "固定种子从剩余随机审计子池抽取",
+      "queue_rank": 105
+    },
+    {
+      "index": 5,
+      "group": "random",
+      "trajectory_id": "4dc74ff5da4b7112df5bf56e",
+      "selection_reason": "固定种子从剩余随机审计子池抽取",
+      "queue_rank": 102
+    },
+    {
+      "index": 6,
+      "group": "random",
+      "trajectory_id": "a6186a70d50f69b4fc9b114b",
+      "selection_reason": "固定种子从剩余随机审计子池抽取",
+      "queue_rank": 107
+    },
+    {
+      "index": 7,
+      "group": "random",
+      "trajectory_id": "1dfa68e4d45e1809564d014f",
+      "selection_reason": "固定种子从剩余随机审计子池抽取",
+      "queue_rank": 106
+    },
+    {
+      "index": 8,
+      "group": "random",
+      "trajectory_id": "947bff5d1e83d3a444a6d0b3",
+      "selection_reason": "固定种子从剩余随机审计子池抽取",
+      "queue_rank": 110
+    },
+    {
+      "index": 9,
+      "group": "random",
+      "trajectory_id": "91de80047c831bb903c2a4e2",
+      "selection_reason": "固定种子从剩余随机审计子池抽取",
+      "queue_rank": 104
+    },
+    {
+      "index": 10,
+      "group": "random",
+      "trajectory_id": "788f75ec42d6701f1810c3cc",
+      "selection_reason": "固定种子从剩余随机审计子池抽取",
+      "queue_rank": 100
+    },
+    {
+      "index": 11,
+      "group": "rule_hit",
+      "trajectory_id": "a11e0688dc7f141f22ea507b",
+      "selection_reason": "跨表结果差异、移除文本及schema冲突",
+      "queue_rank": 1
+    },
+    {
+      "index": 12,
+      "group": "rule_hit",
+      "trajectory_id": "7bce5aa6ee3bc6fa68957d61",
+      "selection_reason": "截断标记误报的回归案例与参数兼容问题",
+      "queue_rank": 8
+    },
+    {
+      "index": 13,
+      "group": "rule_hit",
+      "trajectory_id": "4e7f55928c33fd2fff1db7af",
+      "selection_reason": "replacements参数变体不应直接判缺参",
+      "queue_rank": 7
+    },
+    {
+      "index": 14,
+      "group": "rule_hit",
+      "trajectory_id": "fffa584c9e10be4e287f1a94",
+      "selection_reason": "仅dirty-files摘要，不能重建改动",
+      "queue_rank": 36
+    },
+    {
+      "index": 15,
+      "group": "rule_hit",
+      "trajectory_id": "9b0406d7ec2f9dc41a7d1824",
+      "selection_reason": "嵌套parameters记录仅含路径",
+      "queue_rank": 37
+    },
+    {
+      "index": 16,
+      "group": "rule_hit",
+      "trajectory_id": "235c0f6f1675e4095344e9f1",
+      "selection_reason": "写入记录只有路径",
+      "queue_rank": 66
+    },
+    {
+      "index": 17,
+      "group": "rule_hit",
+      "trajectory_id": "109c981e1c9043aac0b41131",
+      "selection_reason": "write的input承载内容但与schema不兼容",
+      "queue_rank": 64
+    },
+    {
+      "index": 18,
+      "group": "rule_hit",
+      "trajectory_id": "d357581401a83f863e7f5fff",
+      "selection_reason": "task调用参数变体与发布schema不一致",
+      "queue_rank": 73
+    },
+    {
+      "index": 19,
+      "group": "rule_hit",
+      "trajectory_id": "77e1e9ccc1420c26899e1759",
+      "selection_reason": "移除文本可能阻断上下文解释",
+      "queue_rank": 84
+    },
+    {
+      "index": 20,
+      "group": "rule_hit",
+      "trajectory_id": "7db6c1d8a023ed1a889c6881",
+      "selection_reason": "仅一次调用的schema疑问，核验暂缓是否过度",
+      "queue_rank": 113
+    },
+    {
+      "index": 21,
+      "group": "boundary",
+      "trajectory_id": "7daf4462d83e7964ecc06877",
+      "selection_reason": "失败后针对性修正，但最后返回为空且无最终回答",
+      "queue_rank": 116
+    },
+    {
+      "index": 22,
+      "group": "boundary",
+      "trajectory_id": "e8e7875ed949d0b4242d3da4",
+      "selection_reason": "仅评测来源改变策略，且状态成功可伴随错误文本",
+      "queue_rank": 115
+    },
+    {
+      "index": 23,
+      "group": "boundary",
+      "trajectory_id": "753530dd642d338581edde8e",
+      "selection_reason": "权限失败后换工具，评测来源及开放结尾同时命中",
+      "queue_rank": 118
+    },
+    {
+      "index": 24,
+      "group": "boundary",
+      "trajectory_id": "34b796f5a03369d11b40e110",
+      "selection_reason": "开头是工具输出，未知工具是否实际可执行",
+      "queue_rank": 112
+    },
+    {
+      "index": 25,
+      "group": "boundary",
+      "trajectory_id": "938fb20e9c2c354b2ac2f6f6",
+      "selection_reason": "只有一次调用，派生视图截短但原始结果完整",
+      "queue_rank": 109
+    },
+    {
+      "index": 26,
+      "group": "boundary",
+      "trajectory_id": "eecd796755bb58f80dfefafa",
+      "selection_reason": "状态未知但无其他阻断标记，检查是否应保留",
+      "queue_rank": 117
+    },
+    {
+      "index": 27,
+      "group": "boundary",
+      "trajectory_id": "c4704adb2a18332df39148b2",
+      "selection_reason": "失败密集且恢复视图关联不唯一",
+      "queue_rank": 114
+    },
+    {
+      "index": 28,
+      "group": "boundary",
+      "trajectory_id": "d101de2b80d1abf850b43f07",
+      "selection_reason": "管线无风险标记的正常对照",
+      "queue_rank": 98
+    },
+    {
+      "index": 29,
+      "group": "boundary",
+      "trajectory_id": "f6ee1f33426b334fc6e6d1a1",
+      "selection_reason": "全部调用状态未知，评测且无最终文本回答",
+      "queue_rank": 96
+    },
+    {
+      "index": 30,
+      "group": "boundary",
+      "trajectory_id": "4fd7f1ffc160d75c53ad659f",
+      "selection_reason": "交互轨迹缺少清晰用户开头/结尾，核验边界价值",
+      "queue_rank": 108
+    }
+  ],
+  "random_pool_size": 13,
+  "output": "reports/review_draft"
+}

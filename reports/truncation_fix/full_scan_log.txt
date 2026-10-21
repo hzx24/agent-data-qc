@@ -1,0 +1,123 @@
+{
+  "decisions": {
+    "admit": 862,
+    "defer": 245,
+    "exclude": 82
+  },
+  "review_budget": {
+    "denominator": 1189,
+    "fraction": 0.1,
+    "maximum": 118,
+    "queued": 118,
+    "uncertainty_candidates": 245,
+    "deferred_not_queued": 149,
+    "audit_slots_requested": 24,
+    "seed": 20261020
+  },
+  "batch_problems": 0,
+  "output": "outputs/balanced"
+}
+{
+  "decisions": {
+    "defer": 674,
+    "admit": 433,
+    "exclude": 82
+  },
+  "review_budget": {
+    "denominator": 1189,
+    "fraction": 0.1,
+    "maximum": 118,
+    "queued": 118,
+    "uncertainty_candidates": 674,
+    "deferred_not_queued": 562,
+    "audit_slots_requested": 24,
+    "seed": 20261020
+  },
+  "batch_problems": 0,
+  "output": "outputs/conservative"
+}
+{
+  "decision_counts": {
+    "balanced": {
+      "admit": 862,
+      "defer": 245,
+      "exclude": 82
+    },
+    "conservative": {
+      "defer": 674,
+      "admit": 433,
+      "exclude": 82
+    }
+  },
+  "transition_matrix": {
+    "admit->admit": 433,
+    "admit->defer": 429,
+    "defer->defer": 245,
+    "exclude->exclude": 82
+  },
+  "changed_cause_counts": {
+    "STRICT_BOUNDARY": 97,
+    "STRICT_BOUNDARY+STRICT_EVAL": 94,
+    "STRICT_EVAL": 238
+  },
+  "balanced_minus_conservative_retained": {
+    "trajectories": 429,
+    "steps": 24207,
+    "tool_calls": 13265,
+    "failed_calls": 915,
+    "unknown_calls": 962,
+    "successful_followup_windows": 768,
+    "trajectories_with_failures": 182,
+    "trajectories_with_unknown_status": 135,
+    "eval_flagged_trajectories": 332,
+    "open_boundary_trajectories": 191,
+    "shared_template_trajectories": 362,
+    "uncertain_recovery_view_trajectories": 13
+  },
+  "review": {
+    "balanced": {
+      "denominator": 1189,
+      "fraction": 0.1,
+      "maximum": 118,
+      "queued": 118,
+      "uncertainty_candidates": 245,
+      "deferred_not_queued": 149,
+      "audit_slots_requested": 24,
+      "seed": 20261020,
+      "composition": {
+        "uncertainty_priority:defer": 94,
+        "seeded_audit:admit": 22,
+        "seeded_audit:defer": 2
+      },
+      "changed_trajectories_queued": 16,
+      "deferred_queued": 96,
+      "deferred_coverage_fraction": 0.39183673469387753,
+      "hypothetical_capacity_shortfall_even_if_all_118_reviewed_defer": 127
+    },
+    "conservative": {
+      "denominator": 1189,
+      "fraction": 0.1,
+      "maximum": 118,
+      "queued": 118,
+      "uncertainty_candidates": 674,
+      "deferred_not_queued": 562,
+      "audit_slots_requested": 24,
+      "seed": 20261020,
+      "composition": {
+        "uncertainty_priority:defer": 94,
+        "seeded_audit:admit": 6,
+        "seeded_audit:defer": 18
+      },
+      "changed_trajectories_queued": 16,
+      "deferred_queued": 112,
+      "deferred_coverage_fraction": 0.1661721068249258,
+      "hypothetical_capacity_shortfall_even_if_all_118_reviewed_defer": 556
+    }
+  },
+  "queue_comparison": {
+    "intersection": 118,
+    "union": 118,
+    "warning": "两队列是相同批次的替代方案，不能分别执行后合并算作118条预算；推荐仅采用balanced的118条队列。"
+  },
+  "recommendation": "balanced"
+}

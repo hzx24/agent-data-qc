@@ -1,0 +1,121 @@
+test_actual_markers_still_block_even_when_reading_source (test_qc.TruncationRegressionTest) ... ok
+test_evidence_offsets_point_back_to_original_text (test_qc.TruncationRegressionTest) ... ERROR
+test_literal_does_not_hide_second_marker_on_same_line (test_qc.TruncationRegressionTest) ... FAIL
+test_quoted_constants_are_not_observation_loss (test_qc.TruncationRegressionTest) ... test_real_source_literal_and_recorded_omission (test_qc.TruncationRegressionTest) ... test_unrecognised_context_is_uncertain_not_silently_allowed (test_qc.TruncationRegressionTest) ... 
+======================================================================
+ERROR: test_evidence_offsets_point_back_to_original_text (test_qc.TruncationRegressionTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/huangzixuan/Desktop/研究生/大模型实习/基元律动/coding test/tests/test_qc.py", line 194, in test_evidence_offsets_point_back_to_original_text
+    hit=issue['evidence']['matches'][0]
+KeyError: 'matches'
+
+======================================================================
+ERROR: test_unrecognised_context_is_uncertain_not_silently_allowed (test_qc.TruncationRegressionTest) (result='prefix [TRUNCATED] suffix')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/huangzixuan/Desktop/研究生/大模型实习/基元律动/coding test/tests/test_qc.py", line 182, in test_unrecognised_context_is_uncertain_not_silently_allowed
+    self.assertEqual(issue['evidence']['matches'][0]['context'],'ambiguous_marker')
+KeyError: 'matches'
+
+======================================================================
+ERROR: test_unrecognised_context_is_uncertain_not_silently_allowed (test_qc.TruncationRegressionTest) (result='"[TRUNCATED]"')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/huangzixuan/Desktop/研究生/大模型实习/基元律动/coding test/tests/test_qc.py", line 182, in test_unrecognised_context_is_uncertain_not_silently_allowed
+    self.assertEqual(issue['evidence']['matches'][0]['context'],'ambiguous_marker')
+KeyError: 'matches'
+
+======================================================================
+ERROR: test_unrecognised_context_is_uncertain_not_silently_allowed (test_qc.TruncationRegressionTest) (result='{"content":"[TRUNCATED]"}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/huangzixuan/Desktop/研究生/大模型实习/基元律动/coding test/tests/test_qc.py", line 182, in test_unrecognised_context_is_uncertain_not_silently_allowed
+    self.assertEqual(issue['evidence']['matches'][0]['context'],'ambiguous_marker')
+KeyError: 'matches'
+
+======================================================================
+ERROR: test_unrecognised_context_is_uncertain_not_silently_allowed (test_qc.TruncationRegressionTest) (result="const message = '[TRUNCATED]")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/huangzixuan/Desktop/研究生/大模型实习/基元律动/coding test/tests/test_qc.py", line 182, in test_unrecognised_context_is_uncertain_not_silently_allowed
+    self.assertEqual(issue['evidence']['matches'][0]['context'],'ambiguous_marker')
+KeyError: 'matches'
+
+======================================================================
+ERROR: test_unrecognised_context_is_uncertain_not_silently_allowed (test_qc.TruncationRegressionTest) (result='output...TRUNCATED')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/huangzixuan/Desktop/研究生/大模型实习/基元律动/coding test/tests/test_qc.py", line 182, in test_unrecognised_context_is_uncertain_not_silently_allowed
+    self.assertEqual(issue['evidence']['matches'][0]['context'],'ambiguous_marker')
+KeyError: 'matches'
+
+======================================================================
+FAIL: test_literal_does_not_hide_second_marker_on_same_line (test_qc.TruncationRegressionTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/huangzixuan/Desktop/研究生/大模型实习/基元律动/coding test/tests/test_qc.py", line 187, in test_literal_does_not_hide_second_marker_on_same_line
+    self.assertEqual({r['rule_id'] for r in rows},{'TRUNCATION_LITERAL','RECORDED_TRUNCATION'})
+AssertionError: Items in the second set but not the first:
+'TRUNCATION_LITERAL'
+
+======================================================================
+FAIL: test_quoted_constants_are_not_observation_loss (test_qc.TruncationRegressionTest) (result="const expected = '[TRUNCATED]';")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/huangzixuan/Desktop/研究生/大模型实习/基元律动/coding test/tests/test_qc.py", line 164, in test_quoted_constants_are_not_observation_loss
+    self.assertNotIn('RECORDED_TRUNCATION',{r['rule_id'] for r in rows})
+AssertionError: 'RECORDED_TRUNCATION' unexpectedly found in {'RECORDED_TRUNCATION'}
+
+======================================================================
+FAIL: test_quoted_constants_are_not_observation_loss (test_qc.TruncationRegressionTest) (result='123→    return "...TRUNCATED";')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/huangzixuan/Desktop/研究生/大模型实习/基元律动/coding test/tests/test_qc.py", line 164, in test_quoted_constants_are_not_observation_loss
+    self.assertNotIn('RECORDED_TRUNCATION',{r['rule_id'] for r in rows})
+AssertionError: 'RECORDED_TRUNCATION' unexpectedly found in {'RECORDED_TRUNCATION'}
+
+======================================================================
+FAIL: test_quoted_constants_are_not_observation_loss (test_qc.TruncationRegressionTest) (result="expect(value).toBe('[TRUNCATED]');")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/huangzixuan/Desktop/研究生/大模型实习/基元律动/coding test/tests/test_qc.py", line 164, in test_quoted_constants_are_not_observation_loss
+    self.assertNotIn('RECORDED_TRUNCATION',{r['rule_id'] for r in rows})
+AssertionError: 'RECORDED_TRUNCATION' unexpectedly found in {'RECORDED_TRUNCATION'}
+
+======================================================================
+FAIL: test_quoted_constants_are_not_observation_loss (test_qc.TruncationRegressionTest) (result='27\t    const text = "before [TRUNCATED] after";')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/huangzixuan/Desktop/研究生/大模型实习/基元律动/coding test/tests/test_qc.py", line 164, in test_quoted_constants_are_not_observation_loss
+    self.assertNotIn('RECORDED_TRUNCATION',{r['rule_id'] for r in rows})
+AssertionError: 'RECORDED_TRUNCATION' unexpectedly found in {'RECORDED_TRUNCATION'}
+
+======================================================================
+FAIL: test_quoted_constants_are_not_observation_loss (test_qc.TruncationRegressionTest) (result='L12: expected = "[TRUNCATED]"')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/huangzixuan/Desktop/研究生/大模型实习/基元律动/coding test/tests/test_qc.py", line 164, in test_quoted_constants_are_not_observation_loss
+    self.assertNotIn('RECORDED_TRUNCATION',{r['rule_id'] for r in rows})
+AssertionError: 'RECORDED_TRUNCATION' unexpectedly found in {'RECORDED_TRUNCATION'}
+
+======================================================================
+FAIL: test_quoted_constants_are_not_observation_loss (test_qc.TruncationRegressionTest) (result='expected = "escaped \\" [TRUNCATED]"')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/huangzixuan/Desktop/研究生/大模型实习/基元律动/coding test/tests/test_qc.py", line 164, in test_quoted_constants_are_not_observation_loss
+    self.assertNotIn('RECORDED_TRUNCATION',{r['rule_id'] for r in rows})
+AssertionError: 'RECORDED_TRUNCATION' unexpectedly found in {'RECORDED_TRUNCATION'}
+
+======================================================================
+FAIL: test_real_source_literal_and_recorded_omission (test_qc.TruncationRegressionTest) (trajectory_id='7bce5aa6ee3bc6fa68957d61')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/huangzixuan/Desktop/研究生/大模型实习/基元律动/coding test/tests/test_qc.py", line 156, in test_real_source_literal_and_recorded_omission
+    self.assertEqual(any(r['rule_id']=='RECORDED_TRUNCATION' for r in rows),case['expected_blocking'])
+AssertionError: True != False
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+FAILED (failures=8, errors=6)

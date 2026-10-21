@@ -1,0 +1,27 @@
+{
+  "origin": "真实结果摘录；两条已存在轨迹，不新增人工审核计数。",
+  "cases": [
+    {
+      "trajectory_id": "5f2171ff39cf7006b1e49b7e",
+      "source": {
+        "file": "sample/trajectories/trajectories.jsonl.zst",
+        "line": 6,
+        "pointer": "/steps/297/result"
+      },
+      "expected_blocking": true,
+      "result": "<tool_output_masked>\n{\n  \"output\": \"'use client';\\n\\nimport type { ReactNode } from 'react';\\nimport Image from 'next/image';\\nimport {\\n  Trash2,\\n  LoaderCircle,\\n  FileText,\\n  ImageIcon,\\n  NotebookPen,\\n  Play,\\n  Search,\\n  Sparkles,\\n  Video,\\n} from 'lucide-react\n... [TRUNCATED] ...\nm text-slate-700\\\">\\n                      {item.label}\\n                    </span>\\n                  </div>\\n                </div>\\n              ))}\\n            </div>\\n          </div>\\n        ) : null}\\n      </div>\\n    </div>\\n  );\\n}\\n\"\n}\n\nOutput too large. Full output available at: /Users/<USER_1>/.vendor_b/tmp/repo1433/tool-outputs/session-<ID>/read_file_read_file_1777146632916_0_ew4de.txt\n</tool_output_masked>",
+      "result_sha256": "49f714d48e63e7c97a22d2c784a26c8cd00874023f501d263e3e90f0db445252"
+    },
+    {
+      "trajectory_id": "7bce5aa6ee3bc6fa68957d61",
+      "source": {
+        "file": "sample/trajectories/trajectories.jsonl.zst",
+        "line": 53,
+        "pointer": "/steps/27/result"
+      },
+      "expected_blocking": false,
+      "result": "200\t        });\n201\t\n202\t        const [, options] = vi.mocked(Sentry.captureException).mock.calls[0] as [Error, {\n203\t            extra?: Record<string, unknown>;\n204\t        }];\n205\t\n206\t        const deep = (options.extra as Record<string, unknown>);\n207\t        type Nested = { l2: { l3: { l4: { l5: { l6: unknown } } } } };\n208\t        expect(((deep.l1 as Nested).l2.l3.l4.l5 as { l6: unknown }).l6).toBe('[TRUNCATED]');\n209\t    });\n210\t});\n211\t\n212\tdescribe('isSensitiveKey', () => {\n213\t    it('identifies sensitive key names', () => {\n214\t        expect(isSensitiveKey('token')).toBe(true);\n215\t        expect(isSensitiveKey('Authorization')).toBe(true);\n216\t        expect(isSensitiveKey('password')).toBe(true);\n217\t        expect(isSensitiveKey('playerId')).toBe(false);\n218\t    });\n219\t});",
+      "result_sha256": "7d9e8198293f7760218e7065f311245a412942aced7048f20dc1fd5a1164bcf8"
+    }
+  ]
+}

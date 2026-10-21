@@ -1,0 +1,136 @@
+{
+  "dataset": {
+    "name": "GOAT-AI/gatcv6",
+    "url": "https://huggingface.co/datasets/GOAT-AI/gatcv6",
+    "revision": "216fb6e2c9449dd8eeab0a3b9233e89ea08d1f7a",
+    "scope": "公开sample六表全部记录",
+    "trajectory_count": 1189,
+    "raw_steps": 92365,
+    "tool_calls": 52617,
+    "raw_sha256": {
+      "sample/trajectories/trajectories.jsonl.zst": "e8ea1da604050ccff41610ec7404267981c7be31a1c510e0df3c33518e7c4290",
+      "sample/messages/messages.jsonl.zst": "82b0125509065fcdbb8d22384e0725770ce63e4012fe925751a273095a55cb7c",
+      "sample/labels/labels.jsonl.zst": "72c48e79eec912ef09071123efab047247037061cd6dcf8664ad3405b070809e",
+      "sample/views/sft_steps.jsonl.zst": "aea6a0e377e24382ceb8f4d1c7b226a7868258223bab61d2ddd90dce36d48a67",
+      "sample/views/error_recovery.jsonl.zst": "4ecc9d80e72f1283591b765e879724ef609d8adcbfb38377615b615705cf2356",
+      "sample/views/tool_grammar.jsonl.zst": "64b5b03bc2b65e3c8fd3c23f1c7c981ed53a5c92820ea28924a6ca43ee40d925"
+    },
+    "raw_included_in_archive": true,
+    "license_path": "data/gatcv6/raw/LICENSE",
+    "full_117796_dataset_claimed": false
+  },
+  "code": {
+    "git_commit": null,
+    "pipeline_version": "0.1.0",
+    "pipeline_code_sha256": "ed6cb9e67d5c4d09c82f0ad241307f5d1bf9c597fe9a1fd16488d2b51e8f8057",
+    "submission_source_sha256": "60ad4d7ebe40d66e248b8e750d95e60fe6835e92d93816c388a95b8749a11f4e",
+    "source_inventory": {
+      "agent_qc/__init__.py": "b5d9ed2f427d2c5e3d33c0406f3b879eab7901452f40570251f03a9338212454",
+      "agent_qc/__main__.py": "6fb0555b96da7aeb16068c3ca7978966c7d61068e0c2977cff8dac4499153a11",
+      "agent_qc/pipeline.py": "7f6ddf77ed694a1f7959a4ed18e9e7a02f200959aaa9f162df62439584b357e1",
+      "agent_qc/rules.py": "09e44142ea76f2f83363ff39e773123177f5e56bcc9c9c916ff7b9ee57d29ec6",
+      "configs/default.json": "3ed466b0fc378e647488e10154a1b87cf893c64c7e706173b89d76683c2a18a7",
+      "requirements-inspection.txt": "da56c02977e00d88d897af40d227d773822aa7134d30e1d40c68e1518d666026",
+      "requirements-lock.txt": "e21bbc3ab93a72b49be7155c5e8aeaf2f5b3113bcec71c3c9a2ae8e23a412246",
+      "requirements.txt": "3c37b008658106fbaaae656c440f8faee19bf4929542a412638039ca06c1268f",
+      "scripts/build_delivery.py": "f8c1da13f0088c2399521a489d63b83b5f62ac96d31d3c773b2355995fa1891d",
+      "scripts/check_delivery.py": "a772ca59b0b7af1f2b48bb428b4f6e831a91b131cccc768219e55bf91aef96d4",
+      "scripts/compare_policies.py": "88e092900893d3525cc57b23b7cbd4e8f008703b8ef88cd33810a97e1e34c6db",
+      "scripts/compare_truncation_fix.py": "b3ef2bc3fb4a698fbf3f54419682138e1964f46a4066966bbc78f0ad0d8c32d4",
+      "scripts/download_data.py": "ed2cbc73247c08e5236050218e7a4bba9fb7d7d286f51af1ebd194e4df52ccc6",
+      "scripts/inspect_data.py": "edc23f02fa346ec81c1a52feb67569a28a703fdbe7044f8d316b0173d35ae87a",
+      "scripts/prepare_delivery_metadata.py": "ae8e89fe78d3cb4eba8d5acb7275b0ccd5b11a0400da96ba4ba585a9e9d88fec",
+      "scripts/prepare_review.py": "b2d22ab7b13e2aa94ba9e10b2f9c7f9958a5d9fa4d1a6d96995bec6536d39fb0",
+      "scripts/render_review.py": "fe507267bc2fba157443e376d07815f547a0ecb1d6dc07ad6cb090654a71d8e5",
+      "tests/fixtures/truncation_cases.json": "624c762242b396b23372e647d653d4124156301e9925f5918ca20c2b3f514503",
+      "tests/test_comparison.py": "786aa7d7e3ab79b56f995a017d73c2e8e344020dee9aadea10739b9f9b47b041",
+      "tests/test_qc.py": "dd12e5040623fec7d0727ea078c6da3405260ea2989aa37e58d233fe20534147",
+      "tests/test_review.py": "a303d05f10cf791d056f899dd13df810eecee0239a842f3ae98455ccc658a204"
+    },
+    "note": "无Git历史，以内容SHA256标识版本；源码整体与管线包哈希含义不同。"
+  },
+  "runs": {
+    "balanced": {
+      "actual_config": {
+        "policy": "balanced",
+        "review_fraction": 0.1,
+        "audit_fraction_of_budget": 0.2,
+        "seed": 20261020,
+        "expected_revision": "216fb6e2c9449dd8eeab0a3b9233e89ea08d1f7a",
+        "expected_trajectories": 1189
+      },
+      "elapsed_seconds": 7.147,
+      "started_at_utc": "2026-10-20T06:35:54.118210+00:00",
+      "peak_process_memory_bytes": 1338064896,
+      "python": "3.9.6 (default, Apr 17 2026, 18:15:52) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "dependencies": {
+        "zstandard": "0.25.0",
+        "jsonschema": "4.25.1"
+      },
+      "manifest_path": "outputs/balanced/run_manifest.json"
+    },
+    "conservative": {
+      "actual_config": {
+        "policy": "conservative",
+        "review_fraction": 0.1,
+        "audit_fraction_of_budget": 0.2,
+        "seed": 20261020,
+        "expected_revision": "216fb6e2c9449dd8eeab0a3b9233e89ea08d1f7a",
+        "expected_trajectories": 1189
+      },
+      "elapsed_seconds": 7.082,
+      "started_at_utc": "2026-10-20T06:36:01.514879+00:00",
+      "peak_process_memory_bytes": 1336672256,
+      "python": "3.9.6 (default, Apr 17 2026, 18:15:52) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "dependencies": {
+        "zstandard": "0.25.0",
+        "jsonschema": "4.25.1"
+      },
+      "manifest_path": "outputs/conservative/run_manifest.json"
+    }
+  },
+  "dependencies": {
+    "direct": "requirements.txt",
+    "runtime_lock": "requirements-lock.txt",
+    "lock_scope": "QC所需运行依赖及传递依赖，不含可选HF登录CLI。包内已有数据，无需登录。"
+  },
+  "effort": {
+    "total_hours_approx": 6,
+    "source": "用户自报估算：总累计投入6小时左右",
+    "approximate": true,
+    "separate_human_review_time_hours": null,
+    "note": "项目累计投入与扫描秒数分开；未伪造逐阶段人工时间。"
+  },
+  "human_review": {
+    "real_review_trajectories": 30,
+    "formally_confirmed_in_submission": 30,
+    "status": "human_review_complete",
+    "sample_allocation": {
+      "random": 10,
+      "rule_hit": 10,
+      "boundary": 10
+    },
+    "review_file": "reports/review_draft/reviews.jsonl",
+    "human_form": "reports/review_draft/human_review.json"
+  },
+  "validation": {
+    "automated_tests_passed": 50,
+    "tests_log": "reports/submission_tests.txt",
+    "known_truncation_false_positive_fixed": true,
+    "fixed_policy_comparison_unchanged": true,
+    "accuracy_or_false_positive_rate_claimed": false
+  },
+  "ai_assistance": "本项目使用 Codex 辅助代码实现、测试、数据分析及文档整理。提交的 30 条样本复核记录已由本人逐条核对，最终规则、样本判断及准入建议由本人确认并负责。质检管线在普通 CPU 环境运行，不依赖付费模型 API。",
+  "submission_status": "工程、全量结果、报告及30条人工复核记录已整理完成。",
+  "reproduce": [
+    "python3 -m venv .venv",
+    "source .venv/bin/activate",
+    "pip install -r requirements-lock.txt",
+    "python -m agent_qc --config configs/default.json --output outputs/local_reproduction",
+    "python -m unittest discover -s tests -v",
+    "python scripts/compare_policies.py --run",
+    "python scripts/compare_truncation_fix.py"
+  ]
+}

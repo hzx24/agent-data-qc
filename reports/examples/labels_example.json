@@ -1,0 +1,39 @@
+{
+  "trajectory_id": "3e9d0654186f2c9f1a736ef4",
+  "n_steps": 119,
+  "task_type": "implementation",
+  "session_kind": "interactive",
+  "is_eval": false,
+  "eval_kind": null,
+  "template_group": null,
+  "template_group_size": 1,
+  "parent_trajectory_id": null,
+  "prompt_language": "en",
+  "last_test_result": null,
+  "git_commit_made": false,
+  "modified_files": [
+    "/Users/<USER_1>/repo1994/main.tex"
+  ],
+  "key_tools": [
+    "mcp",
+    "bash",
+    "read",
+    "search_tools",
+    "edit"
+  ],
+  "metrics": {
+    "span_count": 119,
+    "llm_span_count": 15,
+    "tool_call_count": 101,
+    "error_count": 0,
+    "error_rate": 0.0,
+    "user_turn_count": 3,
+    "distinct_files_touched": 1,
+    "distinct_models": [
+      "Tier A"
+    ]
+  },
+  "repo_id": "repo1994",
+  "actor_id": "user563",
+  "repo": "user563/repo1994"
+}

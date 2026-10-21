@@ -1,0 +1,425 @@
+{
+  "trajectory_id": "a6186a70d50f69b4fc9b114b",
+  "decision": {
+    "check_status": "completed",
+    "checks": {
+      "cross_table": "complete",
+      "exact_duplicate": "complete",
+      "messages": "complete",
+      "recovery": "complete",
+      "trajectory": "complete"
+    },
+    "decision": "admit",
+    "issue_ids": [
+      "issue_af32770e370f705fdaa2",
+      "issue_5c6a590b1bf5994525d9"
+    ],
+    "message_characters": 1939,
+    "reason_codes": [
+      "CHECKS_PASSED_WITH_RECORDED_RISKS"
+    ],
+    "review_status": "queued",
+    "risk_codes": [
+      "EVAL_RISK",
+      "TEMPLATE_RISK"
+    ],
+    "source_status": "present",
+    "sources": [
+      {
+        "file": "sample/trajectories/trajectories.jsonl.zst",
+        "line": 661,
+        "pointer": ""
+      },
+      {
+        "file": "sample/messages/messages.jsonl.zst",
+        "line": 661,
+        "pointer": ""
+      },
+      {
+        "file": "sample/labels/labels.jsonl.zst",
+        "line": 661,
+        "pointer": ""
+      }
+    ],
+    "tool_calls": 3,
+    "trajectory_id": "a6186a70d50f69b4fc9b114b"
+  },
+  "queue": {
+    "current_decision": "admit",
+    "issue_ids": [
+      "issue_af32770e370f705fdaa2",
+      "issue_5c6a590b1bf5994525d9"
+    ],
+    "priority": {
+      "decision_change_impact": 0,
+      "seeded_tiebreak": "04724b016e4ebb83af6df25bcbfa805b840b2f1a603e93503261f080cf4a1b9f",
+      "tool_call_value_capped_100": 3
+    },
+    "rank": 107,
+    "review_question": "独立检查规则漏检及误报，不预设当前建议正确",
+    "selection_reason": "seeded_audit",
+    "sources": [
+      {
+        "file": "sample/trajectories/trajectories.jsonl.zst",
+        "line": 661,
+        "pointer": ""
+      },
+      {
+        "file": "sample/messages/messages.jsonl.zst",
+        "line": 661,
+        "pointer": ""
+      },
+      {
+        "file": "sample/labels/labels.jsonl.zst",
+        "line": 661,
+        "pointer": ""
+      }
+    ],
+    "trajectory_id": "a6186a70d50f69b4fc9b114b"
+  },
+  "issues": [
+    {
+      "category": "selection_risk",
+      "evidence": {
+        "is_eval": true
+      },
+      "issue_id": "issue_af32770e370f705fdaa2",
+      "message": "未证明与目标评测集重叠",
+      "related_sources": [],
+      "rule_id": "EVAL_RISK",
+      "severity": "medium",
+      "source": {
+        "file": "sample/messages/messages.jsonl.zst",
+        "line": 661,
+        "pointer": "/is_eval"
+      },
+      "suggested_action": "allow",
+      "trajectory_id": "a6186a70d50f69b4fc9b114b"
+    },
+    {
+      "category": "selection_risk",
+      "evidence": {
+        "group": "tg00001",
+        "size_in_full_dataset": 11984
+      },
+      "issue_id": "issue_5c6a590b1bf5994525d9",
+      "message": "共享开头不是全文重复证据",
+      "related_sources": [],
+      "rule_id": "TEMPLATE_RISK",
+      "severity": "info",
+      "source": {
+        "file": "sample/messages/messages.jsonl.zst",
+        "line": 661,
+        "pointer": "/template_group_size"
+      },
+      "suggested_action": "allow",
+      "trajectory_id": "a6186a70d50f69b4fc9b114b"
+    }
+  ],
+  "trajectories": {
+    "file": "sample/trajectories/trajectories.jsonl.zst",
+    "line": 661,
+    "data": {
+      "trajectory_id": "a6186a70d50f69b4fc9b114b",
+      "models": [
+        "Tier A"
+      ],
+      "actor_id": "user2097",
+      "repo_id": "repo1205",
+      "started_at": "2026-08-05T04:48:01",
+      "duration_s": 22.687,
+      "n_steps": 5,
+      "n_tool_calls": 3,
+      "n_errors": 0,
+      "task_type": "exploration",
+      "session_kind": "autonomous",
+      "is_eval": true,
+      "eval_kind": "qa-battery",
+      "template_group": "tg00001",
+      "template_group_size": 11984,
+      "parent_trajectory_id": null,
+      "prompt_language": "en",
+      "last_test_result": null,
+      "git_commit_made": false,
+      "tokens": {
+        "input": 6,
+        "output": 370,
+        "total": 376,
+        "cache_read": 153843,
+        "cache_write": 3125
+      },
+      "redaction": {
+        "n": 3
+      },
+      "steps": [
+        {
+          "i": 0,
+          "type": "user",
+          "text": "Answer the SINGLE question below about this repository. Cite file paths. If you cannot determine the answer, say so rather than guessing.\nStart your answer with a line reading exactly \"q03.\"\n\nQuestion q03:\nWhich struct implements the database driver for PostgreSQL, and in which file is it defined?\nAnswer format: StructName — path",
+          "ts": "2026-08-05T04:48:01.258Z",
+          "is_wrapper": false
+        },
+        {
+          "i": 1,
+          "type": "tool_call",
+          "tool": "bash",
+          "tool_raw": "Bash",
+          "tool_class": "builtin",
+          "args": "{\"command\": \"grep -r \\\"Postgres\\\\|postgresql\\\\|pg_driver\\\\|PgDriver\\\\|PostgresDriver\\\" --include=\\\"*.rs\\\" --include=\\\"*.go\\\" --include=\\\"*.ts\\\" --include=\\\"*.py\\\" --include=\\\"*.java\\\" -l /bench/repo | head -20\", \"description\": \"Find files referencing PostgreSQL driver\"}",
+          "result": "/bench/repo/internal/filter/engine_test.go\n/bench/repo/internal/filter/functions_test.go\n/bench/repo/internal/filter/schema.go\n/bench/repo/internal/filter/render.go\n/bench/repo/server/router/api/v1/attachment_service.go\n/bench/repo/server/router/api/v1/shortcut_service.go\n/bench/repo/store/test/store.go\n/bench/repo/store/test/containers.go\n/bench/repo/store/test/user_setting_test.go\n/bench/repo/store/test/migrator_upgrade_test.go\n/bench/repo/store/db/postgres/memo.go\n/bench/repo/store/db/postgres/memo_relation.go\n/bench/repo/store/db/postgres/user_setting_test.go\n/bench/repo/store/db/postgres/attachment.go",
+          "ok": true,
+          "duration_ms": 142.0,
+          "ts": "2026-08-05T04:48:06.691Z"
+        },
+        {
+          "i": 2,
+          "type": "tool_call",
+          "tool": "bash",
+          "tool_raw": "Bash",
+          "tool_class": "builtin",
+          "args": "{\"command\": \"grep -rn \\\"type.*struct\\\" /bench/repo/store/db/postgres/ | head -20\", \"description\": \"Find struct definitions in postgres directory\"}",
+          "result": "/bench/repo/store/db/postgres/postgres.go:16:type DB struct {\n/bench/repo/store/db/postgres/user_delete.go:16:type deleteUserMemoRef struct {\n/bench/repo/store/db/postgres/user_delete.go:21:type deleteUserTargetSet struct {",
+          "ok": true,
+          "duration_ms": 20.0,
+          "ts": "2026-08-05T04:48:17.000Z"
+        },
+        {
+          "i": 3,
+          "type": "retrieval",
+          "tool": "read",
+          "tool_raw": "Read",
+          "tool_class": "builtin",
+          "args": "{\"file_path\": \"/bench/repo/store/db/postgres/postgres.go\", \"limit\": 30}",
+          "result": "1\tpackage postgres\n2\t\n3\timport (\n4\t\t\"context\"\n5\t\t\"database/sql\"\n6\t\t\"log\"\n7\t\n8\t\t// Import the PostgreSQL driver.\n9\t\t_ \"github.com/<USER_2>/pq\"\n10\t\t\"github.com/pkg/errors\"\n11\t\n12\t\t\"github.com/<USER_1>/memos/internal/profile\"\n13\t\t\"github.com/<USER_1>/memos/store\"\n14\t)\n15\t\n16\ttype DB struct {\n17\t\tdb      *sql.DB\n18\t\tprofile *profile.Profile\n19\t}\n20\t\n21\tfunc NewDB(profile *profile.Profile) (store.Driver, error) {\n22\t\tif profile == nil {\n23\t\t\treturn nil, errors.New(\"profile is nil\")\n24\t\t}\n25\t\n26\t\t// Open the PostgreSQL connection\n27\t\tdb, err := sql.Open(\"postgres\", profile.DSN)\n28\t\tif err != nil {\n29\t\t\tlog.Printf(\"Failed to open database: %s\", err)\n30\t\t\treturn nil, errors.Wrapf(err, \"failed to open database: %s\", profile.DSN)",
+          "ok": true,
+          "duration_ms": 5.0,
+          "ts": "2026-08-05T04:48:20.833Z"
+        },
+        {
+          "i": 4,
+          "type": "assistant",
+          "text": "q03.\n`DB` — `store/db/postgres/postgres.go`",
+          "model": "Tier A",
+          "out_tokens": 22,
+          "ts": "2026-08-05T04:48:23.935Z"
+        }
+      ],
+      "repo": "user2097/repo1205",
+      "schema_version": "gatc-v0.5"
+    }
+  },
+  "messages": {
+    "file": "sample/messages/messages.jsonl.zst",
+    "line": 661,
+    "data": {
+      "trajectory_id": "a6186a70d50f69b4fc9b114b",
+      "models": [
+        "Tier A"
+      ],
+      "n_steps": 5,
+      "task_type": "exploration",
+      "session_kind": "autonomous",
+      "is_eval": true,
+      "eval_kind": "qa-battery",
+      "template_group": "tg00001",
+      "template_group_size": 11984,
+      "parent_trajectory_id": null,
+      "prompt_language": "en",
+      "last_test_result": null,
+      "git_commit_made": false,
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the SINGLE question below about this repository. Cite file paths. If you cannot determine the answer, say so rather than guessing.\nStart your answer with a line reading exactly \"q03.\"\n\nQuestion q03:\nWhich struct implements the database driver for PostgreSQL, and in which file is it defined?\nAnswer format: StructName — path",
+          "is_wrapper": false
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_0",
+              "type": "function",
+              "function": {
+                "name": "bash",
+                "arguments": "{\"command\": \"grep -r \\\"Postgres\\\\|postgresql\\\\|pg_driver\\\\|PgDriver\\\\|PostgresDriver\\\" --include=\\\"*.rs\\\" --include=\\\"*.go\\\" --include=\\\"*.ts\\\" --include=\\\"*.py\\\" --include=\\\"*.java\\\" -l /bench/repo | head -20\", \"description\": \"Find files referencing PostgreSQL driver\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_0",
+          "content": "/bench/repo/internal/filter/engine_test.go\n/bench/repo/internal/filter/functions_test.go\n/bench/repo/internal/filter/schema.go\n/bench/repo/internal/filter/render.go\n/bench/repo/server/router/api/v1/attachment_service.go\n/bench/repo/server/router/api/v1/shortcut_service.go\n/bench/repo/store/test/store.go\n/bench/repo/store/test/containers.go\n/bench/repo/store/test/user_setting_test.go\n/bench/repo/store/test/migrator_upgrade_test.go\n/bench/repo/store/db/postgres/memo.go\n/bench/repo/store/db/postgres/memo_relation.go\n/bench/repo/store/db/postgres/user_setting_test.go\n/bench/repo/store/db/postgres/attachment.go"
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_1",
+              "type": "function",
+              "function": {
+                "name": "bash",
+                "arguments": "{\"command\": \"grep -rn \\\"type.*struct\\\" /bench/repo/store/db/postgres/ | head -20\", \"description\": \"Find struct definitions in postgres directory\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_1",
+          "content": "/bench/repo/store/db/postgres/postgres.go:16:type DB struct {\n/bench/repo/store/db/postgres/user_delete.go:16:type deleteUserMemoRef struct {\n/bench/repo/store/db/postgres/user_delete.go:21:type deleteUserTargetSet struct {"
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_2",
+              "type": "function",
+              "function": {
+                "name": "read",
+                "arguments": "{\"path\": \"/bench/repo/store/db/postgres/postgres.go\", \"limit\": 30}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_2",
+          "content": "1\tpackage postgres\n2\t\n3\timport (\n4\t\t\"context\"\n5\t\t\"database/sql\"\n6\t\t\"log\"\n7\t\n8\t\t// Import the PostgreSQL driver.\n9\t\t_ \"github.com/<USER_2>/pq\"\n10\t\t\"github.com/pkg/errors\"\n11\t\n12\t\t\"github.com/<USER_1>/memos/internal/profile\"\n13\t\t\"github.com/<USER_1>/memos/store\"\n14\t)\n15\t\n16\ttype DB struct {\n17\t\tdb      *sql.DB\n18\t\tprofile *profile.Profile\n19\t}\n20\t\n21\tfunc NewDB(profile *profile.Profile) (store.Driver, error) {\n22\t\tif profile == nil {\n23\t\t\treturn nil, errors.New(\"profile is nil\")\n24\t\t}\n25\t\n26\t\t// Open the PostgreSQL connection\n27\t\tdb, err := sql.Open(\"postgres\", profile.DSN)\n28\t\tif err != nil {\n29\t\t\tlog.Printf(\"Failed to open database: %s\", err)\n30\t\t\treturn nil, errors.Wrapf(err, \"failed to open database: %s\", profile.DSN)"
+        },
+        {
+          "role": "assistant",
+          "content": "q03.\n`DB` — `store/db/postgres/postgres.go`"
+        }
+      ],
+      "tools": "[{\"type\": \"function\", \"function\": {\"name\": \"bash\", \"description\": \"Run a shell command.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"command\": {\"type\": \"string\", \"description\": \"The command to run.\"}, \"description\": {\"type\": \"string\", \"description\": \"What the command does.\"}, \"workdir\": {\"type\": \"string\", \"description\": \"Working directory.\"}, \"timeout_ms\": {\"type\": \"integer\", \"description\": \"Timeout in milliseconds.\"}, \"background\": {\"type\": \"boolean\", \"description\": \"Run in the background.\"}}, \"required\": [\"command\"]}}}, {\"type\": \"function\", \"function\": {\"name\": \"read\", \"description\": \"Read a file.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"path\": {\"type\": \"string\", \"description\": \"File path.\"}, \"offset\": {\"type\": \"integer\", \"description\": \"First line to read.\"}, \"limit\": {\"type\": \"integer\", \"description\": \"Number of lines to read.\"}, \"pages\": {\"type\": \"string\", \"description\": \"Pages of a PDF.\"}}, \"required\": [\"path\"]}}}]",
+      "ft_issues": [],
+      "repo_id": "repo1205",
+      "actor_id": "user2097",
+      "repo": "user2097/repo1205"
+    }
+  },
+  "labels": {
+    "file": "sample/labels/labels.jsonl.zst",
+    "line": 661,
+    "data": {
+      "trajectory_id": "a6186a70d50f69b4fc9b114b",
+      "n_steps": 5,
+      "task_type": "exploration",
+      "session_kind": "autonomous",
+      "is_eval": true,
+      "eval_kind": "qa-battery",
+      "template_group": "tg00001",
+      "template_group_size": 11984,
+      "parent_trajectory_id": null,
+      "prompt_language": "en",
+      "last_test_result": null,
+      "git_commit_made": false,
+      "modified_files": [
+        "/bench/repo/store/db/postgres/postgres.go"
+      ],
+      "key_tools": [
+        "bash",
+        "read"
+      ],
+      "metrics": {
+        "span_count": 5,
+        "llm_span_count": 1,
+        "tool_call_count": 3,
+        "error_count": 0,
+        "error_rate": 0.0,
+        "user_turn_count": 1,
+        "distinct_files_touched": 1,
+        "distinct_models": [
+          "Tier A"
+        ]
+      },
+      "repo_id": "repo1205",
+      "actor_id": "user2097",
+      "repo": "user2097/repo1205"
+    }
+  },
+  "sft_steps": [
+    {
+      "file": "sample/views/sft_steps.jsonl.zst",
+      "line": 37571,
+      "data": {
+        "trajectory_id": "a6186a70d50f69b4fc9b114b",
+        "i": 1,
+        "context": [
+          {
+            "type": "user",
+            "text": "Answer the SINGLE question below about this repository. Cite file paths. If you cannot determine the answer, say so rather than guessing.\nStart your answer with a line reading exactly \"q03.\"\n\nQuestion q03:\nWhich struct implements the database driver for PostgreSQL, and in which file is it defined?\nAnswer format: StructName — path"
+          }
+        ],
+        "tool": "bash",
+        "tool_raw": "Bash",
+        "args": "{\"command\": \"grep -r \\\"Postgres\\\\|postgresql\\\\|pg_driver\\\\|PgDriver\\\\|PostgresDriver\\\" --include=\\\"*.rs\\\" --include=\\\"*.go\\\" --include=\\\"*.ts\\\" --include=\\\"*.py\\\" --include=\\\"*.java\\\" -l /bench/repo | head -20\", \"description\": \"Find files referencing PostgreSQL driver\"}",
+        "ok": true,
+        "result": "/bench/repo/internal/filter/engine_test.go\n/bench/repo/internal/filter/functions_test.go\n/bench/repo/internal/filter/schema.go\n/bench/repo/internal/filter/render.go\n/bench/repo/server/router/api/v1/attachment_service.go\n/bench/repo/server/router/api/v1/shortcut_service.go\n/bench/repo/store/test/store.go\n/bench/repo/store/test/containers.go\n/bench/repo/store/test/user_setting_test.go\n/bench/repo/store/test/migrator_upgrade_test.go\n/bench/repo/store/db/postgres/memo.go\n/bench/repo/store/db/postgres/memo_relation.go\n/bench/repo/store/db/postgres/user_setting_test.go\n/bench/repo/store/db/postgres/attachment.go",
+        "repo_id": "repo1205",
+        "actor_id": "user2097",
+        "repo": "user2097/repo1205"
+      }
+    },
+    {
+      "file": "sample/views/sft_steps.jsonl.zst",
+      "line": 37572,
+      "data": {
+        "trajectory_id": "a6186a70d50f69b4fc9b114b",
+        "i": 2,
+        "context": [
+          {
+            "type": "user",
+            "text": "Answer the SINGLE question below about this repository. Cite file paths. If you cannot determine the answer, say so rather than guessing.\nStart your answer with a line reading exactly \"q03.\"\n\nQuestion q03:\nWhich struct implements the database driver for PostgreSQL, and in which file is it defined?\nAnswer format: StructName — path"
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          }
+        ],
+        "tool": "bash",
+        "tool_raw": "Bash",
+        "args": "{\"command\": \"grep -rn \\\"type.*struct\\\" /bench/repo/store/db/postgres/ | head -20\", \"description\": \"Find struct definitions in postgres directory\"}",
+        "ok": true,
+        "result": "/bench/repo/store/db/postgres/postgres.go:16:type DB struct {\n/bench/repo/store/db/postgres/user_delete.go:16:type deleteUserMemoRef struct {\n/bench/repo/store/db/postgres/user_delete.go:21:type deleteUserTargetSet struct {",
+        "repo_id": "repo1205",
+        "actor_id": "user2097",
+        "repo": "user2097/repo1205"
+      }
+    },
+    {
+      "file": "sample/views/sft_steps.jsonl.zst",
+      "line": 37573,
+      "data": {
+        "trajectory_id": "a6186a70d50f69b4fc9b114b",
+        "i": 3,
+        "context": [
+          {
+            "type": "user",
+            "text": "Answer the SINGLE question below about this repository. Cite file paths. If you cannot determine the answer, say so rather than guessing.\nStart your answer with a line reading exactly \"q03.\"\n\nQuestion q03:\nWhich struct implements the database driver for PostgreSQL, and in which file is it defined?\nAnswer format: StructName — path"
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          },
+          {
+            "type": "tool_call",
+            "text": "bash"
+          }
+        ],
+        "tool": "read",
+        "tool_raw": "Read",
+        "args": "{\"file_path\": \"/bench/repo/store/db/postgres/postgres.go\", \"limit\": 30}",
+        "ok": true,
+        "result": "1\tpackage postgres\n2\t\n3\timport (\n4\t\t\"context\"\n5\t\t\"database/sql\"\n6\t\t\"log\"\n7\t\n8\t\t// Import the PostgreSQL driver.\n9\t\t_ \"github.com/<USER_2>/pq\"\n10\t\t\"github.com/pkg/errors\"\n11\t\n12\t\t\"github.com/<USER_1>/memos/internal/profile\"\n13\t\t\"github.com/<USER_1>/memos/store\"\n14\t)\n15\t\n16\ttype DB struct {\n17\t\tdb      *sql.DB\n18\t\tprofile *profile.Profile\n19\t}\n20\t\n21\tfunc NewDB(profile *profile.Profile) (store.Driver, error) {\n22\t\tif profile == nil {\n23\t\t\treturn nil, errors.New(\"profile is nil\")\n24\t\t}\n25\t\n26\t\t// Open the PostgreSQL connection\n27\t\tdb, err := sql.Open(\"postgres\", profile.DSN)\n28\t\tif err != nil {\n29\t\t\tlog.Printf(\"Failed to open database: %s\", err)\n30\t\t\treturn nil, errors.Wrapf(err, \"failed to open database: %s\", profile.DSN)",
+        "repo_id": "repo1205",
+        "actor_id": "user2097",
+        "repo": "user2097/repo1205"
+      }
+    }
+  ]
+}

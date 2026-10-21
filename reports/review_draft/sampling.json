@@ -1,0 +1,289 @@
+{
+  "status": "人工复核抽样及证据包；确认状态另见human_review.json与summary.json",
+  "revision": "216fb6e2c9449dd8eeab0a3b9233e89ea08d1f7a",
+  "seed": 20261020,
+  "sample_size": 30,
+  "unique_sample_size": 30,
+  "budget_queue_size": 118,
+  "all_samples_in_existing_queue": true,
+  "new_trajectory_ids_outside_queue": 0,
+  "allocation": {
+    "random": 10,
+    "rule_hit": 10,
+    "boundary": 10
+  },
+  "random_sampling": "先固定10个边界与10个规则命中案例；再从seeded_audit队列移除这些ID后的有序池中，用random.Random(seed).sample不放回抽10条。边界有意选择会影响随机池，随机组仅代表剩余审计子池，不是全量简单随机样本。",
+  "random_pool_ids": [
+    "1dfa68e4d45e1809564d014f",
+    "374f0c71cad0c4e7d1c27c57",
+    "417fe86dd5d139a8842ca200",
+    "4dc74ff5da4b7112df5bf56e",
+    "55b10005500b3026ee26e63a",
+    "61bcfad0dd5ffc9dbdd81225",
+    "788f75ec42d6701f1810c3cc",
+    "8a315ebdf674f909d7880577",
+    "91de80047c831bb903c2a4e2",
+    "947bff5d1e83d3a444a6d0b3",
+    "a4f4652bf1f2db578146d1c5",
+    "a6186a70d50f69b4fc9b114b",
+    "e77456b90dbeb23873305aea"
+  ],
+  "random_pool_size": 13,
+  "purpose_selection": "规则组有意覆盖参数缺失、schema变体、移除和跨表差异；边界组覆盖策略分歧、未知状态、合法视图截短、正常对照与恢复歧义。类别不凑齐：既有队列没有exclude样本。",
+  "scope_of_reading": "核对输入/末尾、代表性规则命中位置及相关上下文和失败窗口；长轨迹未逐一核对全部命中，也未逐字阅读全部代码、完整重放或验收任务语义。各条关键证据和阅读局限见reviews；完整原始轨迹和训练消息在evidence中供人类核验。",
+  "groups": [
+    {
+      "index": 1,
+      "group": "random",
+      "trajectory_id": "e77456b90dbeb23873305aea",
+      "selection_reason": "固定种子从剩余随机审计子池抽取",
+      "queue_rank": 99
+    },
+    {
+      "index": 2,
+      "group": "random",
+      "trajectory_id": "8a315ebdf674f909d7880577",
+      "selection_reason": "固定种子从剩余随机审计子池抽取",
+      "queue_rank": 111
+    },
+    {
+      "index": 3,
+      "group": "random",
+      "trajectory_id": "a4f4652bf1f2db578146d1c5",
+      "selection_reason": "固定种子从剩余随机审计子池抽取",
+      "queue_rank": 97
+    },
+    {
+      "index": 4,
+      "group": "random",
+      "trajectory_id": "61bcfad0dd5ffc9dbdd81225",
+      "selection_reason": "固定种子从剩余随机审计子池抽取",
+      "queue_rank": 105
+    },
+    {
+      "index": 5,
+      "group": "random",
+      "trajectory_id": "4dc74ff5da4b7112df5bf56e",
+      "selection_reason": "固定种子从剩余随机审计子池抽取",
+      "queue_rank": 102
+    },
+    {
+      "index": 6,
+      "group": "random",
+      "trajectory_id": "a6186a70d50f69b4fc9b114b",
+      "selection_reason": "固定种子从剩余随机审计子池抽取",
+      "queue_rank": 107
+    },
+    {
+      "index": 7,
+      "group": "random",
+      "trajectory_id": "1dfa68e4d45e1809564d014f",
+      "selection_reason": "固定种子从剩余随机审计子池抽取",
+      "queue_rank": 106
+    },
+    {
+      "index": 8,
+      "group": "random",
+      "trajectory_id": "947bff5d1e83d3a444a6d0b3",
+      "selection_reason": "固定种子从剩余随机审计子池抽取",
+      "queue_rank": 110
+    },
+    {
+      "index": 9,
+      "group": "random",
+      "trajectory_id": "91de80047c831bb903c2a4e2",
+      "selection_reason": "固定种子从剩余随机审计子池抽取",
+      "queue_rank": 104
+    },
+    {
+      "index": 10,
+      "group": "random",
+      "trajectory_id": "788f75ec42d6701f1810c3cc",
+      "selection_reason": "固定种子从剩余随机审计子池抽取",
+      "queue_rank": 100
+    },
+    {
+      "index": 11,
+      "group": "rule_hit",
+      "trajectory_id": "a11e0688dc7f141f22ea507b",
+      "selection_reason": "跨表结果差异、移除文本及schema冲突",
+      "queue_rank": 1
+    },
+    {
+      "index": 12,
+      "group": "rule_hit",
+      "trajectory_id": "7bce5aa6ee3bc6fa68957d61",
+      "selection_reason": "截断标记误报的回归案例与参数兼容问题",
+      "queue_rank": 8
+    },
+    {
+      "index": 13,
+      "group": "rule_hit",
+      "trajectory_id": "4e7f55928c33fd2fff1db7af",
+      "selection_reason": "replacements参数变体不应直接判缺参",
+      "queue_rank": 7
+    },
+    {
+      "index": 14,
+      "group": "rule_hit",
+      "trajectory_id": "fffa584c9e10be4e287f1a94",
+      "selection_reason": "仅dirty-files摘要，不能重建改动",
+      "queue_rank": 36
+    },
+    {
+      "index": 15,
+      "group": "rule_hit",
+      "trajectory_id": "9b0406d7ec2f9dc41a7d1824",
+      "selection_reason": "嵌套parameters记录仅含路径",
+      "queue_rank": 37
+    },
+    {
+      "index": 16,
+      "group": "rule_hit",
+      "trajectory_id": "235c0f6f1675e4095344e9f1",
+      "selection_reason": "写入记录只有路径",
+      "queue_rank": 66
+    },
+    {
+      "index": 17,
+      "group": "rule_hit",
+      "trajectory_id": "109c981e1c9043aac0b41131",
+      "selection_reason": "write的input承载内容但与schema不兼容",
+      "queue_rank": 64
+    },
+    {
+      "index": 18,
+      "group": "rule_hit",
+      "trajectory_id": "d357581401a83f863e7f5fff",
+      "selection_reason": "task调用参数变体与发布schema不一致",
+      "queue_rank": 73
+    },
+    {
+      "index": 19,
+      "group": "rule_hit",
+      "trajectory_id": "77e1e9ccc1420c26899e1759",
+      "selection_reason": "移除文本可能阻断上下文解释",
+      "queue_rank": 84
+    },
+    {
+      "index": 20,
+      "group": "rule_hit",
+      "trajectory_id": "7db6c1d8a023ed1a889c6881",
+      "selection_reason": "仅一次调用的schema疑问，核验暂缓是否过度",
+      "queue_rank": 113
+    },
+    {
+      "index": 21,
+      "group": "boundary",
+      "trajectory_id": "7daf4462d83e7964ecc06877",
+      "selection_reason": "失败后针对性修正，但最后返回为空且无最终回答",
+      "queue_rank": 116
+    },
+    {
+      "index": 22,
+      "group": "boundary",
+      "trajectory_id": "e8e7875ed949d0b4242d3da4",
+      "selection_reason": "仅评测来源改变策略，且状态成功可伴随错误文本",
+      "queue_rank": 115
+    },
+    {
+      "index": 23,
+      "group": "boundary",
+      "trajectory_id": "753530dd642d338581edde8e",
+      "selection_reason": "权限失败后换工具，评测来源及开放结尾同时命中",
+      "queue_rank": 118
+    },
+    {
+      "index": 24,
+      "group": "boundary",
+      "trajectory_id": "34b796f5a03369d11b40e110",
+      "selection_reason": "开头是工具输出，未知工具是否实际可执行",
+      "queue_rank": 112
+    },
+    {
+      "index": 25,
+      "group": "boundary",
+      "trajectory_id": "938fb20e9c2c354b2ac2f6f6",
+      "selection_reason": "只有一次调用，派生视图截短但原始结果完整",
+      "queue_rank": 109
+    },
+    {
+      "index": 26,
+      "group": "boundary",
+      "trajectory_id": "eecd796755bb58f80dfefafa",
+      "selection_reason": "状态未知但无其他阻断标记，检查是否应保留",
+      "queue_rank": 117
+    },
+    {
+      "index": 27,
+      "group": "boundary",
+      "trajectory_id": "c4704adb2a18332df39148b2",
+      "selection_reason": "失败密集且恢复视图关联不唯一",
+      "queue_rank": 114
+    },
+    {
+      "index": 28,
+      "group": "boundary",
+      "trajectory_id": "d101de2b80d1abf850b43f07",
+      "selection_reason": "管线无风险标记的正常对照",
+      "queue_rank": 98
+    },
+    {
+      "index": 29,
+      "group": "boundary",
+      "trajectory_id": "f6ee1f33426b334fc6e6d1a1",
+      "selection_reason": "全部调用状态未知，评测且无最终文本回答",
+      "queue_rank": 96
+    },
+    {
+      "index": 30,
+      "group": "boundary",
+      "trajectory_id": "4fd7f1ffc160d75c53ad659f",
+      "selection_reason": "交互轨迹缺少清晰用户开头/结尾，核验边界价值",
+      "queue_rank": 108
+    }
+  ],
+  "pipeline_code_sha256": "ed6cb9e67d5c4d09c82f0ad241307f5d1bf9c597fe9a1fd16488d2b51e8f8057",
+  "queue_sha256": "500de7b4d701dfb032e51a1afaeb22121f383ae1f37daaae1a21a5c45d36af63",
+  "raw_sha256": {
+    "sample/trajectories/trajectories.jsonl.zst": "e8ea1da604050ccff41610ec7404267981c7be31a1c510e0df3c33518e7c4290",
+    "sample/messages/messages.jsonl.zst": "82b0125509065fcdbb8d22384e0725770ce63e4012fe925751a273095a55cb7c",
+    "sample/labels/labels.jsonl.zst": "72c48e79eec912ef09071123efab047247037061cd6dcf8664ad3405b070809e",
+    "sample/views/sft_steps.jsonl.zst": "aea6a0e377e24382ceb8f4d1c7b226a7868258223bab61d2ddd90dce36d48a67",
+    "sample/views/error_recovery.jsonl.zst": "4ecc9d80e72f1283591b765e879724ef609d8adcbfb38377615b615705cf2356",
+    "sample/views/tool_grammar.jsonl.zst": "64b5b03bc2b65e3c8fd3c23f1c7c981ed53a5c92820ea28924a6ca43ee40d925"
+  },
+  "script_sha256": "b2d22ab7b13e2aa94ba9e10b2f9c7f9958a5d9fa4d1a6d96995bec6536d39fb0",
+  "evidence_sha256": {
+    "109c981e1c9043aac0b41131": "9d15b23d4e537a23b41278746c81741a939015f6360822a53e82645222384289",
+    "1dfa68e4d45e1809564d014f": "04c46e4a8d8a3a90eeebaed4f043c9b79d95b55474e348344ec1aa4a54ddbf66",
+    "235c0f6f1675e4095344e9f1": "805fb742b72e309c7b8eb611348c0104d5146700d711fadced4ac3510d02a2d3",
+    "34b796f5a03369d11b40e110": "10db8d96fbf82c55bede69a3b6195f88fe07dc47ecb88092cade35854cb626f2",
+    "4dc74ff5da4b7112df5bf56e": "72b7b8c62b2514f877313145e7e5a3962443fcc4108652da75a79cfd9cd0ab1e",
+    "4e7f55928c33fd2fff1db7af": "9fe3bf2a321bca9ff6f743d59bb705aa48cee3ad3ae3a301606a9d15d7e7a534",
+    "4fd7f1ffc160d75c53ad659f": "ce03dcfdf44f0b959b3202fe19097425db66e3cba851b2236911f7f1afb65402",
+    "61bcfad0dd5ffc9dbdd81225": "c4ef164416920d96d33293692e55a12bddaddeba581c314bc8af23a33260e6ce",
+    "753530dd642d338581edde8e": "bc6eef70738581943cb9c01f8c839b5f9dca6affd9ab42bea0f29140e3c85694",
+    "77e1e9ccc1420c26899e1759": "2a2c1475076bb2a615a3d4af60706dff345eb1ba8419edeed08a43a40c761d5d",
+    "788f75ec42d6701f1810c3cc": "ca54c837f57e9d8c925925a9abd71b286d257aa66a560de07e20ffeb33cd89b4",
+    "7bce5aa6ee3bc6fa68957d61": "8ed709f86e07dd2bef4a2809458ae85031d10c35cc4c617631626534d486a0de",
+    "7daf4462d83e7964ecc06877": "14b32de74ee4f39aac7cc495068888698f4cf38161f829f852c368aa9a8823e4",
+    "7db6c1d8a023ed1a889c6881": "8c2960c007e7530fd8b4760a770d01d88244382d97c4cc85482fd9996c0723bc",
+    "8a315ebdf674f909d7880577": "eb0dd5e603bbaea970240616c9f851a9848863ccf3ccb4f624f9a79161ce919d",
+    "91de80047c831bb903c2a4e2": "65b866da8f193ef737ce4c3b6bf5b5f1818b07aa286e43b2e8a72e7e61f10a32",
+    "938fb20e9c2c354b2ac2f6f6": "17570e067e8b04aa357bf8c64329c8fc06f844d5c4ca1dc713b69bc8140a9b33",
+    "947bff5d1e83d3a444a6d0b3": "5df5b5dd8d7411711e326b9422383f2c7c0c82ba2497854206aad8f05f1ce165",
+    "9b0406d7ec2f9dc41a7d1824": "35eb171cf36f07660721465aa99308db69bf8b9818f54d98af7c9a5cdbe34a79",
+    "a11e0688dc7f141f22ea507b": "a5291c18d19e7e21f70981f3241e36e6eca65784c449bd86040a98110f49e2c3",
+    "a4f4652bf1f2db578146d1c5": "dcbdaafa82becd0f5f9185bb85c22c0980db48707aa2ce7652c306836497e884",
+    "a6186a70d50f69b4fc9b114b": "211f782a6eebee8178b3c166440727771781e4a61572d8f12f28c10638ed1bf6",
+    "c4704adb2a18332df39148b2": "1a172b5aea0015b07d4a25d27d5bd7ba15890939858ea42d805c4f17d5f72fe5",
+    "d101de2b80d1abf850b43f07": "0450daf49e3971be6115e3c7fcaa908295657d8414bda296d3d454622b78efc1",
+    "d357581401a83f863e7f5fff": "54548f7aa1b6016037b273b5f8be4f4c2cb1a29890cc415f488fc38e9311d3d1",
+    "e77456b90dbeb23873305aea": "01730fe807140fcf7a754f3784c327b8ca7dd6d4e204060fbf3a58e6164f4dc3",
+    "e8e7875ed949d0b4242d3da4": "e4a73a8d3cedf6d126bcf7223eeb217d93c090177130c4c4bc2ce312dccffde0",
+    "eecd796755bb58f80dfefafa": "ffa3ccf2d9cb33f7b8d88c83242afe9adcba167d554f8f71e9d251f728b96d24",
+    "f6ee1f33426b334fc6e6d1a1": "e184908b1b64a08ab70c60412e63e44ed0ed8da41896484956fea363727730a6",
+    "fffa584c9e10be4e287f1a94": "8762c5ff7993f67113741062c26623e65279dd51f3f934f88613b19aa21b6fbb"
+  }
+}

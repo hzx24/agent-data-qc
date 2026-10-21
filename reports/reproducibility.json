@@ -1,0 +1,13 @@
+{
+  "scope": "full six-table repeat run",
+  "fact_file_byte_matches": {
+    "issues.jsonl": true,
+    "decisions.jsonl": true,
+    "review_queue.jsonl": true,
+    "summary.json": true,
+    "rules.json": true,
+    "config.json": true
+  },
+  "all_match": true,
+  "raw_hashes_verified_by_both_runs": true
+}

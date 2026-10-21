@@ -1,0 +1,140 @@
+{
+  "dataset_revision_recorded": "216fb6e2c9449dd8eeab0a3b9233e89ea08d1f7a",
+  "policy": "balanced",
+  "trajectory_units": 1189,
+  "valid_id_units": 1189,
+  "unattributable_damaged_units": 0,
+  "decisions": {
+    "admit": 862,
+    "defer": 245,
+    "exclude": 82
+  },
+  "check_status": {
+    "completed": 1189
+  },
+  "issues_by_rule": {
+    "CROSS_VALUE": 4,
+    "EVAL_RISK": 422,
+    "NO_TOOL_TARGET": 82,
+    "OPEN_BOUNDARY": 321,
+    "PARAMS_INCOMPLETE": 1055,
+    "PARENT_OUTSIDE": 43,
+    "PUBLISHER_FLAG": 448,
+    "RECORDED_TRUNCATION": 68,
+    "RECOVERY_HEURISTIC": 452,
+    "RECOVERY_UNCERTAIN": 194,
+    "SCHEMA_MISMATCH": 3648,
+    "STATUS_UNKNOWN": 301,
+    "TEMPLATE_RISK": 674,
+    "TRUNCATION_LITERAL": 1,
+    "VIEW_TRUNCATED": 5593,
+    "WITHHELD": 95
+  },
+  "trajectories_by_rule": {
+    "CROSS_VALUE": 4,
+    "EVAL_RISK": 422,
+    "NO_TOOL_TARGET": 82,
+    "OPEN_BOUNDARY": 321,
+    "PARAMS_INCOMPLETE": 84,
+    "PARENT_OUTSIDE": 43,
+    "PUBLISHER_FLAG": 448,
+    "RECORDED_TRUNCATION": 1,
+    "RECOVERY_HEURISTIC": 452,
+    "RECOVERY_UNCERTAIN": 36,
+    "SCHEMA_MISMATCH": 216,
+    "STATUS_UNKNOWN": 301,
+    "TEMPLATE_RISK": 674,
+    "TRUNCATION_LITERAL": 1,
+    "VIEW_TRUNCATED": 745,
+    "WITHHELD": 43
+  },
+  "issues_by_category": {
+    "risk": 7159,
+    "selection_risk": 1096,
+    "insufficient_evidence": 5064,
+    "selection_mismatch": 82
+  },
+  "blocking_trajectories_by_rule": {
+    "CROSS_VALUE": 4,
+    "NO_TOOL_TARGET": 82,
+    "PARAMS_INCOMPLETE": 84,
+    "RECORDED_TRUNCATION": 1,
+    "SCHEMA_MISMATCH": 216,
+    "WITHHELD": 43
+  },
+  "nonblocking_risk_trajectories_by_rule": {
+    "EVAL_RISK": 422,
+    "OPEN_BOUNDARY": 321,
+    "PARENT_OUTSIDE": 43,
+    "PUBLISHER_FLAG": 448,
+    "RECOVERY_HEURISTIC": 452,
+    "RECOVERY_UNCERTAIN": 36,
+    "STATUS_UNKNOWN": 301,
+    "TEMPLATE_RISK": 674,
+    "TRUNCATION_LITERAL": 1,
+    "VIEW_TRUNCATED": 745
+  },
+  "table_status": {
+    "trajectories": {
+      "valid_rows": 1189,
+      "damaged_rows": 0,
+      "physical_lines_read": 1189,
+      "read_complete": true
+    },
+    "messages": {
+      "valid_rows": 1189,
+      "damaged_rows": 0,
+      "physical_lines_read": 1189,
+      "read_complete": true
+    },
+    "labels": {
+      "valid_rows": 1189,
+      "damaged_rows": 0,
+      "physical_lines_read": 1189,
+      "read_complete": true
+    },
+    "sft_steps": {
+      "valid_rows": 52617,
+      "damaged_rows": 0,
+      "physical_lines_read": 52617,
+      "read_complete": true
+    },
+    "error_recovery": {
+      "valid_rows": 2028,
+      "damaged_rows": 0,
+      "physical_lines_read": 2028,
+      "read_complete": true
+    },
+    "tool_grammar": {
+      "valid_rows": 17,
+      "damaged_rows": 0,
+      "physical_lines_read": 17,
+      "read_complete": true
+    }
+  },
+  "review_budget": {
+    "denominator": 1189,
+    "fraction": 0.1,
+    "maximum": 118,
+    "queued": 118,
+    "uncertainty_candidates": 245,
+    "deferred_not_queued": 149,
+    "audit_slots_requested": 24,
+    "seed": 20261020
+  },
+  "uncovered_and_unresolved_risks": [
+    "未执行原始命令、未重放代码、未核验视觉产物；不保证任务成功或代码正确。",
+    "工具schema由发布者重建；兼容性检查不证明原始工具语义正确。",
+    "无指定目标模型/模板/tokenizer，不检查实际token窗口或训练框架损失掩码。",
+    "没有目标评测集；is_eval与共享开头只作为风险线索，未完成外部去污染或模糊去重。",
+    "不是全面隐私审计；保留原始脱敏占位符，不尝试恢复隐藏内容。",
+    "error_recovery无步骤索引；非唯一匹配明确为不确定，窗口成功不是因果恢复。",
+    "本轮整轨迹准入，无自动裁剪、补写参数或人工判决；队列是待复核建议。",
+    "发布方独立脱敏可能改变视图前缀；无法证明等价的跨表差异暂缓，可能产生误报。",
+    "截断标记按行和源码字面量语境启发判断；未知语境暂缓，未覆盖所有语言语法或无标记截断。"
+  ],
+  "batch_problems": [],
+  "review_order": "先按暂缓问题的改判影响降序，再按工具调用数（上限100）降序，再用固定种子哈希打破平局；预算20%留作全批次随机审计，其余优先疑难。队列排名先疑难再审计。",
+  "source_convention": "file相对--data目录；line为解压后JSONL的1起始行号；pointer为JSON Pointer，/tools下路径需先解析字符串。证据为截取片段，完整内容在原始位置。",
+  "decision_precedence": "明确排除 > 暂缓 > 入选；排除并不表示其他检查全部通过；风险项不自动阻断balanced入选。"
+}

@@ -1,0 +1,12 @@
+{
+  "all_tests": 48,
+  "regression_real_fixtures_verified": 2,
+  "data_unchanged": true,
+  "both_full_scans_complete": true,
+  "decision_changes": 0,
+  "queue_members_and_ranking_unchanged": true,
+  "review_sample_ids_and_ranks_unchanged": true,
+  "human_review_file_unchanged": true,
+  "all_30_draft_source_pointers_valid": true,
+  "impact_and_review_manifests_verified": true
+}

@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+*.part
+.DS_Store
+.pytest_cache/
+.env
+.env.*
+!.env.example
+/data/gatcv6/raw/
+/dist/
+/reports/truncation_fix/before_review/

@@ -1,0 +1,50 @@
+{
+  "pipeline_version": "0.1.0",
+  "code_sha256": "ed6cb9e67d5c4d09c82f0ad241307f5d1bf9c597fe9a1fd16488d2b51e8f8057",
+  "started_at_utc": "2026-10-20T06:35:54.118210+00:00",
+  "elapsed_seconds": 7.147,
+  "peak_process_memory_bytes": 1338064896,
+  "python": "3.9.6 (default, Apr 17 2026, 18:15:52) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "dependencies": {
+    "zstandard": "0.25.0",
+    "jsonschema": "4.25.1"
+  },
+  "command": [
+    "/Users/huangzixuan/Desktop/研究生/大模型实习/基元律动/coding test/agent_qc/__main__.py",
+    "--config",
+    "configs/default.json",
+    "--data",
+    "data/gatcv6/raw",
+    "--policy",
+    "balanced",
+    "--output",
+    "outputs/balanced"
+  ],
+  "data_root": "/Users/huangzixuan/Desktop/研究生/大模型实习/基元律动/coding test/data/gatcv6/raw",
+  "data_sha256": {
+    "sample/trajectories/trajectories.jsonl.zst": "e8ea1da604050ccff41610ec7404267981c7be31a1c510e0df3c33518e7c4290",
+    "sample/messages/messages.jsonl.zst": "82b0125509065fcdbb8d22384e0725770ce63e4012fe925751a273095a55cb7c",
+    "sample/labels/labels.jsonl.zst": "72c48e79eec912ef09071123efab047247037061cd6dcf8664ad3405b070809e",
+    "sample/views/sft_steps.jsonl.zst": "aea6a0e377e24382ceb8f4d1c7b226a7868258223bab61d2ddd90dce36d48a67",
+    "sample/views/error_recovery.jsonl.zst": "4ecc9d80e72f1283591b765e879724ef609d8adcbfb38377615b615705cf2356",
+    "sample/views/tool_grammar.jsonl.zst": "64b5b03bc2b65e3c8fd3c23f1c7c981ed53a5c92820ea28924a6ca43ee40d925"
+  },
+  "output_sha256": {
+    "config.json": "3ed466b0fc378e647488e10154a1b87cf893c64c7e706173b89d76683c2a18a7",
+    "decisions.jsonl": "9f2119e39b2243bd82370e2abb4456c55f97cd98c3fbcb254b9f7f3f293f795f",
+    "issues.jsonl": "e055022f04a2d195fb39451baf427edef32fbe1d91de2a1a8849ced4e460596a",
+    "review_queue.jsonl": "500de7b4d701dfb032e51a1afaeb22121f383ae1f37daaae1a21a5c45d36af63",
+    "rules.json": "0d48c7a4203c03c4cd48fca276c22719efe12b6cbe23e7baf11b128f46a709bf",
+    "summary.json": "14e07043b812c9d6911c926027c78404bc2887e1f661feeb9040591ee6ffe7d9"
+  },
+  "config": {
+    "policy": "balanced",
+    "review_fraction": 0.1,
+    "audit_fraction_of_budget": 0.2,
+    "seed": 20261020,
+    "expected_revision": "216fb6e2c9449dd8eeab0a3b9233e89ea08d1f7a",
+    "expected_trajectories": 1189
+  },
+  "note": "时间/平台/命令可能变化；事实文件及队列在相同输入配置代码下应一致。未执行任何数据中的指令。"
+}

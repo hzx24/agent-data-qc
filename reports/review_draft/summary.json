@@ -1,0 +1,59 @@
+{
+  "status": "human_review_complete",
+  "count": 30,
+  "human_confirmed_count": 30,
+  "human_confirmation_source": "提交者在本对话中的明确确认；逐条记录见human_review.json",
+  "synthetic_cases_in_review_count": 0,
+  "allocation": {
+    "random": 10,
+    "rule_hit": 10,
+    "boundary": 10
+  },
+  "pipeline_decisions": {
+    "admit": 19,
+    "defer": 11
+  },
+  "review_recommendations": {
+    "admit": 15,
+    "defer": 15
+  },
+  "proposed_changes": [
+    {
+      "index": 3,
+      "trajectory_id": "a4f4652bf1f2db578146d1c5",
+      "before": "admit",
+      "review_after": "defer",
+      "finding_type": "语义证据不足；状态层级疑问"
+    },
+    {
+      "index": 9,
+      "trajectory_id": "91de80047c831bb903c2a4e2",
+      "before": "admit",
+      "review_after": "defer",
+      "finding_type": "需求与产物的跨步骤冲突"
+    },
+    {
+      "index": 24,
+      "trajectory_id": "34b796f5a03369d11b40e110",
+      "before": "admit",
+      "review_after": "defer",
+      "finding_type": "工具动作来源可疑"
+    },
+    {
+      "index": 26,
+      "trajectory_id": "eecd796755bb58f80dfefafa",
+      "before": "admit",
+      "review_after": "defer",
+      "finding_type": "关键观测系统性缺失"
+    }
+  ],
+  "additional_budget_ids": 0,
+  "confirmed_rule_false_positive": {
+    "trajectory_id": "7bce5aa6ee3bc6fa68957d61",
+    "rule_id": "RECORDED_TRUNCATION",
+    "pointer": "/steps/27/result",
+    "fix_status": "fixed_and_full_scan_verified",
+    "explanation": "原规则误报已修复：[TRUNCATED]位于测试断言字符串，当前仅记录TRUNCATION_LITERAL。整轨迹仍因独立schema问题暂缓。"
+  },
+  "metrics_warning": "条件随机与有意选样混合；不是全量准确率、漏报率或误报率估计。人工复核与既有全量结果分开保存，未自动覆盖管线处置。"
+}

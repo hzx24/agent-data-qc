@@ -1,0 +1,55 @@
+test_complete_comparison_of_actual_runs (test_comparison.ComparisonTest) ... ok
+test_different_scope_cannot_be_compared (test_comparison.ComparisonTest) ... ok
+test_only_policy_may_differ (test_comparison.ComparisonTest) ... ok
+test_reason_only_change_not_counted_as_decision_change (test_comparison.ComparisonTest) ... ok
+test_budget_and_unqueued_defer (test_qc.IntegrationTest) ... ok
+test_checker_failure_is_explicit (test_qc.IntegrationTest) ... ok
+test_checksums_and_illegal_budget (test_qc.IntegrationTest) ... ok
+test_corrupt_compression_and_empty_batch_reported (test_qc.IntegrationTest) ... ok
+test_corrupt_line_is_reported_and_batch_deferred (test_qc.IntegrationTest) ... ok
+test_duplicate_id_and_duplicate_training_content (test_qc.IntegrationTest) ... ok
+test_full_run_repeatability_and_raw_preservation (test_qc.IntegrationTest) ... ok
+test_malformed_nested_shape_is_not_silent_pass (test_qc.IntegrationTest) ... ok
+test_missing_main_and_outside_parent (test_qc.IntegrationTest) ... ok
+test_no_output_overwrite_raw (test_qc.IntegrationTest) ... ok
+test_policy_difference_is_config_driven (test_qc.IntegrationTest) ... ok
+test_small_batch_does_not_round_budget_up (test_qc.IntegrationTest) ... ok
+test_truncation_literal_admitted_and_notice_deferred_in_both_policies (test_qc.IntegrationTest) ... ok
+test_ambiguous_recovery_not_arbitrary_first_match (test_qc.RulesTest) ... ok
+test_anonymous_placeholder_not_withheld (test_qc.RulesTest) ... ok
+test_cross_step_index_and_status_mismatch (test_qc.RulesTest) ... ok
+test_duplicate_call_and_return (test_qc.RulesTest) ... ok
+test_edit_vendor_patch_not_missing_content (test_qc.RulesTest) ... ok
+test_failed_then_success_not_task_success (test_qc.RulesTest) ... ok
+test_invalid_arguments_not_schema_ambiguity (test_qc.RulesTest) ... ok
+test_json_comparison_preserves_boolean_type (test_qc.RulesTest) ... ok
+test_nonadjacent_parallel_returns_legal (test_qc.RulesTest) ... ok
+test_nonfinite_json_is_invalid (test_qc.RulesTest) ... ok
+test_open_boundary_risk_only (test_qc.RulesTest) ... ok
+test_orphan_return (test_qc.RulesTest) ... ok
+test_recovery_flag_disagrees_with_window (test_qc.RulesTest) ... ok
+test_schema_empty_string_is_not_omission (test_qc.RulesTest) ... ok
+test_schema_mismatch_is_uncertainty (test_qc.RulesTest) ... ok
+test_sft_prefix_and_json_key_order_are_legal (test_qc.RulesTest) ... ok
+test_unknown_status_not_failure (test_qc.RulesTest) ... ok
+test_unknown_tool_and_external_ref (test_qc.RulesTest) ... ok
+test_valid_tool_only_assistant (test_qc.RulesTest) ... ok
+test_withheld_is_explicit_uncertainty (test_qc.RulesTest) ... ok
+test_actual_markers_still_block_even_when_reading_source (test_qc.TruncationRegressionTest) ... ok
+test_evidence_offsets_point_back_to_original_text (test_qc.TruncationRegressionTest) ... ok
+test_literal_does_not_hide_second_marker_on_same_line (test_qc.TruncationRegressionTest) ... ok
+test_quoted_constants_are_not_observation_loss (test_qc.TruncationRegressionTest) ... ok
+test_real_source_literal_and_recorded_omission (test_qc.TruncationRegressionTest) ... ok
+test_unrecognised_context_is_uncertain_not_silently_allowed (test_qc.TruncationRegressionTest) ... ok
+test_absent_claimed_excerpt_is_rejected (test_review.ReviewIntegrityTests) ... ok
+test_ambiguous_view_line_is_rejected (test_review.ReviewIntegrityTests) ... ok
+test_human_confirmation_requires_matching_version_and_source (test_review.ReviewIntegrityTests) ... ok
+test_json_pointer_escapes (test_review.ReviewIntegrityTests) ... ok
+test_missing_confirmations_stay_pending_and_duplicates_are_rejected (test_review.ReviewIntegrityTests) ... ok
+test_missing_or_duplicate_review_ids_do_not_count_as_thirty (test_review.ReviewIntegrityTests) ... ok
+test_real_pointer_and_serialized_schema_are_distinguished (test_review.ReviewIntegrityTests) ... ok
+
+----------------------------------------------------------------------
+Ran 50 tests in 0.160s
+
+OK

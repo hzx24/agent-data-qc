@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "verified_archive_files": 157,
+  "pipeline_code_sha256": "ed6cb9e67d5c4d09c82f0ad241307f5d1bf9c597fe9a1fd16488d2b51e8f8057",
+  "submission_source_sha256": "60ad4d7ebe40d66e248b8e750d95e60fe6835e92d93816c388a95b8749a11f4e",
+  "environment": "临时目录解压；使用调用脚本的已安装Python依赖环境，未宣称独立操作系统验证。",
+  "tests_passed": 50,
+  "fact_file_byte_matches": {
+    "balanced": {
+      "issues.jsonl": true,
+      "decisions.jsonl": true,
+      "review_queue.jsonl": true,
+      "summary.json": true,
+      "rules.json": true,
+      "config.json": true
+    },
+    "conservative": {
+      "issues.jsonl": true,
+      "decisions.jsonl": true,
+      "review_queue.jsonl": true,
+      "summary.json": true,
+      "rules.json": true,
+      "config.json": true
+    }
+  },
+  "policy_comparison_byte_match": true,
+  "draft_regeneration_byte_matches": {
+    "sampling.json": true,
+    "reviews.jsonl": true,
+    "reviews.md": true,
+    "summary.json": true,
+    "human_review.json": true
+  },
+  "extracted_scan_elapsed_seconds": {
+    "balanced": 7.183,
+    "conservative": 7.074
+  },
+  "validation_elapsed_seconds": 17.746,
+  "human_review_status": "human_review_complete",
+  "note": "验证文件加入最终包时不改变所验证的源码、原始数据、配置及事实结果。zip本身哈希见包外.sha256。"
+}

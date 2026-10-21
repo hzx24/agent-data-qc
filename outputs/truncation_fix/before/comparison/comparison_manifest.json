@@ -1,0 +1,59 @@
+{
+  "comparison_script_sha256": "88e092900893d3525cc57b23b7cbd4e8f008703b8ef88cd33810a97e1e34c6db",
+  "pipeline_code_sha256": "76d3aeff7d4b1e84d06187e7950b605ff80fec3143bbfef14af81f227a2f386e",
+  "data_sha256": {
+    "sample/trajectories/trajectories.jsonl.zst": "e8ea1da604050ccff41610ec7404267981c7be31a1c510e0df3c33518e7c4290",
+    "sample/messages/messages.jsonl.zst": "82b0125509065fcdbb8d22384e0725770ce63e4012fe925751a273095a55cb7c",
+    "sample/labels/labels.jsonl.zst": "72c48e79eec912ef09071123efab047247037061cd6dcf8664ad3405b070809e",
+    "sample/views/sft_steps.jsonl.zst": "aea6a0e377e24382ceb8f4d1c7b226a7868258223bab61d2ddd90dce36d48a67",
+    "sample/views/error_recovery.jsonl.zst": "4ecc9d80e72f1283591b765e879724ef609d8adcbfb38377615b615705cf2356",
+    "sample/views/tool_grammar.jsonl.zst": "64b5b03bc2b65e3c8fd3c23f1c7c981ed53a5c92820ea28924a6ca43ee40d925"
+  },
+  "runs": {
+    "balanced": {
+      "config": {
+        "policy": "balanced",
+        "review_fraction": 0.1,
+        "audit_fraction_of_budget": 0.2,
+        "seed": 20261020,
+        "expected_revision": "216fb6e2c9449dd8eeab0a3b9233e89ea08d1f7a",
+        "expected_trajectories": 1189
+      },
+      "elapsed_seconds": 6.787,
+      "output_sha256": {
+        "config.json": "3ed466b0fc378e647488e10154a1b87cf893c64c7e706173b89d76683c2a18a7",
+        "decisions.jsonl": "47a649961709b56f09a3e51a20aed8a21fd1b5da8dbcbf683b00e1cbe3669bdd",
+        "issues.jsonl": "59d88f97d1750725083eb0a962cd1e894693058347d02bc2d31966d0fd1759e7",
+        "review_queue.jsonl": "cafc9405037aaad1ff31d3b83b5d2085a94ae8726ac6b58b1b3b81687f04e249",
+        "rules.json": "60605e958af62bc7c6d32de6bcde9485b237273e61448b24fd4d987c5a86c054",
+        "summary.json": "010a87c4c0b1efa6b89c3e6979e6394eb8621e53c33cbaf9d34beb199d848e78"
+      }
+    },
+    "conservative": {
+      "config": {
+        "policy": "conservative",
+        "review_fraction": 0.1,
+        "audit_fraction_of_budget": 0.2,
+        "seed": 20261020,
+        "expected_revision": "216fb6e2c9449dd8eeab0a3b9233e89ea08d1f7a",
+        "expected_trajectories": 1189
+      },
+      "elapsed_seconds": 6.994,
+      "output_sha256": {
+        "config.json": "d8e54d91025c069d6975d1a2735492a25e2f2fe6d5ad70e0a549ccad1332f561",
+        "decisions.jsonl": "ee751c3da280ece1b67380c70abe50026c3e0530bb115e0dcf4b60e36370cd5e",
+        "issues.jsonl": "a1e75226c4f35e9ceb573c9eb98f79274e64edc88b13983f80a930fe0d9f6ea8",
+        "review_queue.jsonl": "d21e84577f20c3878542c68624bcf0bd4aa2a8ea5d5da24965c7006246f8ec34",
+        "rules.json": "60605e958af62bc7c6d32de6bcde9485b237273e61448b24fd4d987c5a86c054",
+        "summary.json": "2a859a42435f04b0e7ed68851da90402de8699bd9e9a4c7bf68d8ee80f3ef853"
+      }
+    }
+  },
+  "result_sha256": {
+    "comparison.json": "cb85f6dedca88a69f21335405bfb08d7069ce6834bab087f57a3e9f54c5a7bba",
+    "decision_changes.csv": "365eb5b34b6b4d0ee848b1c34020c5748f744766d3711d8756abecadce981684",
+    "decision_changes.jsonl": "e65aa52d8b4904abd466cf1d055bfda05d119ee5ad1911d15e42f6e21e4563c8",
+    "queue_changes.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "same_decision_reason_changes.jsonl": "efcf506a8b1b6230e173b60d558158d6746c83b4c9261e540df4f858589a4b5f"
+  }
+}

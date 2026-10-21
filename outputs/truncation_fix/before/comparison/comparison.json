@@ -1,0 +1,182 @@
+{
+  "scope": {
+    "revision": "216fb6e2c9449dd8eeab0a3b9233e89ea08d1f7a",
+    "trajectories": 1189,
+    "same_code_and_data_verified": true,
+    "common_factual_findings_identical": true,
+    "only_config_difference": "policy"
+  },
+  "decision_counts": {
+    "balanced": {
+      "admit": 862,
+      "defer": 245,
+      "exclude": 82
+    },
+    "conservative": {
+      "defer": 674,
+      "admit": 433,
+      "exclude": 82
+    }
+  },
+  "transition_matrix": {
+    "admit->admit": 433,
+    "admit->defer": 429,
+    "defer->defer": 245,
+    "exclude->exclude": 82
+  },
+  "changed_trajectory_count": 429,
+  "changed_cause_counts": {
+    "STRICT_BOUNDARY": 97,
+    "STRICT_BOUNDARY+STRICT_EVAL": 94,
+    "STRICT_EVAL": 238
+  },
+  "same_decision_with_additional_blocking_reasons": 143,
+  "retained": {
+    "balanced": {
+      "trajectories": 862,
+      "steps": 58778,
+      "tool_calls": 35117,
+      "failed_calls": 1666,
+      "unknown_calls": 1161,
+      "successful_followup_windows": 1439,
+      "trajectories_with_failures": 383,
+      "trajectories_with_unknown_status": 145,
+      "eval_flagged_trajectories": 332,
+      "open_boundary_trajectories": 191,
+      "shared_template_trajectories": 540,
+      "uncertain_recovery_view_trajectories": 23,
+      "prompt_language_counts": {
+        "cs": 2,
+        "de": 2,
+        "en": 748,
+        "es": 4,
+        "fr": 5,
+        "ja": 13,
+        "ko": 7,
+        "pl": 1,
+        "pt": 3,
+        "ru": 3,
+        "uk": 1,
+        "unknown": 55,
+        "vi": 4,
+        "zh": 14
+      },
+      "session_kind_counts": {
+        "autonomous": 454,
+        "interactive": 175,
+        "sub-agent": 107,
+        "unknown": 126
+      }
+    },
+    "conservative": {
+      "trajectories": 433,
+      "steps": 34571,
+      "tool_calls": 21852,
+      "failed_calls": 751,
+      "unknown_calls": 199,
+      "successful_followup_windows": 671,
+      "trajectories_with_failures": 201,
+      "trajectories_with_unknown_status": 10,
+      "eval_flagged_trajectories": 0,
+      "open_boundary_trajectories": 0,
+      "shared_template_trajectories": 178,
+      "uncertain_recovery_view_trajectories": 10,
+      "prompt_language_counts": {
+        "de": 2,
+        "en": 348,
+        "es": 4,
+        "fr": 5,
+        "ja": 11,
+        "ko": 5,
+        "pl": 1,
+        "pt": 2,
+        "ru": 3,
+        "unknown": 37,
+        "vi": 3,
+        "zh": 12
+      },
+      "session_kind_counts": {
+        "autonomous": 127,
+        "interactive": 120,
+        "sub-agent": 100,
+        "unknown": 86
+      }
+    }
+  },
+  "balanced_minus_conservative_retained": {
+    "trajectories": 429,
+    "steps": 24207,
+    "tool_calls": 13265,
+    "failed_calls": 915,
+    "unknown_calls": 962,
+    "successful_followup_windows": 768,
+    "trajectories_with_failures": 182,
+    "trajectories_with_unknown_status": 135,
+    "eval_flagged_trajectories": 332,
+    "open_boundary_trajectories": 191,
+    "shared_template_trajectories": 362,
+    "uncertain_recovery_view_trajectories": 13
+  },
+  "review": {
+    "balanced": {
+      "denominator": 1189,
+      "fraction": 0.1,
+      "maximum": 118,
+      "queued": 118,
+      "uncertainty_candidates": 245,
+      "deferred_not_queued": 149,
+      "audit_slots_requested": 24,
+      "seed": 20261020,
+      "composition": {
+        "uncertainty_priority:defer": 94,
+        "seeded_audit:admit": 22,
+        "seeded_audit:defer": 2
+      },
+      "changed_trajectories_queued": 16,
+      "deferred_queued": 96,
+      "deferred_coverage_fraction": 0.39183673469387753,
+      "hypothetical_capacity_shortfall_even_if_all_118_reviewed_defer": 127
+    },
+    "conservative": {
+      "denominator": 1189,
+      "fraction": 0.1,
+      "maximum": 118,
+      "queued": 118,
+      "uncertainty_candidates": 674,
+      "deferred_not_queued": 562,
+      "audit_slots_requested": 24,
+      "seed": 20261020,
+      "composition": {
+        "uncertainty_priority:defer": 94,
+        "seeded_audit:admit": 6,
+        "seeded_audit:defer": 18
+      },
+      "changed_trajectories_queued": 16,
+      "deferred_queued": 112,
+      "deferred_coverage_fraction": 0.1661721068249258,
+      "hypothetical_capacity_shortfall_even_if_all_118_reviewed_defer": 556
+    }
+  },
+  "queue_comparison": {
+    "intersection": 118,
+    "union": 118,
+    "warning": "两队列是相同批次的替代方案，不能分别执行后合并算作118条预算；推荐仅采用balanced的118条队列。"
+  },
+  "recommendation": "balanced",
+  "recommendation_origin": "实现者基于本轮业务目标与下述全量计数作出的选择；不是学习得到的效用或准确率估计。",
+  "recommendation_basis": "当前目标包含探索与失败恢复；保守策略额外隔离的是评测来源和起止边界，不是新增已证实损坏。保留相同硬约束，避免将有限人工预算花在批量豁免来源/边界标记上。",
+  "metric_limits": [
+    "这些是全量记录特征和处置计数，不是准确率、误报率或任务成功率。",
+    "successful_followup_windows为原始步骤推导的后四步成功启发式，不证明因果修复。",
+    "保留工具调用数不是独立任务数、有效token数或模型收益；没有训练实验。",
+    "未提供目标评测集，无法计算真实污染率。is_eval=false仍可能含评测来源。",
+    "两种策略都未验证任务语义正确性或完成全面隐私审计。"
+  ],
+  "switch_conditions": [
+    "目标改为只训练用户起点和文本结尾完整的终局回答，且不允许片段训练：转向保守边界门槛。",
+    "业务规定禁止所有预设评测来源：采用保守评测隔离；这属于来源政策而非检测到损坏。",
+    "取得独立评测集并证实重叠：按真实重叠隔离，未必要把全部is_eval轨迹排除。",
+    "分层复核证明开放边界缺少关键动作反馈，或对照训练显示额外数据显著损害目标能力：收紧相应准入规则。",
+    "允许片段训练/损失屏蔽，或补齐原始schema和环境：重新评估暂缓数据，可放宽整轨迹门槛。"
+  ]
+}

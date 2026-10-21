@@ -1,0 +1,279 @@
+{
+  "instructions": "提交者本人已确认逐条核对完成；后续变更需实际审核后修改，生成器不得自动确认。",
+  "annotations_sha256": "19565854d3bc9698f99762ab2445e069fb8c25724dff3307bb0b3e3a05a5bdb9",
+  "confirmation_source": "提交者在本对话中明确回复“已核对”，随后确认项目参与说明及最终样本判断责任。",
+  "confirmation_date": "2026-10-20",
+  "reviews": [
+    {
+      "index": 1,
+      "trajectory_id": "e77456b90dbeb23873305aea",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "admit",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 2,
+      "trajectory_id": "8a315ebdf674f909d7880577",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "defer",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 3,
+      "trajectory_id": "a4f4652bf1f2db578146d1c5",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "defer",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 4,
+      "trajectory_id": "61bcfad0dd5ffc9dbdd81225",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "admit",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 5,
+      "trajectory_id": "4dc74ff5da4b7112df5bf56e",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "admit",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 6,
+      "trajectory_id": "a6186a70d50f69b4fc9b114b",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "admit",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 7,
+      "trajectory_id": "1dfa68e4d45e1809564d014f",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "admit",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 8,
+      "trajectory_id": "947bff5d1e83d3a444a6d0b3",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "admit",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 9,
+      "trajectory_id": "91de80047c831bb903c2a4e2",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "defer",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 10,
+      "trajectory_id": "788f75ec42d6701f1810c3cc",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "admit",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 11,
+      "trajectory_id": "a11e0688dc7f141f22ea507b",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "defer",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 12,
+      "trajectory_id": "7bce5aa6ee3bc6fa68957d61",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "defer",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 13,
+      "trajectory_id": "4e7f55928c33fd2fff1db7af",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "defer",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 14,
+      "trajectory_id": "fffa584c9e10be4e287f1a94",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "defer",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 15,
+      "trajectory_id": "9b0406d7ec2f9dc41a7d1824",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "defer",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 16,
+      "trajectory_id": "235c0f6f1675e4095344e9f1",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "defer",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 17,
+      "trajectory_id": "109c981e1c9043aac0b41131",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "defer",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 18,
+      "trajectory_id": "d357581401a83f863e7f5fff",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "defer",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 19,
+      "trajectory_id": "77e1e9ccc1420c26899e1759",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "defer",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 20,
+      "trajectory_id": "7db6c1d8a023ed1a889c6881",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "defer",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 21,
+      "trajectory_id": "7daf4462d83e7964ecc06877",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "admit",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 22,
+      "trajectory_id": "e8e7875ed949d0b4242d3da4",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "admit",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 23,
+      "trajectory_id": "753530dd642d338581edde8e",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "admit",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 24,
+      "trajectory_id": "34b796f5a03369d11b40e110",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "defer",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 25,
+      "trajectory_id": "938fb20e9c2c354b2ac2f6f6",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "admit",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 26,
+      "trajectory_id": "eecd796755bb58f80dfefafa",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "defer",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 27,
+      "trajectory_id": "c4704adb2a18332df39148b2",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "admit",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 28,
+      "trajectory_id": "d101de2b80d1abf850b43f07",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "admit",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 29,
+      "trajectory_id": "f6ee1f33426b334fc6e6d1a1",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "admit",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    },
+    {
+      "index": 30,
+      "trajectory_id": "4fd7f1ffc160d75c53ad659f",
+      "reviewer": "提交者本人",
+      "reviewed_at": "2026-10-20",
+      "decision": "admit",
+      "agrees_with_record": true,
+      "notes": "提交者确认已逐条核对并认可本条结论、依据、不确定性及改判条件。"
+    }
+  ],
+  "date_basis": "2026-10-20为本对话完成确认的日期，不代表另行记录了具体审核时段。"
+}
